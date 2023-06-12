@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/normalize.css">
     <link rel="stylesheet" href="/style/main.css">
+    <script src="/scripts/main.js"></script>
     <title>Style Guide</title>
 </head>
 <body>
     <header class="nav">
-        <nav class="nav__mobile">
+        <nav class="nav__wrapper">
             <a href="/">
-                home
+                Home
             </a>
-            <ul>
+            <ul class="nav__wrapper__items">
                 <li>
                     <a>Overview</a>
                 </li>
@@ -30,32 +31,7 @@
                     <a>Structures</a>
                 </li>
             </ul>
-            <button>
-
-            </button>
-        </nav>
-        <nav class="nav__desktop">
-            <a href="/">
-                home
-            </a>
-            <ul>
-                <li>
-                    <a>Overview</a>
-                </li>
-                <li>
-                    <a>Tokens</a>
-                </li>
-                <li>
-                    <a>Utilities</a>
-                </li>
-                <li>
-                    <a>Elements</a>
-                </li>
-                <li>
-                    <a>Structures</a>
-                </li>
-            </ul>
-            <button>
+            <button onclick="toggleMenu()">
 
             </button>
         </nav>

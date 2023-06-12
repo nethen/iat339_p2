@@ -1,20 +1,39 @@
 @font-face {
     font-family: "Jubilee";
-    src: url(../assets/fonts/OTJubilee-Silver.woff), url(../assets/fonts/OTJubilee-Silver.woff2);
-    font-weight: 500;
+    src: url(../assets/fonts/OTJubilee-Silver.woff);
+    font-weight: 400;
 }
 
 
 @font-face {
     font-family: "Jubilee Platinum";
-    src: url(../assets/fonts/OTJubilee-Platinum.woff), url(../assets/fonts/OTJubilee-Platinum.woff2);
-    font-weight: 500;
+    src: url(../assets/fonts/OTJubilee-Platinum.woff);
+    font-weight: 400;
 }
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
 body{
     font-family: "Jubilee";
 }
 
+h1, h2, h3, h4, h5, h6, p{
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
 h1, h2, h3, h4{
     font-family: "Jubilee Platinum";
+    font-weight: 400;
+}
+
+.nav .nav__wrapper ul.nav__wrapper__items {
+    display: block;
+    list-style-type: none;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-inline-start: 0;
 }
