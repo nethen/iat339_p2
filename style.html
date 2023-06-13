@@ -11,36 +11,53 @@
 <body>
     <main>
         <header class="nav">
-            <nav class="nav__wrapper">
-                <a class="nav__wrapper__logo" href="/">
+            <nav class="nav__overlay">
+                <a class="nav__overlay__logo" href="/">
                     Cheong-su-dang
                 </a>
-                <div class="nav__wrapper__items">
-                    <ul>
-                        <li>
-                            <a href="/style.html" onclick="closeMenu()">Overview</a>
-                        </li>
-                        <li>
-                            <a href="/style.html#tokens" onclick="closeMenu()">Tokens</a>
-                        </li>
-                        <li>
-                            <a href="/style.html#utilities" onclick="closeMenu()">Utilities</a>
-                        </li>
-                        <li>
-                            <a href="/style.html#elements" onclick="closeMenu()">Elements</a>
-                        </li>
-                        <li>
-                            <a href="/style.html#structures" onclick="closeMenu()">Structures</a>
-                        </li>
-                    </ul>
+                <div class="nav__overlay__wrapper">
+                    <div class="nav__overlay__wrapper__items">
+                        <div class="nav__overlay__wrapper__items__group">
+                            <ul>
+                                <li>
+                                    <a href="/style.html" onclick="closeMenu()">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="/style.html#tokens" onclick="closeMenu()">Tokens</a>
+                                </li>
+                                <li>
+                                    <a href="/style.html#utilities" onclick="closeMenu()">Utilities</a>
+                                </li>
+                                <li>
+                                    <a href="/style.html#elements" onclick="closeMenu()">Elements</a>
+                                </li>
+                                <li>
+                                    <a href="/style.html#structures" onclick="closeMenu()">Structures</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="nav__overlay__wrapper__items__divider"></span>
+                        <div class="nav__overlay__wrapper__items__group">
+                            <h2>Resources</h2>
+                            <ul>
+                                <li>
+                                    <a href="https://google.com" target="_blank" onclick="closeMenu()">Github</a>
+                                </li>
+                                <li>
+                                    <a href="/style.html#citations" onclick="closeMenu()">Citations</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+            
                 <!-- SVG icons converted to inline using https://www.bayustudio.com/app/svg-encoder/ -->
-                <button class="nav__wrapper__menu" onclick="toggleMenu()">
-                    <svg class="nav__wrapper__menu__img nav__wrapper__menu__img--active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="nav__overlay__menu" onclick="toggleMenu()">
+                    <svg class="nav__overlay__menu__img nav__overlay__menu__img--active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z"/>
                     </svg>
                         
-                    <svg class="nav__wrapper__menu__img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="nav__overlay__menu__img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"/>
                     </svg>
                 </button>
