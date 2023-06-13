@@ -11,35 +11,38 @@
 <body>
     <header class="nav">
         <nav class="nav__wrapper">
-            <a href="/">
-                Home
+            <a class="nav__wrapper__logo" href="/">
+                Cheong-su-dang
             </a>
-            <ul class="nav__wrapper__items">
-                <li>
-                    <a>Overview</a>
-                </li>
-                <li>
-                    <a>Tokens</a>
-                </li>
-                <li>
-                    <a>Utilities</a>
-                </li>
-                <li>
-                    <a>Elements</a>
-                </li>
-                <li>
-                    <a>Structures</a>
-                </li>
-            </ul>
-            <button onclick="toggleMenu()">
-
+            <div class="nav__wrapper__items">
+                <ul>
+                    <li>
+                        <a href="/style.html" onclick="closeMenu()">Overview</a>
+                    </li>
+                    <li>
+                        <a href="/style.html#tokens" onclick="closeMenu()">Tokens</a>
+                    </li>
+                    <li>
+                        <a href="/style.html#utilities" onclick="closeMenu()">Utilities</a>
+                    </li>
+                    <li>
+                        <a href="/style.html#elements" onclick="closeMenu()">Elements</a>
+                    </li>
+                    <li>
+                        <a href="/style.html#structures" onclick="closeMenu()">Structures</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="nav__wrapper__menu" onclick="toggleMenu()">
+                <img class="nav__wrapper__menu__img nav__wrapper__menu__img--active" src="/assets/img/mdi_menu.svg">
+                <img class="nav__wrapper__menu__img" src="/assets/img/mdi_close.svg">
             </button>
         </nav>
     </header>
     <main>
         <section id="overview">
             <h1>Cheongsudang Cafe</h1>
-            <p></p>
+            <p>Descriptor about the cafe itself.</p>
         </section>
         <section id="tokens">
             <h2>Tokens</h2>

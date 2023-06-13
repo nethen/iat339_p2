@@ -11,13 +11,14 @@
     font-weight: 400;
 }
 
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: "Jubilee";
+    line-height: 1;
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -30,10 +31,69 @@ h1, h2, h3, h4{
     font-weight: 400;
 }
 
-.nav .nav__wrapper ul.nav__wrapper__items {
-    display: block;
+section{
+    padding: 2rem 1rem;
+}
+
+.nav{
+    padding: 1rem;
+}
+
+.nav__wrapper{
+    display: flex;
+    /* position: relative; */
+    justify-content: space-between;;
+    align-items: center;
+}
+
+.nav .nav__wrapper .nav__wrapper__logo {
+    font-family: "Jubilee Platinum";
+    font-size: 1.25rem;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #000000;
+}
+
+
+.nav .nav__wrapper div.nav__wrapper__items ul {
+    display: none;
+    position: fixed;
     list-style-type: none;
     margin-block: 0;
     margin-inline: 0;
     padding-inline-start: 0;
+    padding: 2rem 1rem;
+
+    flex-direction: column;
+    /* justify-content: end; */
+
+    gap: 1rem; 
+    top: 0;
+    margin-top: 3.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    background: #FFFFFFEF;
+}
+
+.nav .nav__wrapper div.nav__wrapper__items.nav__wrapper__items--active ul {
+    display: flex;
+}
+
+.nav .nav__wrapper button.nav__wrapper__menu{
+    display: block;
+    padding: 0;
+    line-height: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav .nav__wrapper button.nav__wrapper__menu img{
+    display: none;
+}
+
+.nav .nav__wrapper button.nav__wrapper__menu img.nav__wrapper__menu__img--active{
+    display: block;
 }
