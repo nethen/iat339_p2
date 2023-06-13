@@ -11,6 +11,14 @@
     font-weight: 400;
 }
 
+/*  CSS variables learned from Mozilla docs
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+    --bg-color: #0f0f0f;
+    --text-primary: #dddddd;
+    ---text-secondary: #555555;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -19,16 +27,19 @@ body{
     font-family: "Jubilee";
     line-height: 1;
     position: relative;
+    background: var(--bg-color);
+    color: var(--text-primary);
 }
 
 h1, h2, h3, h4, h5, h6, p{
     margin-top: 0;
     margin-bottom: 0.25rem;
+    font-weight: 400;
+
 }
 
 h1, h2, h3, h4{
     font-family: "Jubilee Platinum";
-    font-weight: 400;
 }
 
 section{
@@ -51,7 +62,7 @@ section{
     font-size: 1.25rem;
     text-transform: lowercase;
     text-decoration: none;
-    color: #000000;
+    color: var(--text-primary);
 }
 
 
@@ -74,7 +85,7 @@ section{
     right: 0;
     bottom: 0;
     z-index: 50;
-    background: #FFFFFFEF;
+    background: var(--bg-color);
 }
 
 .nav .nav__wrapper div.nav__wrapper__items.nav__wrapper__items--active ul {
@@ -90,10 +101,54 @@ section{
     cursor: pointer;
 }
 
-.nav .nav__wrapper button.nav__wrapper__menu img{
+.nav .nav__wrapper button.nav__wrapper__menu svg{
     display: none;
+    fill: var(--text-primary);
 }
 
-.nav .nav__wrapper button.nav__wrapper__menu img.nav__wrapper__menu__img--active{
+.nav .nav__wrapper button.nav__wrapper__menu svg.nav__wrapper__menu__img--active{
     display: block;
+}
+
+@media screen and (min-width: 36rem) {
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+    }
+
+    body > main > section{
+        grid-column: 2/-1;
+    }
+
+    .nav{
+        position: sticky;
+        top: 0;
+        height:fit-content;
+    }
+    .nav__wrapper{
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .nav .nav__wrapper div.nav__wrapper__items ul {
+        margin-top: 0;
+        display: flex;
+        position: static;
+        padding: 1rem 0;
+        /* flex-direction: row; */
+    }
+    .nav .nav__wrapper button.nav__wrapper__menu{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+
+}
+
+@media screen and (min-width: 62rem) {
+
 }
