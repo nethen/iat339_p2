@@ -14,9 +14,13 @@
 /*  CSS variables learned from Mozilla docs
     https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
-    --bg-color: #0f0f0f;
-    --text-primary: #dddddd;
+    --bg-color1: #283C2F;
+    --bg-color2: #B4C5B1;
+    --text-primary: #f8f8f8;
     ---text-secondary: #555555;
+    --accent1: #F36364;
+    --accent2: #AF5652;
+    --accent3: #6C4941;
 }
 
 html{
@@ -27,7 +31,7 @@ body{
     font-family: "Jubilee";
     line-height: 1;
     position: relative;
-    background: var(--bg-color);
+    background: var(--bg-color1);
     color: var(--text-primary);
 }
 
@@ -99,7 +103,7 @@ section{
     right: 0;
     bottom: 0;
     z-index: 50;
-    background: var(--bg-color);
+    background: var(--bg-color1);
 }
 
 .nav .nav__overlay__wrapper .nav__overlay__wrapper__items{
@@ -178,7 +182,8 @@ main > section[id] .container .container__type_display{
     margin-bottom: 2rem;
 }
 
-main > section[id] .container .container__type_display span{
+main > section[id] .container .container__type_display span,
+main > section[id] .container .container__colour_display span{
     display: block;
     overflow-x: hidden;
 }
@@ -200,6 +205,37 @@ main > section[id] .container .container__type_display.container__type_display--
 main > section[id] .container .container__type_display__item.container__type_display__item--upper{
     text-transform: uppercase;
 }
+
+main > section[id] .container .container__colour_display .container__colour_display__item{
+    padding: 1rem;
+}
+
+main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--bg1{
+    background: var(--bg-color1);
+    border: 1px solid var(--bg-color2);
+}
+
+main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--bg2{
+    background: var(--bg-color2);
+}
+
+main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--text{
+    background: var(--text-primary);
+    color: var(--bg-color1);
+}
+
+main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--accent1{
+    background: var(--accent1);
+}
+
+main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--accent2{
+    background: var(--accent2);
+}
+
+main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--accent3{
+    background: var(--accent3);
+}
+
 
 @media screen and (min-width: 36rem) {
 
@@ -266,6 +302,19 @@ main > section[id] .container .container__type_display__item.container__type_dis
         grid-column: 1/-1;
     }
 
+    main > section[id] .container .container__colour_display{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min(40vw, 20rem) 1fr 1fr 1fr;
+    }
+
+    main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item.container__colour_display__item--text{
+        grid-row: 2/4
+    }
+
+    main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--accent3{
+       grid-column: 1/-1;
+    }
 }
 
 @media screen and (min-width: 48rem) {
