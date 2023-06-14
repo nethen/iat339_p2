@@ -208,6 +208,8 @@ main > section[id] .container .container__type_display__item.container__type_dis
 
 main > section[id] .container .container__colour_display .container__colour_display__item{
     padding: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--bg1{
