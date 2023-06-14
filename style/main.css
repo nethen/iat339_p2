@@ -35,7 +35,6 @@ h1, h2, h3, h4, h5, h6, p{
     margin-top: 0;
     margin-bottom: 0.25rem;
     font-weight: 400;
-
 }
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4{
@@ -45,6 +44,20 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 h1, .h1{
     font-size: 3rem;
     margin-bottom: 0.5rem;
+}
+
+h2, .h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3, .h3{
+    font-family: "Jubilee";
+    font-size: 1rem;
+}
+
+p{
+    margin-bottom: 1rem;
 }
 
 section{
@@ -150,12 +163,19 @@ section{
     display: block;
 }
 
-main > section[id] .container .container__type_display.container__type_display--platinum span{
-    font-family: "Jubilee Platinum";
+main > section[id] .container .container__desc .container__desc__divider{
+    border-top: 1px var(--text-primary) solid;
 }
 
-main > section[id] .container .container__type_display.container__type_display--silver span{
-    font-family: "Jubilee";
+main > section[id] .container .container__desc{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+main > section[id] .container .container__type_display{
+    margin-bottom: 2rem;
 }
 
 main > section[id] .container .container__type_display span{
@@ -169,6 +189,14 @@ main > section[id] .container .container__type_display span sup{
     opacity: 50%;
 }
 
+main > section[id] .container .container__type_display.container__type_display--platinum span{
+    font-family: "Jubilee Platinum";
+}
+
+main > section[id] .container .container__type_display.container__type_display--silver span{
+    font-family: "Jubilee";
+}
+
 main > section[id] .container .container__type_display__item.container__type_display__item--upper{
     text-transform: uppercase;
 }
@@ -180,10 +208,18 @@ main > section[id] .container .container__type_display__item.container__type_dis
         margin-bottom: 0.5rem;
     }
 
+    h2, .h2{
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
     main{
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 1fr;
+        gap: 1rem;
+        margin: 0 auto;
+        max-width: 75rem;
     }
 
     body > main > section{
@@ -210,12 +246,39 @@ main > section[id] .container .container__type_display__item.container__type_dis
     .nav .nav__overlay button.nav__overlay__menu{
         display: none;
     }
+    
+    main > section[id] .container .container__desc{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    main > section[id] .container .container__desc *:nth-child(2){
+        grid-column: 1/2;
+    }
+
+    main > section[id] .container .container__desc *:not(:nth-child(2)){
+        grid-column: 3/-1;
+    }
+
+    main > section[id] .container .container__desc .container__desc__divider{
+        grid-column: 1/-1;
+    }
+
 }
 
 @media screen and (min-width: 48rem) {
 
+
 }
 
 @media screen and (min-width: 62rem) {
+    main > section[id] .container .container__desc *:not(:nth-child(2)){
+        grid-column: 3/-2;
+    }
 
+    main > section[id] .container .container__desc .container__desc__divider{
+        grid-column: 1/-2;
+    }
 }
