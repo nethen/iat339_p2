@@ -38,8 +38,13 @@ h1, h2, h3, h4, h5, h6, p{
 
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, .h1, .h2, .h3, .h4{
     font-family: "Jubilee Platinum";
+}
+
+h1, .h1{
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
 
 section{
@@ -55,6 +60,7 @@ section{
     /* position: relative; */
     justify-content: space-between;;
     align-items: center;
+    overflow: auto;
 }
 
 .nav .nav__overlay .nav__overlay__logo {
@@ -144,7 +150,35 @@ section{
     display: block;
 }
 
+main > section[id] .container .container__type_display.container__type_display--platinum span{
+    font-family: "Jubilee Platinum";
+}
+
+main > section[id] .container .container__type_display.container__type_display--silver span{
+    font-family: "Jubilee";
+}
+
+main > section[id] .container .container__type_display span{
+    display: block;
+    overflow-x: hidden;
+}
+
+main > section[id] .container .container__type_display span sub,
+main > section[id] .container .container__type_display span sup{
+    font-size: 50%;
+    opacity: 50%;
+}
+
+main > section[id] .container .container__type_display__item.container__type_display__item--upper{
+    text-transform: uppercase;
+}
+
 @media screen and (min-width: 36rem) {
+
+    h1, .h1{
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+    }
 
     main{
         display: grid;
@@ -159,7 +193,6 @@ section{
     .nav{
         position: sticky;
         top: 0;
-        height:fit-content;
     }
     .nav__overlay{
         position: absolute;
