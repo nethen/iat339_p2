@@ -347,6 +347,7 @@ main > section[id] .container .container__colour_display .container__colour_disp
     border-radius: 0.8125rem;
     font-family: "Jubilee Platinum";
     font-size: medium;
+    transition: all 0.3s ease-out;
 }
 
 .button:hover, .button:focus, .button:active{
