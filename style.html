@@ -9,178 +9,186 @@
     <title>Style Guide</title>
 </head>
 <body>
-    <main>
-        <header class="nav">
-            <nav class="nav__overlay">
-                <a class="nav__overlay__logo" href="/">
-                    Cheong-su-dang
-                </a>
-                <div class="nav__overlay__wrapper">
-                    <div class="nav__overlay__wrapper__items">
-                        <div class="nav__overlay__wrapper__items__group">
-                            <ul>
-                                <li>
-                                    <a href="/style.html" onclick="closeMenu()">Overview</a>
-                                </li>
-                                <li>
-                                    <a href="/style.html#typography" onclick="closeMenu()">Tokens</a>
-                                </li>
-                                <li>
-                                    <a href="/style.html#colour" onclick="closeMenu()">Colour</a>
-                                </li>
-                                <li>
-                                    <a href="/style.html#grids" onclick="closeMenu()">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="/style.html#spacing" onclick="closeMenu()">Spacing</a>
-                                </li>
-                                <li>
-                                    <a href="/style.html#elements" onclick="closeMenu()">Elements</a>
-                                </li>
-                                <li>
-                                    <a href="/style.html#structures" onclick="closeMenu()">Structures</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <span class="nav__overlay__wrapper__items__divider"></span>
-                        <div class="nav__overlay__wrapper__items__group">
-                            <h2>Resources</h2>
-                            <ul>
-                                <li>
-                                    <a href="https://github.com/nethen/iat339_p2" target="_blank" onclick="closeMenu()">Github</a>
-                                </li>
-                                <li>
-                                    <a href="/style.html#citations" onclick="closeMenu()">Citations</a>
-                                </li>
-                            </ul>
-                        </div>
+<main>
+    <header class="nav">
+        <nav class="nav__overlay">
+            <a class="nav__overlay__logo" href="/">
+                Cheong-su-dang
+            </a>
+            <div class="nav__overlay__wrapper">
+                <div class="nav__overlay__wrapper__items">
+                    <div class="nav__overlay__wrapper__items__group">
+                        <ul>
+                            <li>
+                                <a href="/style.html" onclick="closeMenu()">Overview</a>
+                            </li>
+                            <li>
+                                <a href="/style.html#typography" onclick="closeMenu()">Tokens</a>
+                            </li>
+                            <li>
+                                <a href="/style.html#colour" onclick="closeMenu()">Colour</a>
+                            </li>
+                            <li>
+                                <a href="/style.html#grids" onclick="closeMenu()">Grids</a>
+                            </li>
+                            <li>
+                                <a href="/style.html#spacing" onclick="closeMenu()">Spacing</a>
+                            </li>
+                            <li>
+                                <a href="/style.html#elements" onclick="closeMenu()">Elements</a>
+                            </li>
+                            <li>
+                                <a href="/style.html#structures" onclick="closeMenu()">Structures</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            
-                <!-- SVG icons converted to inline using https://www.bayustudio.com/app/svg-encoder/ -->
-                <button class="nav__overlay__menu" onclick="toggleMenu()">
-                    <svg class="nav__overlay__menu__img nav__overlay__menu__img--active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z"/>
-                    </svg>
-                        
-                    <svg class="nav__overlay__menu__img" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"/>
-                    </svg>
-                </button>
-            </nav>
-        </header>
-        <section id="overview">
-            <h1>Cheongsudang Cafe</h1>
-            <p>Descriptor about the cafe itself.</p>
-        </section>
-        <section id="typography">
-            <h2>Typography</h2>
-            <p>Tokens for text sizing and styling to create a clear structure</p>
-            <div class="container">
-                <div class="container__desc">
-                    <div class="container__desc__divider"></div>
-                    <h3>Headings</h3>
-                    <p>
-                        The advent of the computer generated the phenomena called desktop publishing. 
-                        This enabled anyone who could type the freedom of using any available typeface and do any kind of distortion. 
-                        It was a disaster of mega proportions. 
-                    </p>
-                </div>
-                <div class="container__type_display container__type_display--platinum">
-                    <span class="h1">Jubilee <sup>Platinum</sup></span>
-                    <span class="h1 container__type_display__item container__type_display__item--upper">abcdefghijklmnopqrstuvwxyz</span>
-                    <span class="h1">abcdefghijklmnopqrstuvwxyz</span>
-                    <span class="h1">0123456789</span>
-                    <span class="h1">&excl;&commat;&num;&dollar;&percnt;&Hat;&amp;&ast;&lpar;&rpar;&quest;&plus;</span>
-                </div>
-                <div class="container__desc">
-                    <div class="container__desc__divider"></div>
-                    <h3>Body paragraphs</h3>
-                    <p>
-                        The advent of the computer generated the phenomena called desktop publishing. 
-                        This enabled anyone who could type the freedom of using any available typeface and do any kind of distortion. 
-                        It was a disaster of mega proportions. 
-                    </p>
-                </div>
-                <div class="container__type_display container__type_display--silver">
-                    <span class="h1">Jubilee <sup>Silver</sup></span>
-                    <span class="h1 container__type_display__item container__type_display__item--upper">abcdefghijklmnopqrstuvwxyz</span>
-                    <span class="h1">abcdefghijklmnopqrstuvwxyz</span>
-                    <span class="h1">0123456789</span>
-                    <span class="h1">&excl;&commat;&num;&dollar;&percnt;&Hat;&amp;&ast;&lpar;&rpar;&quest;&plus;</span>
-                </div>
-            </div>
-        </section>
-        <section id="colour">
-            <h2>Colour</h2>
-            <p>Tokens for backgrounds, text, fills and other accents</p>
-            <div class="container">
-                <div class="container__colour_display">
-                    <div class="container__colour_display__item container__colour_display__item--bg1">
-                        <h4>Inspiring name</h4>
-                        <div>
-                            <span>#000000</span>
-                            <span>Use case</span>
-                        </div>
-                    </div>
-                    <div class="container__colour_display__item container__colour_display__item--bg2">
-                        <h4>Inspiring name</h4>
-                        <div>
-                            <span>#000000</span>
-                            <span>Use case</span>
-                        </div>
-                    </div>
-                    <div class="container__colour_display__item container__colour_display__item--text">
-                        <h4>Inspiring name</h4>
-                        <div>
-                            <span>#000000</span>
-                            <span>Use case</span>
-                        </div>
-                    </div>
-                    <div class="container__colour_display__item container__colour_display__item--accent1">
-                        <h4>Inspiring name</h4>
-                        <div>
-                            <span>#000000</span>
-                            <span>Use case</span>
-                        </div>
-                    </div>
-                    <div class="container__colour_display__item container__colour_display__item--accent2">
-                        <h4>Inspiring name</h4>
-                        <div>
-                            <span>#000000</span>
-                            <span>Use case</span>
-                        </div>
-                    </div>
-                    <div class="container__colour_display__item container__colour_display__item--accent3">
-                        <h4>Inspiring name</h4>
-                        <div>
-                            <span>#000000</span>
-                            <span>Use case</span>
-                        </div>
+                    <span class="nav__overlay__wrapper__items__divider"></span>
+                    <div class="nav__overlay__wrapper__items__group">
+                        <h2>Resources</h2>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/nethen/iat339_p2" target="_blank" onclick="closeMenu()">Github</a>
+                            </li>
+                            <li>
+                                <a href="/style.html#citations" onclick="closeMenu()">Citations</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="grids">
-            <h2>Grids</h2>
-            <p>Grids, spacing and containers to organize content across the site.</p>
-            <div class="container">
 
-            </div>
-        </section>
-        <section id="spacing">
-            <h2>Spacing</h2>
-            <p>Grids, spacing and containers to organize content across the site.</p>
-            <div class="container">
+            <!-- SVG icons converted to inline using https://www.bayustudio.com/app/svg-encoder/ -->
+            <button class="nav__overlay__menu" onclick="toggleMenu()">
+                <svg class="nav__overlay__menu__img nav__overlay__menu__img--active" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z"/>
+                </svg>
 
+                <svg class="nav__overlay__menu__img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+    <section id="overview">
+        <h1>Cheongsudang Cafe</h1>
+        <p>Descriptor about the cafe itself.</p>
+    </section>
+    <section id="typography">
+        <h2>Typography</h2>
+        <p>Tokens for text sizing and styling to create a clear structure</p>
+        <div class="container">
+            <div class="container__desc">
+                <div class="container__desc__divider"></div>
+                <h3>Headings</h3>
+                <p>
+                    The advent of the computer generated the phenomena called desktop publishing.
+                    This enabled anyone who could type the freedom of using any available typeface and do any kind of
+                    distortion.
+                    It was a disaster of mega proportions.
+                </p>
             </div>
-        </section>
-        <section id="elements">
-            <h2>Elements</h2>
-            <p>Combinations of tokens to convey content and interactive objects.</p>
-            <div class="container">
+            <div class="container__type_display container__type_display--platinum">
+                <span class="h1">Jubilee <sup>Platinum</sup></span>
+                <span class="h1 container__type_display__item container__type_display__item--upper">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="h1">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="h1">0123456789</span>
+                <span class="h1">&excl;&commat;&num;&dollar;&percnt;&Hat;&amp;&ast;&lpar;&rpar;&quest;&plus;</span>
+            </div>
+            <div class="container__desc">
+                <div class="container__desc__divider"></div>
+                <h3>Body paragraphs</h3>
+                <p>
+                    The advent of the computer generated the phenomena called desktop publishing.
+                    This enabled anyone who could type the freedom of using any available typeface and do any kind of
+                    distortion.
+                    It was a disaster of mega proportions.
+                </p>
+            </div>
+            <div class="container__type_display container__type_display--silver">
+                <span class="h1">Jubilee <sup>Silver</sup></span>
+                <span class="h1 container__type_display__item container__type_display__item--upper">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="h1">abcdefghijklmnopqrstuvwxyz</span>
+                <span class="h1">0123456789</span>
+                <span class="h1">&excl;&commat;&num;&dollar;&percnt;&Hat;&amp;&ast;&lpar;&rpar;&quest;&plus;</span>
+            </div>
+        </div>
+    </section>
+    <section id="colour">
+        <h2>Colour</h2>
+        <p>Tokens for backgrounds, text, fills and other accents</p>
+        <div class="container">
+            <div class="container__colour_display">
+                <div class="container__colour_display__item container__colour_display__item--bg1">
+                    <h4>Inspiring name</h4>
+                    <div>
+                        <span>#000000</span>
+                        <span>Use case</span>
+                    </div>
+                </div>
+                <div class="container__colour_display__item container__colour_display__item--bg2">
+                    <h4>Inspiring name</h4>
+                    <div>
+                        <span>#000000</span>
+                        <span>Use case</span>
+                    </div>
+                </div>
+                <div class="container__colour_display__item container__colour_display__item--text">
+                    <h4>Inspiring name</h4>
+                    <div>
+                        <span>#000000</span>
+                        <span>Use case</span>
+                    </div>
+                </div>
+                <div class="container__colour_display__item container__colour_display__item--accent1">
+                    <h4>Inspiring name</h4>
+                    <div>
+                        <span>#000000</span>
+                        <span>Use case</span>
+                    </div>
+                </div>
+                <div class="container__colour_display__item container__colour_display__item--accent2">
+                    <h4>Inspiring name</h4>
+                    <div>
+                        <span>#000000</span>
+                        <span>Use case</span>
+                    </div>
+                </div>
+                <div class="container__colour_display__item container__colour_display__item--accent3">
+                    <h4>Inspiring name</h4>
+                    <div>
+                        <span>#000000</span>
+                        <span>Use case</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="grids">
+        <h2>Grids</h2>
+        <p>Grids, spacing and containers to organize content across the site.</p>
+        <div class="container">
 
-                <!-- in-text link -->
+        </div>
+    </section>
+    <section id="spacing">
+        <h2>Spacing</h2>
+        <p>Grids, spacing and containers to organize content across the site.</p>
+        <div class="container">
+
+        </div>
+    </section>
+    <section id="elements">
+        <h2>Elements</h2>
+        <p>Combinations of tokens to convey content and interactive objects.</p>
+        <div class="container">
+            <div class="container__desc">
+                <div class="container__desc__divider"></div>
+                <h3>Text Input field & label</h3>
+            </div>
+          
+            <!-- in-text link -->
                 <hr class="topSectionLine">
                 <h3>In-text link</h3>
                 <p>
@@ -206,10 +214,26 @@
                 <a  target = "_blank" href="https://www.instagram.com/cheongsudang_/">
                     <img src = "assets/img/GardenInTheCity.png" alt="AmorePacific Skincare Products" width="438" height="275">
                 </a>
-            
 
-
+            <label class="label__text__input" for="exampletext">text</label>
+            <input class="label__text__input text__input" type="text" id="exampletext" name="exampletext"
+                   placeholder="text">
+            <div class="container__desc">
+                <div class="container__desc__divider"></div>
+                <h3>Radio button</h3>
             </div>
+            <div class="input__radio__overlay">
+                <div>
+                    <input type="radio" id="visaexample" name="radioexample">
+                </div>
+                <div>
+                    <label for="visaexample">Visa</label>
+                </div>
+                <div>
+                    <input class="" type="radio" id="masterexample" name="radioexample">
+                </div>
+                <div>
+
         </section>
         <section id="structures">
             <h2>Structures</h2>
@@ -217,8 +241,36 @@
             <div class="container">
                 <hr class="topSectionLine">
 
+
+                    <label for="visaexample">Mastercard</label>
+                </div>
+                <div>
+                    <input class="" type="radio" id="debitexample" name="radioexample">
+                </div>
+                <div>
+                    <label for="visaexample">Debit</label>
+                </div>
+                <div>
+                <input class="" type="radio" id="paypalexample" name="radioexample">
+                </div>
+                <div>
+                    <label for="visaexample">Paypal</label>
+                </div>
             </div>
-        </section>
-    </main>
+            <br>
+            <div class="container__desc">
+                <div class="container__desc__divider"></div>
+                <h3>Image as a link</h3>
+            </div>
+        </div>
+    </section>
+    <section id="structures">
+        <h2>Structures</h2>
+        <p>Combinations of elements arranged to create larger content groups.</p>
+        <div class="container">
+
+        </div>
+    </section>
+</main>
 </body>
 </html>
