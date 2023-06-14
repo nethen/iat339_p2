@@ -58,6 +58,7 @@ h2, .h2{
 h3, .h3{
     font-family: "Jubilee";
     font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 p{
@@ -386,3 +387,41 @@ input[type="radio"]:checked::before{
         grid-column: 1/-2;
     }
 }
+
+
+/* sab edits */
+.button{
+    border: 1px solid var(--bg-color2);
+    background-color: transparent;
+    text-align: center;
+    margin: 4px 2px;
+    color:var(--bg-color2);
+    padding: 0.5rem 2rem;
+    border-radius: 0.8125rem;
+    font-family: "Jubilee Platinum";
+    font-size: medium;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover, .button:focus, .button:active{
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+}
+
+a{
+    color: var(--bg-color2);
+    text-decoration: none;
+}
+
+/* divder line between the components */
+.sectionLine{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* diveder line under the big headings */
+.topSectionLine{
+    margin-bottom: 2rem;;
+}
+
