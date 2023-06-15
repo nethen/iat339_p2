@@ -69,17 +69,24 @@ p{
     margin-bottom: 1rem;
 }
 
-section{
+main{
     padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+main > header,
+main > section{
+    grid-column: 1/-1;
 }
 
 img{
     width: 100%;
     height: auto;
 }
-.nav{
-    padding: 1rem;
-}
+
 
 .nav__overlay{
     display: flex;
@@ -177,13 +184,18 @@ img{
 }
 
 main > section[id] .container .container__desc .container__desc__divider{
-    border-top: 1px var(--text-primary) solid;
+    color: var(--text-primary);
+    width: 100%;
 }
 
 main > section[id] .container .container__desc{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+main > section[id] .container .container__display{
     margin-bottom: 2rem;
 }
 
@@ -247,6 +259,12 @@ main > section[id] .container .container__display.container__display--color .con
 
 main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
     background: var(--accent3);
+}
+
+main > section[id] .container .container__display.container__display--grid{
+    min-height: 4rem;
+    background: var(--bg-color2);
+
 }
 
 main > section[id] .container .container__display .container__display--spacing{
@@ -409,12 +427,18 @@ a:hover{
         position: sticky;
         top: 0;
     }
+    
     .nav__overlay{
         position: absolute;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
+
+    .nav .nav__overlay .nav__overlay__logo {
+        font-size: min(2.5vw, 1.25rem);
+    }
+
     .nav .nav__overlay__wrapper {
         margin-top: 0;
         display: flex;
@@ -431,7 +455,6 @@ a:hover{
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 1rem;
-        margin-bottom: 2rem;
     }
     main > section[id] .container .container__display--no_gap{
         gap: 0;
