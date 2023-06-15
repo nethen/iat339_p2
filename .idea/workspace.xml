@@ -5,6 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="382a85b2-ff7d-4b35-b3b9-cd22b980642c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/img/coffee_pot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/cutlery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/french_press.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/glass_teapot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/large_totebag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/matcha_set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/mug_set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/mugs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/tea_pot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/tote_bag.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.html" beforeDir="false" afterPath="$PROJECT_DIR$/style.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/main.css" afterDir="false" />
@@ -31,7 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "alex",
-    "last_opened_file_path": "C:/Users/Alex luowan/Documents/GitHub/iat339_p2",
+    "last_opened_file_path": "C:/Users/Alex luowan/Documents/GitHub/iat339_p2/assets/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -39,6 +49,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex luowan\Documents\GitHub\iat339_p2\assets\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex luowan\Documents\GitHub\iat339_p2\assets\img" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686462797742</updated>
       <workItem from="1686718619460" duration="6232000" />
+      <workItem from="1686778007658" duration="8272000" />
     </task>
     <servers />
   </component>

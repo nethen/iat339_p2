@@ -183,15 +183,51 @@
         <h2>Elements</h2>
         <p>Combinations of tokens to convey content and interactive objects.</p>
         <div class="container">
+
+            <div class="container__desc">
+                <div class="container__desc__divider"></div>
+                <h3>Text Input field & label</h3>
+            </div>
+            <label class="label__text__input" for="exampletext">text</label>
+            <input class="label__text__input text__input" type="text" id="exampletext" name="exampletext"
+                   placeholder="text">
+
+
+
           
+
             <!-- in-text link -->
-                <hr class="topSectionLine">
-                <h3>In-text link</h3>
-                <p>
-                    Check out our Instagram <a target = "_blank" href="https://www.instagram.com/cheongsudang_/">@cheongsudang_</a> 
-                </p>
+            <hr class="topSectionLine">
+            <h3>In-text link</h3>
+            <p>
+                Check out our Instagram <a target="_blank" href="https://www.instagram.com/cheongsudang_/">@cheongsudang_</a>
+            </p>
 
             <!-- navigation link -->
+
+            <hr class="sectionLine">
+            <h3>Navigation Link</h3>
+            <nav>
+                <a href="/style.html" onclick="closeMenu()">Overview</a>
+            </nav>
+
+            <!-- buttons -->
+            <hr class="sectionLine">
+            <h3>Buttons</h3>
+            <button class="button L">Reset</button>
+            <button class="button R" onclick="alert('Success! you have submitted')">Submit</button>
+
+            <!-- linked img -->
+            <hr class="sectionLine">
+            <h3>Linked Image</h3>
+            <a target="_blank" href="https://www.instagram.com/cheongsudang_/">
+                <img src="assets/img/GardenInTheCity.png" alt="AmorePacific Skincare Products" width="438" height="275">
+            </a>
+
+            <div class="container__desc">
+                <div class="container__desc__divider"></div>
+                <h3>Radio button</h3>
+            </div>
                 <hr class="sectionLine">
                 <h3>Navigation Link</h3>
                 <nav>
@@ -221,6 +257,7 @@
             <!-- radio button -->
             <hr class="sectionLine">
             <h3>Radio button</h3>
+
             <div class="input__radio__overlay">
                 <div>
                     <input type="radio" id="visaexample" name="radioexample">
@@ -232,19 +269,24 @@
                     <input class="" type="radio" id="masterexample" name="radioexample">
                 </div>
                 <div>
+
+
+                    <label for="masterexample">Mastercard</label>
+
                     <label for="visaexample">Mastercard</label>
+
                 </div>
                 <div>
                     <input class="" type="radio" id="debitexample" name="radioexample">
                 </div>
                 <div>
-                    <label for="visaexample">Debit</label>
+                    <label for="debitexample">Debit</label>
                 </div>
                 <div>
-                <input class="" type="radio" id="paypalexample" name="radioexample">
+                    <input class="" type="radio" id="paypalexample" name="radioexample">
                 </div>
                 <div>
-                    <label for="visaexample">Paypal</label>
+                    <label for="paypalexample">Paypal</label>
                 </div>
             </div>
             <hr class="sectionLine">
@@ -255,6 +297,74 @@
     <section id="structures">
         <h2>Structures</h2>
         <p>Combinations of elements arranged to create larger content groups.</p>
+
+        <div class="container">
+            <div class="container__desc">
+                <div class="container__desc__divider"></div>
+                <h3>Product listing</h3>
+            </div>
+            <div class="container__grid--3">
+                <div class="product_listing">
+                    <img src="assets/img/mugs.png">
+                    <p>item name</p>
+                    <p>$20</p>
+                </div>
+                <div>
+                    <img src="assets/img/cutlery.png">
+                    <p>item name</p>
+                    <p>$20</p>
+                </div>
+                <div>
+                    <img src="assets/img/coffee_pot.png">
+                    <p>item name</p>
+                    <p>$20</p>
+                </div>
+                <div>
+                    <img src="assets/img/mug_set.png">
+                    <p>item name</p>
+                    <p>$20</p>
+                </div>
+                <div>
+                    <img src="assets/img/matcha_set.png">
+                    <p>item name</p>
+                    <p>$20</p>
+                </div>
+                <div>
+                    <img src="assets/img/glass_teapot.png">
+                    <p>item name</p>
+                    <p>$20</p>
+                </div>
+                <div>
+                    <img src="assets/img/french_press.png">
+                    <p>item name</p>
+                    <p>$20</p>
+                </div>
+                <div>
+                    <img src="assets/img/tote_bag.png">
+                    <p>item name</p>
+                    <p>$20</p>
+
+                </div>
+                <div>
+                    <img src="assets/img/tea_pot.png">
+                    <p>item name</p>
+                    <p>$20</p>
+                </div>
+            </div>
+            <div class="container__grid--2">
+                <div>
+                    <img src="assets/img/large_totebag.png">
+                </div>
+                <div class="container__product__page__details">
+                <h2>Canvas Tote Bag</h2>
+                <p>$20 CAD</p>
+                <br>
+                <p>This is a laptop utility totebag, suitable for any occasions. Durable, lightweight yet practical.</p>
+                <br>
+                <a href="#"><p>view full detail description</p></a>
+                    <button class="button R" onclick="alert('You have added a Tote Bag to Cart!')">Add to cart</button>
+                </div>
+            </div>
         <hr class="topSectionLine">
 
         <h3>Checkout cart</h3>
