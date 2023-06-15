@@ -68,7 +68,6 @@ p{
 section{
     padding: 2rem 1rem;
 }
-
 .nav{
     padding: 1rem;
 }
@@ -239,6 +238,7 @@ main > section[id] .container .container__colour_display .container__colour_disp
     background: var(--accent3);
 }
 
+/*edits made by alex*/
 input[type="radio"] {
     -webkit-appearance: none;
     appearance:none;
@@ -290,10 +290,44 @@ input[type="radio"]:checked::before{
     display:flex;
     gap: 0.5rem;
 }
+/*edits made by alex*/
+
+
+.container__product__page__details{
+    margin-top: 13rem;
+}
+
+
+a:hover{
+  text-decoration: underline;
+}
+
+
 
 
 @media screen and (min-width: 36rem) {
 
+    /*edits made by alex*/
+    .container__grid--3{
+        display:grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: 3fr;
+        gap: 1rem;
+        max-width: 40.8125rem;
+
+    }
+
+    .container__grid--2{
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: 2fr;
+        gap: 1rem;
+        max-width: 55.0625rem;
+        margin-top:5rem;
+
+    }
+
+    /*edits made by alex*/
     h1, .h1{
         font-size: 4rem;
         margin-bottom: 0.5rem;
