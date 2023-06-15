@@ -66,6 +66,7 @@ h3, .h3{
 }
 
 p{
+    line-height: 1.375;
     margin-bottom: 1rem;
 }
 
@@ -261,10 +262,27 @@ main > section[id] .container .container__display.container__display--color .con
     background: var(--accent3);
 }
 
-main > section[id] .container .container__display.container__display--grid{
+main > section[id] .container .container__display .container__display--grid__wrapper{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+main > section[id] .container .container__display .container__display--grid__wrapper--desktop{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+main > section[id] .container .container__display .container__display--grid__item{
     min-height: 4rem;
     background: var(--bg-color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+main > section[id] .container .container__display{
+    grid-column: 1/-1;
 }
 
 main > section[id] .container .container__display .container__display--spacing{
@@ -425,7 +443,7 @@ a:hover{
 
     .nav{
         position: sticky;
-        top: 0;
+        top: 2rem;
     }
     
     .nav__overlay{
@@ -504,6 +522,10 @@ a:hover{
     }
 
     main > section[id] .container .container__desc .container__desc__divider{
+        grid-column: 1/-2;
+    }
+
+    main > section[id] .container .container__display .container__display--grid__wrapper{
         grid-column: 1/-2;
     }
 }
