@@ -68,6 +68,11 @@ p{
 section{
     padding: 2rem 1rem;
 }
+
+img{
+    width: 100%;
+    height: auto;
+}
 .nav{
     padding: 1rem;
 }
@@ -294,7 +299,9 @@ input[type="radio"]:checked::before{
 
 
 .container__product__page__details{
-    margin-top: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 
