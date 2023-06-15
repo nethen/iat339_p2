@@ -187,65 +187,108 @@ main > section[id] .container .container__desc{
     margin-bottom: 2rem;
 }
 
-main > section[id] .container .container__type_display{
+main > section[id] .container .container__display.container__display--type{
     margin-bottom: 2rem;
 }
 
-main > section[id] .container .container__type_display span,
-main > section[id] .container .container__colour_display span{
+main > section[id] .container .container__display.container__display--type span,
+main > section[id] .container .container__display.container__display--color span{
     display: block;
+    grid-column: 1/-1;;
     overflow: hidden;
+    line-height: 1.25;;
 }
 
-main > section[id] .container .container__type_display span sub,
-main > section[id] .container .container__type_display span sup{
+main > section[id] .container .container__display.container__display--type span sub,
+main > section[id] .container .container__display.container__display--type span sup{
     font-size: 50%;
     opacity: 50%;
 }
 
-main > section[id] .container .container__type_display.container__type_display--platinum span{
+main > section[id] .container .container__display.container__display--type.container__display--type--platinum span{
     font-family: "Jubilee Platinum";
 }
 
-main > section[id] .container .container__type_display.container__type_display--silver span{
+main > section[id] .container .container__display.container__display--type.container__display--type--silver span{
     font-family: "Jubilee";
 }
 
-main > section[id] .container .container__type_display__item.container__type_display__item--upper{
+main > section[id] .container .container__display .container__display--type__item.container__display--type__item--upper{
     text-transform: uppercase;
 }
 
-main > section[id] .container .container__colour_display .container__colour_display__item{
+main > section[id] .container .container__display.container__display--color .container__display--color__item{
     padding: 1rem;
     display: flex;
     justify-content: space-between;
 }
 
-main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--bg1{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--bg1{
     background: var(--bg-color1);
     border: 1px solid var(--bg-color2);
 }
 
-main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--bg2{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--bg2{
     background: var(--bg-color2);
 }
 
-main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--text{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--text{
     background: var(--text-primary);
     color: var(--bg-color1);
 }
 
-main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--accent1{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent1{
     background: var(--accent1);
 }
 
-main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--accent2{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent2{
     background: var(--accent2);
 }
 
-main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--accent3{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
     background: var(--accent3);
 }
+
+main > section[id] .container .container__display .container__display--spacing{
+    grid-column: 3/-1;
+}
+
+main > section[id] .container .container__display .container__display--spacing__item{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample{
+    background: var(--bg-color2);
+}
+
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--1{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+main > section[id] .container .container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--2{
+    width: 1rem;
+    height: 1rem;
+}
+
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--3{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--4{
+    width: 2rem;
+    height: 2rem;
+}
+
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--5{
+    width: 3rem;
+    height: 3rem;
+}
+
 
 /*edits made by alex*/
 input[type="radio"] {
@@ -309,6 +352,8 @@ input[type="radio"]:checked::before{
 a:hover{
   text-decoration: underline;
 }
+
+
 
 
 
@@ -381,11 +426,15 @@ a:hover{
         display: none;
     }
     
-    main > section[id] .container .container__desc{
+    main > section[id] .container .container__desc,
+    main > section[id] .container .container__display{
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 1rem;
         margin-bottom: 2rem;
+    }
+    main > section[id] .container .container__display--no_gap{
+        gap: 0;
     }
 
     main > section[id] .container .container__desc *:nth-child(2){
@@ -400,18 +449,23 @@ a:hover{
         grid-column: 1/-1;
     }
 
-    main > section[id] .container .container__colour_display{
+    main > section[id] .container .container__display.container__display--color{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min(40vw, 20rem) 1fr 1fr 1fr;
     }
 
-    main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item.container__colour_display__item--text{
+    main > section[id] .container .container__display.container__display--color.container__display--color__item.container__display--color__item.container__display--color__item--text{
         grid-row: 2/4
     }
 
-    main > section[id] .container .container__colour_display .container__colour_display__item.container__colour_display__item--accent3{
+    main > section[id] .container .container__display.container__display--color.container__display--color__item.container__display--color__item--accent3{
        grid-column: 1/-1;
+    }
+
+    main > section[id] .container .container__display .container__display--spacing__item{
+        margin-bottom: 0;
+        grid-column: 3/-1;
     }
 }
 
@@ -421,7 +475,8 @@ a:hover{
 }
 
 @media screen and (min-width: 62rem) {
-    main > section[id] .container .container__desc *:not(:nth-child(2)){
+    main > section[id] .container .container__desc *:not(:nth-child(2)),
+    main > section[id] .container .container__display .container__display--spacing__item{
         grid-column: 3/-2;
     }
 
