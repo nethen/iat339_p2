@@ -73,7 +73,7 @@
     </header>
     <section id="overview">
         <h1>Cheongsudang Cafe</h1>
-        <p>Descriptor about the cafe itself.</p>
+        <p>Cheongsudang is a Hanok-style café in the Ikseon-dong, South Korea. The café focuses on the value of relaxing and enjoying the moment. Time moves slowly at Cheongsudang, come enjoy your time winding down in a quiet garden, escaping life in the busy city. Cheongsudang offers a variety of coffee and tea-based drinks, with their specialty in desserts, including warm made-to-order soufflés.</p>
     </section>
     <section id="typography">
         <h2>Typography</h2>
@@ -183,10 +183,6 @@
         <h2>Elements</h2>
         <p>Combinations of tokens to convey content and interactive objects.</p>
         <div class="container">
-            <div class="container__desc">
-                <div class="container__desc__divider"></div>
-                <h3>Text Input field & label</h3>
-            </div>
           
             <!-- in-text link -->
                 <hr class="topSectionLine">
@@ -195,33 +191,36 @@
                     Check out our Instagram <a target = "_blank" href="https://www.instagram.com/cheongsudang_/">@cheongsudang_</a> 
                 </p>
 
-                <!-- navigation link -->
+            <!-- navigation link -->
                 <hr class="sectionLine">
                 <h3>Navigation Link</h3>
                 <nav>
                     <a href="/style.html" onclick="closeMenu()">Overview</a>
                 </nav>
 
-                <!-- buttons -->
+            <!-- buttons -->
                 <hr class="sectionLine">
                 <h3>Buttons</h3>
                 <button class="button L">Reset</button>
                 <button class="button R" onclick="alert('Success! you have submitted')">Submit</button>
 
-                <!-- linked img -->
+            <!-- linked img -->
                 <hr class="sectionLine">
                 <h3>Linked Image</h3>
                 <a  target = "_blank" href="https://www.instagram.com/cheongsudang_/">
                     <img src = "assets/img/GardenInTheCity.png" alt="AmorePacific Skincare Products" width="438" height="275">
                 </a>
 
-            <label class="label__text__input" for="exampletext">text</label>
-            <input class="label__text__input text__input" type="text" id="exampletext" name="exampletext"
-                   placeholder="text">
-            <div class="container__desc">
-                <div class="container__desc__divider"></div>
-                <h3>Radio button</h3>
-            </div>
+            <!-- Input field and label -->
+            <hr class="sectionLine">
+            <h3>Input Text Field & Label</h3>
+                
+                <label class="label__text__input" for="exampletext">First Name</label>
+                <input class="label__text__input text__input" type="text" id="exampletext" name="exampletext" placeholder="Jane">
+
+            <!-- radio button -->
+            <hr class="sectionLine">
+            <h3>Radio button</h3>
             <div class="input__radio__overlay">
                 <div>
                     <input type="radio" id="visaexample" name="radioexample">
@@ -248,19 +247,186 @@
                     <label for="visaexample">Paypal</label>
                 </div>
             </div>
-            <br>
-            <div class="container__desc">
-                <div class="container__desc__divider"></div>
-                <h3>Image as a link</h3>
-            </div>
+            <hr class="sectionLine">
         </div>
     </section>
+
+
     <section id="structures">
         <h2>Structures</h2>
         <p>Combinations of elements arranged to create larger content groups.</p>
-        <div class="container">
+        <hr class="topSectionLine">
 
+        <h3>Checkout cart</h3>
+
+        <div class="checkout-grid">
+            <!-- item 1 in cart -->
+                <div class="itemAmount">
+                    <h2>1x</h2>
+                </div>
+
+                <div class="itemName">
+                    <h2>Shopping Cart</h2>
+                </div>
+
+                <div class="itemCost">
+                    <h2>$20.00 CAD</h2>
+                </div>
+
+                <div class="itemRemove">
+                    <h3>remove</h3>
+                </div>
+
+                <!-- item 2 in cart -->
+                <div class="itemAmount">
+                    <h2>1x</h2>
+                </div>
+
+                <div class="itemName">
+                    <h2>Shopping Cart</h2>
+                </div>
+
+                <div class="itemCost">
+                    <h2>$35.00 CAD</h2>
+                </div>
+
+                <div class="itemRemove">
+                    <h3>remove</h3>
+                </div>
         </div>
+
+
+
+
+        <hr class="sectionLine">
+        <h3>Payment Form</h3>
+        <!-- grid  -->
+        <form method="post" action="#">   
+            <div class="grid-con">
+                <h3 class="itemLeft h3-payment">CONTACT</h3>
+
+                <!-- first name -->
+                <div class="itemLeft">
+                    <label class="label__text__input" for="payment-form">First Name</label>
+                    <input class="label__text__input text__input" type="text" id="payment-form" name="payment-form" placeholder="Jane">
+                </div>
+
+                <!-- last name -->
+                <div class="itemRight">
+                    <label class="label__text__input" for="payment-form">Last Name</label>
+                    <input class="label__text__input text__input" type="text" id="payment-form" name="payment-form" placeholder="Doe">
+                </div>
+
+                <!-- email -->
+                <div class="itemLong">
+                    <label class="label__text__input" for="payment-form">Email</label>
+                    <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="JaneDoe@gmail.com">
+                </div>
+            
+
+                <!-- biling -->
+                <h3 class="itemLeft h3-payment">BILLING ADDRESS</h3>
+  
+                <div class="itemLong">
+                    <label class="label__text__input" for="payment-form">Street Address</label>
+                    <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="1234 University Dr.">
+                </div>
+                
+                <div class="itemLeft">
+                    <label class="label__text__input" for="payment-form">Country</label> 
+                                
+                    <!-- source for drop down: https://www.w3schools.com/Css/css_dropdowns.asp -->
+                    <select class="label__text__input text__input_drop"  name="country" id="payment-form">
+                    <option value="Select Country">Select Country</option>
+                    <option value="Canada">Canada</option>
+                    <option value="International">International</option>
+                    </select>
+                </div>
+
+                <div class="itemRight">
+                    <label class="label__text__input" for="payment-form">Province</label> 
+                                
+                    <!-- source for drop down: https://www.w3schools.com/Css/css_dropdowns.asp -->
+                    <select class="label__text__input text__input_drop"  name="province" id="payment-form">
+                        <option value="Select Province">Select Province</option>
+                        <option value="BC">BC</option>
+                        <option value="Alberta">Alberta</option>
+                        <option value="Saskatchewan">Saskatchewan</option>
+                        <option value="Manitoba">Manitoba</option>
+                        <option value="Ontario">Ontario</option>
+                        <option value="Quebec">Quebec</option>
+                        <option value="Internatinoal">International</option>
+                    </select>
+                </div>
+
+                <div class="itemLeft">
+                    <label class="label__text__input" for="payment-form">City</label>
+                    <input class="label__text__input text__input" type="text" id="payment-form" name="payment-form" placeholder="Vancouver">
+                </div>
+
+                <div class="itemRight">
+                    <label class="label__text__input" for="payment-form">Postal Code</label>
+                    <input class="label__text__input text__input" type="text" id="payment-form" name="payment-form" placeholder="V5A 1S6">
+                </div>
+
+                <div class="itemLeft">
+                    <input type="checkbox" name="items" value="SameAsBillingAddress" notchecked> Billing address same as shipping? 
+                </div>
+             
+                <h3 class="itemLeft h3-payment">PAYMENT METHOD</h3>
+
+                <div class="itemLong">
+                    <div class="input__radio__overlay">
+                        <div>
+                            <input type="radio" id="visaexample" name="radioexample">
+                        </div>
+                        <div>
+                            <label for="visaexample">Visa</label>
+                        </div>
+                        <div>
+                            <input class="" type="radio" id="masterexample" name="radioexample">
+                        </div>
+                        <div>
+                            <label for="visaexample">Mastercard</label>
+                        </div>
+                        <div>
+                            <input class="" type="radio" id="debitexample" name="radioexample">
+                        </div>
+                        <div>
+                            <label for="visaexample">Debit</label>
+                        </div>
+                        <div>
+                            <input class="" type="radio" id="paypalexample" name="radioexample">
+                        </div>
+                        <div>
+                            <label for="visaexample">Paypal</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="itemLong">
+                    <label class="label__text__input" for="payment-form">Card Holder Name</label>
+                    <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Jane Doe">
+                </div>
+                
+                <div class="itemLeft">
+                    <label class="label__text__input" for="payment-form">Card Number</label>
+                    <input class="label__text__input text__input" type="text" id="payment-form" name="payment-form" placeholder="123 456 7890">
+                </div>
+
+                <div class="itemRight">
+                    <label class="label__text__input" for="payment-form">CVC</label>
+                    <input class="label__text__input text__input" type="text" id="payment-form" name="payment-form" placeholder="XXX">
+                </div>
+                
+                <div class="itemLeft">
+                    <button class="button L" type="reset">Reset</button>
+                    <button class="button R" type="submit" onclick="alert('Success! you have submitted')">Submit</button>
+                </div>
+            </div>
+
+        </form>
+
     </section>
 </main>
 </body>

@@ -273,6 +273,7 @@ input[type="radio"]:checked::before{
     margin-top: 1em;
 }
 
+/* input text field */
 .label__text__input{
     display:block;
     margin-bottom: 1em;
@@ -423,5 +424,93 @@ a{
 /* diveder line under the big headings */
 .topSectionLine{
     margin-bottom: 2rem;;
+}
+
+
+/* sabs edits pt 2 */
+
+/* for the longer input fields */
+.text__input_long{
+    outline: 0;
+    border:none;
+    border-bottom: 2px solid var(--text-primary);
+    background-color:transparent;
+    color: var(--text-primary);
+}
+
+.label__text__input{
+    display:block;
+    width: 80%;
+}
+
+/* drop down form */
+.text__input_drop{
+    outline: 0;
+    border-width: 0 0 0.125rem;
+    border-color: var(--text-primary);
+    background-color:transparent;
+    color: var(--text-primary);
+    padding-left: 0.5rem;
+}
+
+.text__input_drop:hover, .text__input_drop:focus, .text__input_drop:active{
+    transition: all 0.3s ease-out;
+    border-radius: 0.8125rem;
+    background-color: var(--text-primary);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+}
+
+/* payment grid*/
+.grid-con {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: repeat(4, minmax(0, 1fr)); */
+    gap: 1rem;
+    grid-template-rows: auto;
+}
+
+/* contact items */
+.itemLeft{
+    /* background: rebeccapurple; */
+    grid-column: 1;
+}
+
+.itemRight{
+    /* background: var(--accent1); */
+    grid-column: 2;
+}
+
+.itemLong{
+    /* background:#6C4941; */
+    grid-column: 1/span 2;
+}
+
+.h3-payment{
+margin-top:3rem;
+}
+
+/* Checkout grid*/
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 10% 45% 35% 10%;
+    gap: 1rem;
+    grid-template-rows: auto;
+}
+
+.itemAmount{
+    grid-column: 1;
+}
+
+.itemName{
+    grid-column: 2;
+}
+
+.itemCost{
+    grid-column: 3;
+}
+
+.itemRemove{
+    grid-column: 4;
 }
 
