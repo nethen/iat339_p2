@@ -496,11 +496,11 @@ a:hover{
         grid-template-rows: min(40vw, 20rem) 1fr 1fr 1fr;
     }
 
-    main > section[id] .container .container__display.container__display--color.container__display--color__item.container__display--color__item.container__display--color__item--text{
+    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item.container__display--color__item--text{
         grid-row: 2/4
     }
 
-    main > section[id] .container .container__display.container__display--color.container__display--color__item.container__display--color__item--accent3{
+    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
        grid-column: 1/-1;
     }
 
@@ -516,6 +516,18 @@ a:hover{
 }
 
 @media screen and (min-width: 62rem) {
+    main > section[id] .container .container__display.container__display--color{
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    main > section[id] .container .container__display .container__display--color__item{
+        grid-column: span 2;
+    }
+
+    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
+        grid-column: 1/-2;
+     }
+
     main > section[id] .container .container__desc *:not(:nth-child(2)),
     main > section[id] .container .container__display .container__display--spacing__item{
         grid-column: 3/-2;
