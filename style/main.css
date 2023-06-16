@@ -50,20 +50,27 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 }
 
 h1, .h1{
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 0.5rem;
 }
 
 h2, .h2{
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
 h3, .h3{
     font-family: "Jubilee";
-    font-size: 1rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
+
+h4, .h4{
+    font-family: "Jubilee";
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 
 p{
     line-height: 1.375;
@@ -675,3 +682,12 @@ margin-top:3rem;
 }
 
 
+/* header grid */
+.header-grid {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    /* gap: 1rem; */
+    grid-template-rows: auto;
+    align-items: center;
+    /* background-color: #555555; */
+}
