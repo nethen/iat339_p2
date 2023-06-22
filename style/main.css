@@ -37,6 +37,7 @@ body{
     position: relative;
     background: var(--bg-color1);
     color: var(--text-primary);
+    padding-bottom: 4rem;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -50,7 +51,7 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 }
 
 h1, .h1{
-    font-size: 1.5rem;
+    font-size: 7.5vw;
     margin-bottom: 0.5rem;
     grid-column: 1/-1;
 }
@@ -78,10 +79,6 @@ p{
     margin-bottom: 1rem;
 }
 
-main{
-    padding: 0 1rem;
-}
-
 body:not(.style) main > header{
     position: fixed;
     top: 0;
@@ -95,7 +92,7 @@ body:not(.style) main > header{
 body.style main > header,
 main > section{
     grid-column: 1/-1;
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 body:not(.style) main > section{
@@ -210,8 +207,8 @@ img{
 }
 
 main > section.hero{
-    min-height: 100vh;
-    justify-content: flex-end;
+    min-height: calc(100vh - 4rem);
+    align-items: end;
     transition: background 0.3s ease;
 }
 
@@ -219,12 +216,21 @@ main > section.hero.hero--active{
     background: white;
 }
 
-main > section.hero h1{
-    margin-top: auto;
-}
 
 main > section.hero .hero__location{
-    grid-column: 1/-1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0rem;
+    padding: 1rem;
+    background: var(--bg-color1);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap : 0.5rem;
+}
+
+main > section.hero .hero__location a{
+    grid-column: 2/-1;
 }
 
 main > section[id] .container .container__desc .container__desc__divider{
@@ -439,6 +445,11 @@ a:hover{
 
 @media screen and (min-width: 36rem) {
 
+    main > section.hero .hero__location{
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap : 1rem;
+    }
+
     /*edits made by alex*/
     .container__grid--3{
         display:grid;
@@ -460,10 +471,6 @@ a:hover{
     }
 
     /*edits made by alex*/
-    h1, .h1{
-        font-size: 4rem;
-        margin-bottom: 0.5rem;
-    }
 
     h2, .h2{
         font-size: 2.5rem;
@@ -576,12 +583,15 @@ a:hover{
 }
 
 @media screen and (min-width: 48rem) {
-    
-
+    h1, .h1{
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
-    body:not(.style) main > section.hero h1{
+    body:not(.style) main > section h1.h1--hero,
+    .h1.h1--hero{
         grid-column: 1/5;
     }
 
@@ -612,7 +622,8 @@ a:hover{
 }
 
 @media screen and (min-width: 90rem) {
-    body:not(.style) main > section.hero h1{
+    body:not(.style) main > section h1.h1--hero,
+    .h1.h1--hero{
         grid-column: 1/4;
     }
 }
