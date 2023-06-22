@@ -50,8 +50,9 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 }
 
 h1, .h1{
-    font-size: 4rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    grid-column: 1/-1;
 }
 
 h2, .h2{
@@ -61,7 +62,7 @@ h2, .h2{
 
 h3, .h3{
     font-family: "Jubilee";
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
@@ -79,10 +80,6 @@ p{
 
 main{
     padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: 1fr;
-    gap: 1rem;
 }
 
 body:not(.style) main > header{
@@ -99,6 +96,13 @@ body.style main > header,
 main > section{
     grid-column: 1/-1;
     padding: 1rem 0;
+}
+
+body:not(.style) main > section{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    gap: 1rem;
 }
 
 img{
@@ -207,14 +211,20 @@ img{
 
 main > section.hero{
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     transition: background 0.3s ease;
 }
 
 main > section.hero.hero--active{
     background: white;
+}
+
+main > section.hero h1{
+    margin-top: auto;
+}
+
+main > section.hero .hero__location{
+    grid-column: 1/-1;
 }
 
 main > section[id] .container .container__desc .container__desc__divider{
@@ -460,7 +470,7 @@ a:hover{
         margin-bottom: 0.5rem;
     }
 
-    main{
+    body.style main{
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 1fr;
@@ -487,6 +497,14 @@ a:hover{
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+
+    body:not(.style) main > section{
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+        gap: 1rem;
+        margin: 0 auto;
     }
 
     .nav .nav__overlay .nav__overlay__logo {
@@ -558,11 +576,15 @@ a:hover{
 }
 
 @media screen and (min-width: 48rem) {
-
+    
 
 }
 
 @media screen and (min-width: 62rem) {
+    body:not(.style) main > section.hero h1{
+        grid-column: 1/5;
+    }
+
     body.style main > section[id] .container .container__display.container__display--color{
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
@@ -586,6 +608,12 @@ a:hover{
 
     body.style main > section[id] .container .container__display .container__display--grid__wrapper{
         grid-column: 1/-2;
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    body:not(.style) main > section.hero h1{
+        grid-column: 1/4;
     }
 }
 

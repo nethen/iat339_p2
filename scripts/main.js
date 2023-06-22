@@ -36,6 +36,7 @@ const setupObserver = () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting){
                 hero.classList.add("hero--active");
+                console.log(entry.intersectionRatio);
             } else{
                 hero.classList.remove("hero--active");
             }
