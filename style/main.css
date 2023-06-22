@@ -50,8 +50,9 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4{
 }
 
 h1, .h1{
-    font-size: 4rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    grid-column: 1/-1;
 }
 
 h2, .h2{
@@ -61,7 +62,7 @@ h2, .h2{
 
 h3, .h3{
     font-family: "Jubilee";
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
 
@@ -78,16 +79,30 @@ p{
 }
 
 main{
-    padding: 2rem 1rem;
+    padding: 0 1rem;
+}
+
+body:not(.style) main > header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: var(--bg-color1);
+    z-index: 50;
+}
+
+body.style main > header,
+main > section{
+    grid-column: 1/-1;
+    padding: 1rem 0;
+}
+
+body:not(.style) main > section{
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 1fr;
     gap: 1rem;
-}
-
-main > header,
-main > section{
-    grid-column: 1/-1;
 }
 
 img{
@@ -139,25 +154,28 @@ img{
 
 }
 
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items span.nav__overlay__wrapper__items__divider{
+.nav .nav__overlay__wrapper hr.nav__overlay__wrapper__divider{
     display: block;
-    border-top: 1px solid var(--text-primary);
+    color: var(--text-primary);
+    width: 100%;
+    max-width: 4rem;
+    margin-inline: 0;
     
 }
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group,
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group ul {
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
     display: flex;
     list-style-type: none;
     margin-block: 0;
     margin-inline: 0;
     padding-inline-start: 0;
-
     flex-direction: column;
     /* justify-content: end; */
+    text-transform: lowercase;
     gap: 1rem; 
 }
 
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group h2{
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items h2{
     font-size: 1rem;
 }
 
@@ -189,6 +207,24 @@ img{
 
 .nav .nav__overlay button.nav__overlay__menu svg.nav__overlay__menu__img--active{
     display: block;
+}
+
+main > section.hero{
+    min-height: 100vh;
+    justify-content: flex-end;
+    transition: background 0.3s ease;
+}
+
+main > section.hero.hero--active{
+    background: white;
+}
+
+main > section.hero h1{
+    margin-top: auto;
+}
+
+main > section.hero .hero__location{
+    grid-column: 1/-1;
 }
 
 main > section[id] .container .container__desc .container__desc__divider{
@@ -434,30 +470,41 @@ a:hover{
         margin-bottom: 0.5rem;
     }
 
-    main{
+    body.style main{
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 1fr;
         gap: 1rem;
         margin: 0 auto;
+    }
+
+    body.style main{
         max-width: 75rem;
     }
 
-    body > main > section{
+    body.style > main > section{
         grid-column: 2/-1;
     }
 
 
-    .nav{
+    body.style .nav{
         position: sticky;
         top: 2rem;
     }
     
-    .nav__overlay{
+    body.style .nav__overlay{
         position: absolute;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+
+    body:not(.style) main > section{
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-rows: 1fr;
+        gap: 1rem;
+        margin: 0 auto;
     }
 
     .nav .nav__overlay .nav__overlay__logo {
@@ -471,6 +518,17 @@ a:hover{
         padding: 1rem 0;
         /* flex-direction: row; */
     }
+
+    .nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
+    .nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
+        flex-direction: row;
+    }
+
+    body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
+    body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
+        flex-direction: column;
+    }
+
     .nav .nav__overlay button.nav__overlay__menu{
         display: none;
     }
@@ -485,67 +543,77 @@ a:hover{
         gap: 0;
     }
 
-    main > section[id] .container .container__desc *:nth-child(2){
+    body.style main > section[id] .container .container__desc *:nth-child(2){
         grid-column: 1/2;
     }
 
-    main > section[id] .container .container__desc *:not(:nth-child(2)){
+    body.style main > section[id] .container .container__desc *:not(:nth-child(2)){
         grid-column: 3/-1;
     }
 
-    main > section[id] .container .container__desc .container__desc__divider{
+    body.style main > section[id] .container .container__desc .container__desc__divider{
         grid-column: 1/-1;
     }
 
-    main > section[id] .container .container__display.container__display--color{
+    body.style main > section[id] .container .container__display.container__display--color{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min(40vw, 20rem) 1fr 1fr 1fr;
     }
 
-    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item.container__display--color__item--text{
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item.container__display--color__item--text{
         grid-row: 2/4
     }
 
-    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
        grid-column: 1/-1;
     }
 
-    main > section[id] .container .container__display .container__display--spacing__item{
+    body.style main > section[id] .container .container__display .container__display--spacing__item{
         margin-bottom: 0;
         grid-column: 3/-1;
     }
 }
 
 @media screen and (min-width: 48rem) {
-
+    
 
 }
 
 @media screen and (min-width: 62rem) {
-    main > section[id] .container .container__display.container__display--color{
+    body:not(.style) main > section.hero h1{
+        grid-column: 1/5;
+    }
+
+    body.style main > section[id] .container .container__display.container__display--color{
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 
-    main > section[id] .container .container__display .container__display--color__item{
+    body.style main > section[id] .container .container__display .container__display--color__item{
         grid-column: span 2;
     }
 
-    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
         grid-column: 1/-2;
      }
 
-    main > section[id] .container .container__desc *:not(:nth-child(2)),
-    main > section[id] .container .container__display .container__display--spacing__item{
+    body.style main > section[id] .container .container__desc *:not(:nth-child(2)),
+    body.style  main > section[id] .container .container__display .container__display--spacing__item{
         grid-column: 3/-2;
     }
 
-    main > section[id] .container .container__desc .container__desc__divider{
+    body.style main > section[id] .container .container__desc .container__desc__divider{
         grid-column: 1/-2;
     }
 
-    main > section[id] .container .container__display .container__display--grid__wrapper{
+    body.style main > section[id] .container .container__display .container__display--grid__wrapper{
         grid-column: 1/-2;
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    body:not(.style) main > section.hero h1{
+        grid-column: 1/4;
     }
 }
 
