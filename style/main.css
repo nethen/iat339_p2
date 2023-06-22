@@ -63,7 +63,7 @@ h2, .h2{
 
 h3, .h3{
     font-family: "Jubilee";
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -231,6 +231,22 @@ main > section.hero .hero__location{
 
 main > section.hero .hero__location a{
     grid-column: 2/-1;
+}
+
+main > section.news{
+    min-height: 200vh;
+    position: relative;
+}
+
+main > section.news .news__nav{
+    position: sticky;
+    top: 8rem;
+    height: fit-content;
+}
+
+main > section.news .news__item{
+    grid-column: 1/-1;
+    min-height: 1rem;
 }
 
 main > section[id] .container .container__desc .container__desc__divider{
