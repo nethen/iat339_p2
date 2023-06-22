@@ -139,25 +139,28 @@ img{
 
 }
 
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items span.nav__overlay__wrapper__items__divider{
+.nav .nav__overlay__wrapper hr.nav__overlay__wrapper__divider{
     display: block;
     border-top: 1px solid var(--text-primary);
     
 }
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group,
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group ul {
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
     display: flex;
     list-style-type: none;
     margin-block: 0;
     margin-inline: 0;
     padding-inline-start: 0;
-
-    flex-direction: column;
     /* justify-content: end; */
     gap: 1rem; 
 }
 
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group h2{
+body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
+body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
+    flex-direction: column;
+}
+
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items h2{
     font-size: 1rem;
 }
 
@@ -434,7 +437,7 @@ a:hover{
         margin-bottom: 0.5rem;
     }
 
-    main{
+    body.style main{
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 1fr;
@@ -448,12 +451,12 @@ a:hover{
     }
 
 
-    .nav{
+    body.style .nav{
         position: sticky;
         top: 2rem;
     }
     
-    .nav__overlay{
+    body.style .nav__overlay{
         position: absolute;
         flex-direction: column;
         justify-content: flex-start;
