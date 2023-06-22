@@ -78,16 +78,27 @@ p{
 }
 
 main{
-    padding: 2rem 1rem;
+    padding: 0 1rem;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 1fr;
     gap: 1rem;
 }
 
-main > header,
+body:not(.style) main > header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: var(--bg-color1);
+    z-index: 50;
+}
+
+body.style main > header,
 main > section{
     grid-column: 1/-1;
+    padding: 1rem 0;
 }
 
 img{
@@ -141,7 +152,10 @@ img{
 
 .nav .nav__overlay__wrapper hr.nav__overlay__wrapper__divider{
     display: block;
-    border-top: 1px solid var(--text-primary);
+    color: var(--text-primary);
+    width: 100%;
+    max-width: 4rem;
+    margin-inline: 0;
     
 }
 .nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
@@ -151,13 +165,10 @@ img{
     margin-block: 0;
     margin-inline: 0;
     padding-inline-start: 0;
-    /* justify-content: end; */
-    gap: 1rem; 
-}
-
-body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
-body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
     flex-direction: column;
+    /* justify-content: end; */
+    text-transform: lowercase;
+    gap: 1rem; 
 }
 
 .nav .nav__overlay__wrapper .nav__overlay__wrapper__items h2{
@@ -192,6 +203,18 @@ body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
 
 .nav .nav__overlay button.nav__overlay__menu svg.nav__overlay__menu__img--active{
     display: block;
+}
+
+main > section.hero{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background 0.3s ease;
+}
+
+main > section.hero.hero--active{
+    background: white;
 }
 
 main > section[id] .container .container__desc .container__desc__divider{
@@ -437,16 +460,19 @@ a:hover{
         margin-bottom: 0.5rem;
     }
 
-    body.style main{
+    main{
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 1fr;
         gap: 1rem;
         margin: 0 auto;
+    }
+
+    body.style main{
         max-width: 75rem;
     }
 
-    body > main > section{
+    body.style > main > section{
         grid-column: 2/-1;
     }
 
@@ -474,6 +500,17 @@ a:hover{
         padding: 1rem 0;
         /* flex-direction: row; */
     }
+
+    .nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
+    .nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
+        flex-direction: row;
+    }
+
+    body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
+    body.style .nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
+        flex-direction: column;
+    }
+
     .nav .nav__overlay button.nav__overlay__menu{
         display: none;
     }
@@ -488,33 +525,33 @@ a:hover{
         gap: 0;
     }
 
-    main > section[id] .container .container__desc *:nth-child(2){
+    body.style main > section[id] .container .container__desc *:nth-child(2){
         grid-column: 1/2;
     }
 
-    main > section[id] .container .container__desc *:not(:nth-child(2)){
+    body.style main > section[id] .container .container__desc *:not(:nth-child(2)){
         grid-column: 3/-1;
     }
 
-    main > section[id] .container .container__desc .container__desc__divider{
+    body.style main > section[id] .container .container__desc .container__desc__divider{
         grid-column: 1/-1;
     }
 
-    main > section[id] .container .container__display.container__display--color{
+    body.style main > section[id] .container .container__display.container__display--color{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min(40vw, 20rem) 1fr 1fr 1fr;
     }
 
-    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item.container__display--color__item--text{
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item.container__display--color__item--text{
         grid-row: 2/4
     }
 
-    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
        grid-column: 1/-1;
     }
 
-    main > section[id] .container .container__display .container__display--spacing__item{
+    body.style main > section[id] .container .container__display .container__display--spacing__item{
         margin-bottom: 0;
         grid-column: 3/-1;
     }
@@ -526,28 +563,28 @@ a:hover{
 }
 
 @media screen and (min-width: 62rem) {
-    main > section[id] .container .container__display.container__display--color{
+    body.style main > section[id] .container .container__display.container__display--color{
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 
-    main > section[id] .container .container__display .container__display--color__item{
+    body.style main > section[id] .container .container__display .container__display--color__item{
         grid-column: span 2;
     }
 
-    main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
         grid-column: 1/-2;
      }
 
-    main > section[id] .container .container__desc *:not(:nth-child(2)),
-    main > section[id] .container .container__display .container__display--spacing__item{
+    body.style main > section[id] .container .container__desc *:not(:nth-child(2)),
+    body.style  main > section[id] .container .container__display .container__display--spacing__item{
         grid-column: 3/-2;
     }
 
-    main > section[id] .container .container__desc .container__desc__divider{
+    body.style main > section[id] .container .container__desc .container__desc__divider{
         grid-column: 1/-2;
     }
 
-    main > section[id] .container .container__display .container__display--grid__wrapper{
+    body.style main > section[id] .container .container__display .container__display--grid__wrapper{
         grid-column: 1/-2;
     }
 }
