@@ -110,10 +110,25 @@ img{
     height: auto;
 }
 
+.nav{
+    overflow-y: hidden;
+}
+
+.nav .nav__background{
+    position:absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/assets/img/background.png);
+    background-size: cover;
+    /* opacity: 50%; */
+}
 
 .nav__overlay{
     display: flex;
-    /* position: relative; */
+    position: relative;
     justify-content: space-between;;
     align-items: center;
     overflow: auto;
@@ -209,7 +224,7 @@ img{
     display: block;
 }
 
-main > .shadow{
+.shadow{
     position: fixed;
     top: 0;
     left: 0;
@@ -219,7 +234,7 @@ main > .shadow{
     transition: background 0.3s ease;
 }
 
-main > .shadow.shadow--active{
+.shadow.shadow--active{
     background: #0000007F;
 }
 
@@ -248,6 +263,25 @@ main > section.hero .hero__location{
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap : 0.5rem;
+    overflow-y: hidden;
+}
+
+main > section.hero .hero__location__background{
+    position:absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/assets/img/background.png);
+    background-size: cover;
+    background-position: top;
+    opacity: 50%;
+}
+
+main > section.hero .hero__location__background__img{
+    object-fit: cover;
+    object-position: bottom;
 }
 
 main > section.hero .hero__location a{
