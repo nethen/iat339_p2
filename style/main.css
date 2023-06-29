@@ -454,8 +454,24 @@ a:hover{
   text-decoration: underline;
 }
 
+.div__menu--spacing1{
+    margin-top: 15rem;
+}
 
+.div__menu--spacing2{
+    margin-top: 4rem;
+}
 
+.div__menu--listing{
+    list-style: none;
+    padding: 0;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr); /* Assuming 6 columns */
+    gap: 1rem;
+}
 
 
 
@@ -485,6 +501,8 @@ a:hover{
         margin-top:5rem;
 
     }
+
+
 
     /*edits made by alex*/
 
