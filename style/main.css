@@ -47,9 +47,26 @@ main > .background{
     right: 0;
     bottom: 0;
     /* https://www.w3schools.com/cssref/pr_background-attachment.php */
-    background: url(/assets/img/background.png);
+    /* https://css-tricks.com/css-basics-using-multiple-backgrounds/ */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/img/background.png);
     background-size: cover;
     background-attachment: fixed;
+}
+
+
+main > picture.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+}
+
+main > picture.background img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -130,7 +147,7 @@ body:not(.style) .nav{
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(/assets/img/background.png);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/img/background.png);
     background-size: cover;
     /* opacity: 50%; */
 }
@@ -166,8 +183,6 @@ body:not(.style) .nav{
     right: 0;
     bottom: 0;
     z-index: 50;
-    background: url(/assets/img/background.png);
-    background-size: cover;
     /* background-position: 0 -3rem; */
 }
 
@@ -179,7 +194,7 @@ body:not(.style) .nav{
     right: 0;
     height: 100vh;
     /* bottom: 0; */
-    background: url(/assets/img/background.png);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/img/background.png);
     background-size: cover;
 }
 
@@ -310,7 +325,7 @@ main > section.hero .hero__location__background{
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(/assets/img/background.png);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/img/background.png);
     background-size: cover;
     /* opacity: 50%; */
 }

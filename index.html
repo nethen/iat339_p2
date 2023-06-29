@@ -12,7 +12,6 @@
     <main>
         <header class="nav">
         <div class="nav__background"></div>
-        <div class="shadow"></div>
         <nav class="nav__overlay">
             <a class="nav__overlay__logo" href="/">
                 Cheong-su-dang
@@ -50,8 +49,17 @@
             </button>
         </nav>
     </header>
-    <div class="background"></div>
-    <div class="shadow"></div>
+    <!-- <div class="background"></div> -->
+    <picture class="background">
+        <source media="min-width: 90rem" srcset="./assets/img/background.png 1x">
+        <source media="min-width: 62rem" srcset="./assets/img/background_mega.png 1x">
+        <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
+        <img 
+            src="./assets/img/background_mini.png"
+            srcset="./assets/img/background_midi.png 2x, ./assets/img/background_mega.png 3x, ./assets/img/background.png 4x"
+            alt="exterior shot of cheong-su-dang cafe"
+            >
+    </picture>
     <section class="hero">
         <h1 class="h1--hero">A garden in the city in Ikseon-dong, South Korea.</h1>
         <div class="hero__location">
