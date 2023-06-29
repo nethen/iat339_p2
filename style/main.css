@@ -511,19 +511,6 @@ a:hover{
 
     }
 
-    .item--listing{
-        display:flex;
-        flex-direction: row;
-        gap: 2rem;
-        width: 18.125rem;
-    }
-
-    .item--listing--container{
-        display:flex;
-        flex-direction: column;
-    }
-
-
     /*edits made by alex*/
     h2, .h2 {
         font-size: 2.5rem;
@@ -664,7 +651,7 @@ a:hover{
 
 @media screen and (min-width: 62rem) {
     body:not(.style) main > section h1.h1--hero,
-    .h1.h1--hero{
+    .h1.h1--hero,{
         grid-column: 1/5;
     }
 
@@ -846,4 +833,52 @@ margin-top:3rem;
     grid-template-rows: auto;
     align-items: center;
     /* background-color: #555555; */
+}
+
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: column;
+    margin: 0 4rem;
+}
+
+.menu-column-1 {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+.menu-column-2 {
+    grid-column-start: 3;
+    grid-column-end: span 2;
+}
+
+.menu-column-3 {
+    grid-column-start: 5;
+    grid-column-end: span 2;
+}
+
+.grid-item {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.grid-item .item {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.grid-item .desc {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+.grid-item .price {
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    grid-column-start: 2;
+    justify-self: start;
 }
