@@ -35,12 +35,21 @@ body{
     font-family: "Jubilee";
     line-height: 1;
     position: relative;
+    color: var(--text-primary);
+    padding-bottom: 4rem;
+    background: var(--bg-color1);
+}
+
+main > .background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     /* https://www.w3schools.com/cssref/pr_background-attachment.php */
     background: url(/assets/img/background.png);
     background-size: cover;
     background-attachment: fixed;
-    color: var(--text-primary);
-    padding-bottom: 4rem;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -110,7 +119,7 @@ img{
     height: auto;
 }
 
-.nav{
+body:not(.style) .nav{
     overflow-y: hidden;
 }
 
@@ -157,7 +166,21 @@ img{
     right: 0;
     bottom: 0;
     z-index: 50;
-    background: var(--bg-color1);
+    background: url(/assets/img/background.png);
+    background-size: cover;
+    /* background-position: 0 -3rem; */
+}
+
+.nav .nav__overlay__wrapper__background{
+    position: absolute;
+    /* padding: 2rem 1rem; */
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    /* bottom: 0; */
+    background: url(/assets/img/background.png);
+    background-size: cover;
 }
 
 .nav .nav__overlay__wrapper .nav__overlay__wrapper__items{
@@ -224,8 +247,18 @@ img{
     display: block;
 }
 
-.shadow{
+/* main > .shadow{
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0000004F;
+    transition: background 0.3s ease;
+}
+
+.nav .shadow{
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -236,7 +269,7 @@ img{
 
 .shadow.shadow--active{
     background: #0000007F;
-}
+} */
 
 main > section {
     position: relative;
@@ -264,19 +297,22 @@ main > section.hero .hero__location{
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap : 0.5rem;
     overflow-y: hidden;
+    z-index: 50;
+}
+
+main > section.hero .hero__location *{
+    position: relative;
 }
 
 main > section.hero .hero__location__background{
     position:absolute;
     height: 100vh;
-    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: url(/assets/img/background.png);
     background-size: cover;
-    background-position: top;
-    opacity: 50%;
+    /* opacity: 50%; */
 }
 
 main > section.hero .hero__location__background__img{
@@ -516,6 +552,12 @@ a:hover{
 
 
 @media screen and (min-width: 36rem) {
+    .nav .nav__overlay__wrapper,
+    .nav .nav__overlay__wrapper__background{
+        background: transparent;
+    }
+
+    
 
     main > section.hero .hero__location{
         grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -716,7 +758,7 @@ a:hover{
     border-radius: 0.8125rem;
     font-family: "Jubilee Platinum";
     font-size: medium;
-    transition: all 0.3s ease-out;
+    transition: background 0.3s ease-out, color 0.3s ease-out, background 0.3s ease-out;
 }
 
 .button:hover, .button:focus, .button:active{

@@ -25,7 +25,7 @@ const closeMenu = () => {
 // https://javascript.plainenglish.io/how-to-check-whether-an-element-is-in-the-viewport-or-not-eb5de51c0201
 // Handles scroll transition on hero
 const setupObserver = () => {
-    const hero = document.querySelector("div.shadow");
+    const hero = document.getElementsByClassName("shadow");
     const second = document.getElementsByTagName("section")[1];
 
     const options = {
@@ -35,10 +35,14 @@ const setupObserver = () => {
     const callback = function(entries, observer) {
         entries.forEach((entry) => {
             if (entry.isIntersecting){
-                hero.classList.add("shadow--active");
+                for (let i = 0; i < hero.length; i++){
+                    hero[i].classList.add("shadow--active");
+                }
                 console.log(entry.intersectionRatio);
             } else{
-                hero.classList.remove("shadow--active");
+                for (let i = 0; i < hero.length; i++){
+                    hero[i].classList.remove("shadow--active");
+                }
             }
         });
     }
