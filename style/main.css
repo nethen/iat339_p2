@@ -490,6 +490,7 @@ a:hover{
         gap: 1rem;
     }
 
+
     /*edits made by alex*/
     .container__grid--3 {
         display: grid;
@@ -508,6 +509,18 @@ a:hover{
         max-width: 55.0625rem;
         margin-top: 5rem;
 
+    }
+
+    .item--listing{
+        display:flex;
+        flex-direction: row;
+        gap: 2rem;
+        width: 18.125rem;
+    }
+
+    .item--listing--container{
+        display:flex;
+        flex-direction: column;
     }
 
 
@@ -561,6 +574,17 @@ a:hover{
     #wtf2 {
         grid-column-start: 4;
         grid-column-end: span 2;
+    }
+
+
+    #wtf3 {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+    }
+
+    #wtf4 {
+        grid-column-start: 2;
+        grid-column-end: span 4;
     }
 
     .nav .nav__overlay .nav__overlay__logo {
@@ -640,7 +664,7 @@ a:hover{
 
 @media screen and (min-width: 62rem) {
     body:not(.style) main > section h1.h1--hero,
-    .h1.h1--hero,{
+    .h1.h1--hero{
         grid-column: 1/5;
     }
 
