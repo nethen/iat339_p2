@@ -216,6 +216,11 @@ main > section.hero.hero--active{
     background: white;
 }
 
+main > section.item-detail{
+    min-height: calc(100vh - 4rem);
+    align-items: center;
+}
+
 
 main > section.hero .hero__location{
     position: fixed;
@@ -248,6 +253,10 @@ main > section.news .news__item{
     grid-column: 1/-1;
     min-height: 1rem;
 }
+
+
+
+
 
 main > section[id] .container .container__desc .container__desc__divider{
     color: var(--text-primary);
@@ -454,37 +463,36 @@ a:hover{
   text-decoration: underline;
 }
 
-.div__menu--spacing1{
-    margin-top: 15rem;
-}
 
-.div__menu--spacing2{
-    margin-top: 4rem;
-}
 
 .div__menu--listing{
     list-style: none;
     padding: 0;
 }
 
-.menu-grid{
-    display:grid;
-    grid-template-columns: repeat(6, 1fr); /* Assuming 6 columns */
-    gap: 1rem;
-}
+
 
 
 
 @media screen and (min-width: 36rem) {
 
-    main > section.hero .hero__location{
+    .section-spacing {
+        padding-top: 10rem;
+    }
+
+    .div__menu--spacing2 {
+        margin-top: 4rem;
+    }
+
+
+    main > section.hero .hero__location {
         grid-template-columns: repeat(6, minmax(0, 1fr));
-        gap : 1rem;
+        gap: 1rem;
     }
 
     /*edits made by alex*/
-    .container__grid--3{
-        display:grid;
+    .container__grid--3 {
+        display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-rows: 3fr;
         gap: 1rem;
@@ -492,26 +500,24 @@ a:hover{
 
     }
 
-    .container__grid--2{
-        display:grid;
+    .container__grid--2 {
+        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: 2fr;
         gap: 1rem;
         max-width: 55.0625rem;
-        margin-top:5rem;
+        margin-top: 5rem;
 
     }
 
 
-
     /*edits made by alex*/
-
-    h2, .h2{
+    h2, .h2 {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
     }
 
-    body.style main{
+    body.style main {
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 1fr;
@@ -519,14 +525,13 @@ a:hover{
         margin: 0 auto;
     }
 
-    body.style main{
+    body.style main {
         max-width: 75rem;
     }
 
-    body.style > main > section{
+    body.style > main > section {
         grid-column: 2/-1;
     }
-
 
     body.style .nav{
         position: sticky;
@@ -546,6 +551,16 @@ a:hover{
         grid-template-rows: 1fr;
         gap: 1rem;
         margin: 0 auto;
+    }
+
+    #wtf1 {
+        grid-column-start: 2;
+        grid-column-end: span 2;
+    }
+
+    #wtf2 {
+        grid-column-start: 4;
+        grid-column-end: span 2;
     }
 
     .nav .nav__overlay .nav__overlay__logo {
@@ -625,9 +640,10 @@ a:hover{
 
 @media screen and (min-width: 62rem) {
     body:not(.style) main > section h1.h1--hero,
-    .h1.h1--hero{
+    .h1.h1--hero,{
         grid-column: 1/5;
     }
+
 
     body.style main > section[id] .container .container__display.container__display--color{
         grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -653,6 +669,9 @@ a:hover{
     body.style main > section[id] .container .container__display .container__display--grid__wrapper{
         grid-column: 1/-2;
     }
+
+
+
 }
 
 @media screen and (min-width: 90rem) {
