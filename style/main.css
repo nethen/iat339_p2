@@ -88,7 +88,7 @@ h2, .h2{
 
 h3, .h3{
     font-family: "Jubilee";
-    font-size: 1rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -98,10 +98,19 @@ h4, .h4{
     margin-bottom: 0.5rem;
 }
 
+h5, .h5{
+    font-family: "Jubilee";
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
 
 p{
     line-height: 1.375;
     margin-bottom: 1rem;
+}
+
+.lower{
+    text-transform: lowercase;
 }
 
 body:not(.style) main > header{
@@ -123,7 +132,6 @@ main > section{
 body:not(.style) main > section{
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: 1fr;
     gap: 1rem;
 }
 
@@ -343,14 +351,15 @@ main > section.hero .hero__location a{
     grid-column: 2/-1;
 }
 
-main > section.news{
-    min-height: 200vh;
+/* main > section.news{
+    min-height: 100vh;
     position: relative;
-}
+} */
 
 main > section.news .news__nav{
-    position: sticky;
-    top: 8rem;
+    /* position: sticky; */
+    display: none;
+    top: 4rem;
     height: fit-content;
     grid-column: 1/-1;
 }
@@ -358,6 +367,48 @@ main > section.news .news__nav{
 main > section.news .news__item{
     grid-column: 1/-1;
     min-height: 1rem;
+    position: relative;
+}
+
+main > section.news .news__item .news__item__preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:brightness(0.5)
+}
+
+main > section.news .news__item .news__item__desc{
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+}
+
+
+.news .news__nav ul{
+    display: flex;
+    list-style-type: none;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-inline-start: 0;
+    /* flex-direction: column; */
+    /* justify-content: end; */
+    text-transform: lowercase;
+    gap: 1rem; 
+}
+
+.news .news__nav ul li{
+    flex-grow: 1;
+}
+
+.news .news__nav ul li a{
+    display: block;
+    flex-grow: 1;
+    background: var(--bg-color2);
+    opacity: 50%;
+}
+
+.news .news__nav ul li a.active{
+    opacity: 100%;
 }
 
 main > section[id] .container .container__desc .container__desc__divider{
@@ -569,7 +620,6 @@ a:hover{
 
 
 
-
 @media screen and (min-width: 36rem) {
     /* .nav .nav__background img, */
     .nav .nav__overlay__wrapper__background img{
@@ -613,7 +663,6 @@ a:hover{
     body.style main{
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
-        grid-template-rows: 1fr;
         gap: 1rem;
         margin: 0 auto;
     }
@@ -642,7 +691,6 @@ a:hover{
     body:not(.style) main > section{
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
-        grid-template-rows: 1fr;
         gap: 1rem;
         margin: 0 auto;
     }
@@ -728,7 +776,8 @@ a:hover{
 
 @media screen and (min-width: 62rem) {
     body:not(.style) main > section h1.h1--hero,
-    .h1.h1--hero{
+    .h1.h1--hero,
+    main > section.news .news__item{
         grid-column: 1/5;
     }
 
@@ -760,7 +809,8 @@ a:hover{
 
 @media screen and (min-width: 90rem) {
     body:not(.style) main > section h1.h1--hero,
-    .h1.h1--hero{
+    .h1.h1--hero,
+    main > section.news .news__item{
         grid-column: 1/4;
     }
 }
