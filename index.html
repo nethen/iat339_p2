@@ -11,13 +11,29 @@
 <body>
     <main>
         <header class="nav">
-        <div class="nav__background"></div>
+            <picture class="nav__background">
+                <source media="min-width: 36rem" srcset="./assets/img/background_mega.png 1x, ./assets/img/background.png 2x">
+                <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
+                <img 
+                    src="./assets/img/background_mini.png"
+                    srcset="./assets/img/background_midi.png 2x, ./assets/img/background_mega.png 3x, ./assets/img/background.png 4x"
+                    alt="exterior shot of cheong-su-dang cafe"
+                    >
+            </picture>
         <nav class="nav__overlay">
             <a class="nav__overlay__logo" href="/">
                 Cheong-su-dang
             </a>
             <div class="nav__overlay__wrapper">
-                <div class="nav__overlay__wrapper__background"></div>
+                <picture class="nav__overlay__wrapper__background">
+                    <source media="min-width: 36rem" srcset="./assets/img/background_mega.png 1x, ./assets/img/background.png 2x">
+                    <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
+                    <img 
+                        src="./assets/img/background_mini.png"
+                        srcset="./assets/img/background_midi.png 2x, ./assets/img/background_mega.png 3x, ./assets/img/background.png 4x"
+                        alt="exterior shot of cheong-su-dang cafe"
+                        >
+                </picture>
                 <div class="nav__overlay__wrapper__items">
                     <div class="nav__overlay__wrapper__items__group">
                         <ul>
@@ -51,8 +67,7 @@
     </header>
     <!-- <div class="background"></div> -->
     <picture class="background">
-        <source media="min-width: 90rem" srcset="./assets/img/background.png 1x">
-        <source media="min-width: 62rem" srcset="./assets/img/background_mega.png 1x">
+        <source media="min-width: 36rem" srcset="./assets/img/background_mega.png 1x, ./assets/img/background.png 2x">
         <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
         <img 
             src="./assets/img/background_mini.png"
@@ -63,7 +78,15 @@
     <section class="hero">
         <h1 class="h1--hero">A garden in the city in Ikseon-dong, South Korea.</h1>
         <div class="hero__location">
-            <div class="hero__location__background"></div>
+            <picture class="hero__location__background">
+                <source media="min-width: 36rem" srcset="./assets/img/background_mega.png 1x, ./assets/img/background.png 2x">
+                <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
+                <img 
+                    src="./assets/img/background_mini.png"
+                    srcset="./assets/img/background_midi.png 2x, ./assets/img/background_mega.png 3x, ./assets/img/background.png 4x"
+                    alt="exterior shot of cheong-su-dang cafe"
+                    >
+            </picture>
             <h2 class="h3">Visit us</h2>
             <a href="https://goo.gl/maps/eoKbazC9VGdP9YWe6">31-9 Donhwamun-ro 11na-gil, Jongno-gu, Seoul, South Korea</a>
         </div>
