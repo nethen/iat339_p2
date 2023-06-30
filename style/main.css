@@ -832,6 +832,7 @@ a{
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     grid-template-rows: auto;
+    margin-right:2rem;
     /* background-color: #555555; */
 }
 
@@ -848,7 +849,7 @@ a{
 
 .itemLong{
     /* background:#6C4941; */
-    grid-column: 1/ -1;
+    grid-column: 1/-1;
 }
 
 .h3-payment{
@@ -950,3 +951,11 @@ svg{
     margin-top: 3rem;
 }
 
+#paymentPage{
+    margin-left: 1rem;
+}
+
+.payment-top{
+    padding-top: 6rem;
+    grid-column: 1/4;
+}
