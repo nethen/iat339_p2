@@ -154,19 +154,15 @@ section.menu-listings {
     gap: 1rem;
 }
 
-
-
 .menu-items {
     margin-top: 5rem;
+    grid-column: 1;
     display: grid;
-    grid-template-columns: 1fr; /* Set the grid template columns for mobile view */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     grid-template-rows: auto;
-}
 
 
-.menu-items-price-1 {
-    grid-column: 1;
 }
 
 .menu-listings {
@@ -182,13 +178,13 @@ section.menu-listings {
     grid-column: 1;
 }
 
+.menu-item-price{
+    grid-column: 2;
+}
+
 
 .menu-selection-item {
     text-decoration: underline;
-}
-
-.menu-container-flex{
-    display:flex;
 }
 
 img {
@@ -800,9 +796,6 @@ a:hover {
 
     .menu-listings {
         padding-top: 10rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap:wrap;
 
 
     }
@@ -823,6 +816,8 @@ a:hover {
     .menu-selection-item {
         text-decoration: underline;
     }
+
+
 
 
 
