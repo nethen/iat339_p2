@@ -46,7 +46,107 @@
                 </svg>
             </button>
         </nav>
-    </header>
+        </header>
+    
+    <section id="contactPage">
+        
+        <div class="contact-top">
+            <h2 class="contactHeader">Get in Touch</h2>
+            <p class="contactSubHeader">let us know how we can improve. we would love to hear from you! </p>
+        </div>
+        
+
+        <!-- make them separate -->
+        <div class="contactInfo">
+            <div class="mail">
+                <p class="contactP">
+                    <a target="_blank" href="">
+                        <svg width="17" height="14" viewBox="0 0 17 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.7 13.6C1.2325 13.6 0.832151 13.4334 0.498951 13.1002C0.165751 12.767 -0.000565223 12.3669 1.44312e-06 11.9V1.7C1.44312e-06 1.2325 0.166601 0.832151 0.499801 0.498951C0.833001 0.165751 1.23307 -0.000565223 1.7 1.44312e-06H15.3C15.7675 1.44312e-06 16.1678 0.166601 16.501 0.499801C16.8342 0.833001 17.0006 1.23307 17 1.7V11.9C17 12.3675 16.8334 12.7678 16.5002 13.101C16.167 13.4342 15.7669 13.6006 15.3 13.6H1.7ZM8.5 7.65L1.7 3.4V11.9H15.3V3.4L8.5 7.65ZM8.5 5.95L15.3 1.7H1.7L8.5 5.95ZM1.7 3.4V1.7V11.9V3.4Z"/>
+                            </svg>
+                    </a>
+                cheongsudang@csd.kr
+                </p>
+            </div>
+            
+            <div class="phone">
+                <p class="contactP">
+                    <a target="_blank" href="">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.077 7.22306C4.301 9.62856 6.273 11.5921 8.6785 12.8246L10.5485 10.9546C10.778 10.7251 11.118 10.6486 11.4155 10.7506C12.3675 11.0651 13.396 11.2351 14.45 11.2351C14.9175 11.2351 15.3 11.6176 15.3 12.0851V15.0516C15.3 15.5191 14.9175 15.9016 14.45 15.9016C6.4685 15.9016 0 9.43306 0 1.45156C0 0.984062 0.3825 0.601562 0.85 0.601562H3.825C4.2925 0.601562 4.675 0.984062 4.675 1.45156C4.675 2.51406 4.845 3.53406 5.1595 4.48606C5.253 4.78356 5.185 5.11506 4.947 5.35306L3.077 7.22306Z" fill="white"/>
+                        </svg>
+                    </a>
+                123 456 7890
+                </p>
+            </div>
+            
+            <div class="location">
+                <p>
+                    <a target="_blank" href="">
+                        <svg width="13" height="18" viewBox="0 0 13 18" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.65312 8.575C6.08954 8.575 5.54904 8.35111 5.15052 7.9526C4.75201 7.55409 4.52812 7.01358 4.52812 6.45C4.52812 5.88641 4.75201 5.34591 5.15052 4.9474C5.54904 4.54888 6.08954 4.325 6.65312 4.325C7.21671 4.325 7.75721 4.54888 8.15573 4.9474C8.55424 5.34591 8.77812 5.88641 8.77812 6.45C8.77812 6.72906 8.72316 7.00538 8.61637 7.2632C8.50958 7.52102 8.35305 7.75528 8.15573 7.9526C7.9584 8.14992 7.72414 8.30645 7.46633 8.41324C7.20851 8.52003 6.93218 8.575 6.65312 8.575ZM6.65312 0.5C5.07509 0.5 3.56168 1.12687 2.44584 2.24271C1.33 3.35856 0.703125 4.87196 0.703125 6.45C0.703125 10.9125 6.65312 17.5 6.65312 17.5C6.65312 17.5 12.6031 10.9125 12.6031 6.45C12.6031 4.87196 11.9762 3.35856 10.8604 2.24271C9.74457 1.12687 8.23116 0.5 6.65312 0.5Z"/>
+                        </svg>
+                    </a>
+                    서울특별시 종로구 돈화문로11나길 31-9
+                </p>
+            </div>
+        </div> 
+
+
+
+
+        <form class="contactForm">
+            <!-- Name -->
+            <label class="label__text__input forContact" for="payment-form">Name</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Jane Doe">
+            
+            <!-- Email -->
+            <label class="label__text__input forContact" for="payment-form">Email</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="JaneDoe@gmail.com">
+
+            <!-- topic -->
+            <label class="label__text__input forContact" for="payment-form">Topic</label>  
+                                
+                <!-- source for drop down: https://www.w3schools.com/Css/css_dropdowns.asp  -->
+                <select class="label__text__input text__input_drop"  name="Topic" id="payment-form">
+                <option value="Select Topic">Select Topic</option>
+                <option value="General">General</option>
+                <option value="Careers">Careers</option>
+                <option value="Support">Support</option>
+                <option value="Feedback">Feedback</option>
+                </select>
+
+            <!-- message -->
+            <textarea class ="contactTextarea" placeholder="Type in your message" rows="6" cols="33"></textarea>
+        
+            <button class="button contactbutton" type="submit" onclick="alert('Success! we will get back to you soon')">Submit</button>
+        </form>
+
+        <!-- social media  -->
+        <div class="contactSM">
+            <h3 class="headerSM">Check us out on. . .</h3>
+            <div class="instagram">
+                <p class="contactP">Instagram 
+                    <a target="_blank" href="https://www.instagram.com/cheongsudang_/">@cheongsudang_</a>
+                </p>
+            </div>
+            
+            <div class="naverCafe">
+                <p class="contactP">Naver Cafe
+                    <a target="_blank" href="https://m.cafe.naver.com/">@cheongsudang_cafe</a>
+                </p>
+            </div>
+            
+            <div class="location">
+                <p>KaKaoTalk
+                    <a class="contactP" target="_blank" href="https://apps.apple.com/us/app/kakaotalk/id362057947">@cheongsudang_</a>
+                </p>
+            </div>
+        </div>
+
+    </section>
+    
+
     </main>
 </body>
 </html>

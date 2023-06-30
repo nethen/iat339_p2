@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/normalize.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="/scripts/main.js" defer></script>
+    <title>cart | cheong-su-dang</title>
+</head>
+<body>
+    <main>
+        <header class="nav">
+        <nav class="nav__overlay">
+            <a class="nav__overlay__logo" href="/">
+                Cheong-su-dang
+            </a>
+            <div class="nav__overlay__wrapper">
+                <div class="nav__overlay__wrapper__items">
+                    <div class="nav__overlay__wrapper__items__group">
+                        <ul>
+                            <li>
+                                <a href="/menu.html" onclick="closeMenu()">Menu</a>
+                            </li>
+                            <li>
+                                <a href="/contact.html" onclick="closeMenu()">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/cart.html" onclick="closeMenu()">Cart (<span>0</span>)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SVG icons converted to inline using https://www.bayustudio.com/app/svg-encoder/ -->
+            <button class="nav__overlay__menu" onclick="toggleMenu()">
+                <svg class="nav__overlay__menu__img nav__overlay__menu__img--active" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z"/>
+                </svg>
+
+                <svg class="nav__overlay__menu__img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <img class="productBackground" src="assets/img/matcha.png" alt="Cheongsudang Cafe">
+
+    <section id="productPage">
+        <div class="productSectionAll">
+            <div class="productImg">
+                <img src="assets/img/matchaSmall.png" alt="Cheongsudang Cafe" >
+            </div>
+            
+            <form class="productInfo">  
+                <div class="productName">
+                    <!-- source for drop down: https://www.w3schools.com/Css/css_dropdowns.asp  -->
+                    <select class="label__text__input1 text__input_drop1"  name="Flavour" id="product-form">
+                        <option value="Iced">Matcha (type)</option>
+                        <option value="Iced">Matcha (iced)</option>
+                        <option value="hot">Matcha (hot)</option>
+                    </select>
+                </div>       
+                
+                <div class="productPrice">
+                    <p>$5.00 CAD</p>
+                </div>
+    
+                <div class="productDesc">
+                    <p>A creamy blend of ceremonial-grade matcha and steamed milk, creating a harmonious and invigorating delight.</p>
+                    <button class="button productButton" type="submit" onclick="alert('Success! added to cart')">Add to Cart</button>
+                </div>
+                
+                <!-- Quantity Counter https://dev.to/stackfindover/products-quantity-counter-using-html-css-javascript-663 -->
+                <div class="quantity">
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+
+    </main>
+</body>
+</html>
