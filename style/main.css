@@ -40,6 +40,13 @@ body {
     padding-bottom: 4rem;
 }
 
+
+.productBackground{
+    display:none;
+}
+
+
+
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
     margin-bottom: 0.25rem;
@@ -500,10 +507,85 @@ input[type="radio"]:checked::before {
 }
 
 
-a:hover {
-    text-decoration: underline;
+
+a:hover{
+  text-decoration: underline;
+  color: var(--bg-color2);
 }
 
+
+/* PRODUCT PAGE CSS (outside @medias)*/
+.productSectionAll{
+    grid-column: 1/-1;
+}
+
+
+#productPage{
+    margin-top: 0;
+}
+
+.productImg{
+    margin-top: 1rem;
+    grid-column: 1/-1;
+}
+  
+a:hover {
+    text-decoration: underline;
+
+}
+
+.productInfo{
+    margin-top: 1rem;
+    grid-column: 1/-1;
+}
+
+
+.productPrice{
+    margin-top: 0.5rem;
+    padding-left: 5px;
+}
+
+.productDesc{
+    margin-top: 1rem;
+    padding-left: 5px;
+}
+
+/* for product dropdown */
+/* how to scale: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale */
+.label__text__input1{
+    display:block;
+    font-size:2rem;
+    /* width: 20%;
+    margin-bottom: 1em;
+    transform: scale(2); */
+}
+
+/* drop down form */
+.text__input_drop1{
+    outline: 0;
+    border-width: 0;
+    /* border-width: 0 0 0.125rem; */
+    border-color: var(--text-primary);
+    background-color:transparent;
+    color: var(--text-primary);
+    padding-right: 3rem;
+    font-size:xx-large;
+ 
+}
+
+
+.text__input_drop1:hover, .text__input_drop1:focus, .text__input_drop1:active{
+    transition: all 0.3s ease-out;
+    border-radius: 0.8125rem;
+    background-color: var(--text-primary);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+}
+
+
+
+
+/* mobile - tablet */
 
 @media screen and (min-width: 36rem) {
 
@@ -528,7 +610,7 @@ a:hover {
         grid-template-rows: 2fr;
         gap: 1rem;
         max-width: 55.0625rem;
-        margin-top: 5rem;
+        margin-top:5rem;
 
     }
 
@@ -681,15 +763,20 @@ a:hover {
         margin-bottom: 0;
         grid-column: 3/-1;
     }
+
 }
+
 
 @media screen and (min-width: 48rem) {
     h1, .h1 {
         font-size: 4rem;
         margin-bottom: 0.5rem;
     }
+
 }
 
+
+/* desktop */
 @media screen and (min-width: 62rem) {
     body:not(.style) main > section h1.h1--hero,
     .h1.h1--hero {
@@ -720,32 +807,96 @@ a:hover {
     body.style main > section[id] .container .container__display .container__display--grid__wrapper {
         grid-column: 1/-2;
     }
+
+   
+    /* PRODUCT PAGE CSS (DESKTOP)*/
+    .productSectionAll{
+        /* margin-top: 10rem; */
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .productImg{
+        margin-top: 8rem;
+        grid-column: 2/4;
+    }
+    
+    .productInfo{
+        margin-top: 14rem;
+        margin-left: 1rem;
+        grid-column: 4/6;
+    }
+
+    .productPrice{
+        margin-left: 0.5rem;
+    }
+    
+    .productDesc{
+        margin-top: 3rem;
+        margin-left: 0.5rem;
+    }
+    
+    /* for product dropdown */
+    /* peter said its not clear enough that you can drop down so I added product(type) to help indicate, open to suggestions tho */
+    .label__text__input1{
+        display:block;
+        font-size:2rem;
+    }
+    
+    /* drop down form */
+    .text__input_drop1{
+        outline: 0;
+        border-width: 0;
+        border-color: var(--text-primary);
+        background-color:transparent;
+        color: var(--text-primary);
+        padding-left: 0.5rem;
+    }
+    
+    .text__input_drop1:hover, .text__input_drop1:focus, .text__input_drop1:active{
+        transition: all 0.3s ease-out;
+        border-radius: 0.8125rem;
+        background-color: var(--text-primary); /*white*/
+        color: var(--bg-color1);
+        border: 1px solid var(--bg-color1);
+    }
+
+    /* how to use brightness --> https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness */
+    .productBackground{
+        display:block;
+        position: fixed;
+        top: 0;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index:-50;
+        filter: brightness(75%);
+    }
 }
 
+/* large desktops 2k*/
 @media screen and (min-width: 90rem) {
     body:not(.style) main > section h1.h1--hero,
     .h1.h1--hero {
         grid-column: 1/4;
-    }
 
-
-
+    }    
 
 }
-
 
 /* sab edits */
 .button {
     border: 1px solid var(--bg-color2);
     background-color: transparent;
     text-align: center;
-    margin: 4px 2px;
-    color: var(--bg-color2);
+    margin: 1rem 0rem;
+    color:var(--bg-color2);
     padding: 0.5rem 2rem;
     border-radius: 0.8125rem;
     font-family: "Jubilee Platinum";
     font-size: medium;
     transition: all 0.3s ease-out;
+    display:block;
 }
 
 .button:hover, .button:focus, .button:active {
@@ -754,8 +905,10 @@ a:hover {
     border: 1px solid var(--bg-color1);
 }
 
-a {
-    color: var(--bg-color2);
+
+a{
+    /* color: var(--bg-color2); */
+    color: var(--text-primary);
     text-decoration: none;
 }
 
@@ -771,7 +924,7 @@ a {
 }
 
 
-/* sabs edits pt 2 */
+/* sabs edits pt2 */
 
 /* for the longer input fields */
 .text__input_long {
@@ -865,7 +1018,6 @@ a {
     grid-column: 4;
 }
 
-
 /* header grid */
 .header-grid {
     display: grid;
@@ -875,4 +1027,61 @@ a {
     align-items: center;
     /* background-color: #555555; */
 }
+
+
+/* CONTACT PAGE CSS */
+/* adding padding so the header text doesn't get covered by the nav bar */
+.contact-top{
+    padding-top: 4rem;
+    grid-column: 1/4;
+}
+
+.contactSubHeader{
+    margin-top: 1rem;
+}
+
+.contactInfo{
+    grid-column: 1/-1;
+}
+
+.contactForm{
+    grid-column: 1/3;
+}
+
+.contactTextarea{
+    outline: 0;
+    border:none;
+    border-bottom: 2px solid var(--text-primary);
+    background-color: transparent;
+    color: var(--text-primary);
+    resize: none;
+    grid-column: 1/-1;
+}
+
+.contactbutton{
+    grid-column: 1/-1;
+}
+
+.forContact{
+    grid-column: 1/-1;
+    margin-top: 2rem;
+} 
+
+svg{
+    display: inline-block;
+    fill: var(--text-primary);
+}
+
+.contactSM{
+    grid-column: 1/-1;
+}
+
+.contactP{
+    margin-bottom: 0rem;
+}
+
+.headerSM{
+    margin-top: 3rem;
+}
+
 
