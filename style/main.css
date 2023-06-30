@@ -23,70 +23,70 @@
     --accent3: #6C4941;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: "Jubilee";
     line-height: 1;
     position: relative;
     background: var(--bg-color1);
     color: var(--text-primary);
+    padding-bottom: 4rem;
 }
+
 
 .productBackground{
     display:none;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+
+
+h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
     margin-bottom: 0.25rem;
     font-weight: 400;
 }
 
-h1, h2, h3, h4, .h1, .h2, .h3, .h4{
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     font-family: "Jubilee Platinum";
 }
 
-h1, .h1{
-    font-size: 1.5rem;
+h1, .h1 {
+    font-size: 7.5vw;
     margin-bottom: 0.5rem;
     grid-column: 1/-1;
 }
 
-h2, .h2{
+h2, .h2 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
-h3, .h3{
+h3, .h3 {
     font-family: "Jubilee";
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-h4, .h4{
+h4, .h4 {
     font-family: "Jubilee";
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 
-p{
+p {
     line-height: 1.375;
     margin-bottom: 1rem;
 }
 
-main{
-    padding: 0 1rem;
-}
-
-body:not(.style) main > header{
+body:not(.style) main > header {
     position: fixed;
     top: 0;
     left: 0;
@@ -97,25 +97,73 @@ body:not(.style) main > header{
 }
 
 body.style main > header,
-main > section{
+main > section {
     grid-column: 1/-1;
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
-body:not(.style) main > section{
+
+
+body:not(.style) main > section {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 1fr;
     gap: 1rem;
 }
 
-img{
+section.menu-listings {
+    padding-top: 10rem;
+    grid-column: 1 / -1; /* Extend the grid column to full width */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Adjust the grid template columns */
+    gap: 1rem;
+}
+
+.menu-items {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr; /* Set the grid template columns for mobile view */
+    gap: 1rem;
+    grid-template-rows: auto;
+}
+
+
+.menu-items-price-1 {
+    grid-column: 1;
+}
+
+.menu-listings {
+    padding-top: 10rem;
+    grid-column: 1;
+}
+
+.menu-item-name {
+    grid-column: 1;
+}
+
+.menu-item-descriptor {
+    grid-column: 1;
+}
+
+.menu-item-price {
+    grid-column: 2;
+}
+
+.menu-selection-item {
+    text-decoration: underline;
+}
+
+.menu-container-flex{
+    display:flex;
+}
+
+img {
     width: 100%;
     height: auto;
 }
 
 
-.nav__overlay{
+.nav__overlay {
     display: flex;
     /* position: relative; */
     justify-content: space-between;;
@@ -131,7 +179,7 @@ img{
     color: var(--text-primary);
 }
 
-.nav .nav__overlay__wrapper{
+.nav .nav__overlay__wrapper {
     display: none;
     position: fixed;
     padding: 2rem 1rem;
@@ -139,7 +187,7 @@ img{
     flex-direction: column;
     /* justify-content: end; */
 
-    gap: 2rem; 
+    gap: 2rem;
     top: 0;
     margin-top: 3.5rem;
     left: 0;
@@ -149,23 +197,24 @@ img{
     background: var(--bg-color1);
 }
 
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items{
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items {
     display: flex;
     flex-direction: column;
 
-    gap: 2rem; 
+    gap: 2rem;
     width: fit-content;
 
 }
 
-.nav .nav__overlay__wrapper hr.nav__overlay__wrapper__divider{
+.nav .nav__overlay__wrapper hr.nav__overlay__wrapper__divider {
     display: block;
     color: var(--text-primary);
     width: 100%;
     max-width: 4rem;
     margin-inline: 0;
-    
+
 }
+
 .nav .nav__overlay__wrapper .nav__overlay__wrapper__items,
 .nav .nav__overlay__wrapper .nav__overlay__wrapper__items ul {
     display: flex;
@@ -176,26 +225,26 @@ img{
     flex-direction: column;
     /* justify-content: end; */
     text-transform: lowercase;
-    gap: 1rem; 
+    gap: 1rem;
 }
 
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items h2{
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items h2 {
     font-size: 1rem;
 }
 
-.nav .nav__overlay__wrapper.nav__overlay__wrapper--active{
+.nav .nav__overlay__wrapper.nav__overlay__wrapper--active {
     display: flex;
     overflow: auto;
 }
 
-.nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group a{
+.nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group a {
     display: block;
     color: var(--text-primary);
     opacity: 63%;
     width: 100%;
 }
 
-.nav .nav__overlay button.nav__overlay__menu{
+.nav .nav__overlay button.nav__overlay__menu {
     display: block;
     padding: 0;
     line-height: 1;
@@ -204,55 +253,80 @@ img{
     cursor: pointer;
 }
 
-.nav .nav__overlay button.nav__overlay__menu svg{
+.nav .nav__overlay button.nav__overlay__menu svg {
     display: none;
     fill: var(--text-primary);
 }
 
-.nav .nav__overlay button.nav__overlay__menu svg.nav__overlay__menu__img--active{
+.nav .nav__overlay button.nav__overlay__menu svg.nav__overlay__menu__img--active {
     display: block;
 }
 
-main > section.hero{
-    min-height: 100vh;
-    justify-content: flex-end;
+main > section.hero {
+    min-height: calc(100vh - 4rem);
+    align-items: end;
     transition: background 0.3s ease;
 }
 
-main > section.hero.hero--active{
+main > section.hero.hero--active {
     background: white;
 }
 
-main > section.hero h1{
-    margin-top: auto;
+
+main > section.hero .hero__location {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0rem;
+    padding: 1rem;
+    background: var(--bg-color1);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
 }
 
-main > section.hero .hero__location{
+main > section.hero .hero__location a {
+    grid-column: 2/-1;
+}
+
+main > section.news {
+    min-height: 200vh;
+    position: relative;
+}
+
+main > section.news .news__nav {
+    position: sticky;
+    top: 8rem;
+    height: fit-content;
+}
+
+main > section.news .news__item {
     grid-column: 1/-1;
+    min-height: 1rem;
 }
 
-main > section[id] .container .container__desc .container__desc__divider{
+main > section[id] .container .container__desc .container__desc__divider {
     color: var(--text-primary);
     width: 100%;
 }
 
-main > section[id] .container .container__desc{
+main > section[id] .container .container__desc {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 2rem;
 }
 
-main > section[id] .container .container__display{
+main > section[id] .container .container__display {
     margin-bottom: 2rem;
 }
 
-main > section[id] .container .container__display.container__display--type{
+main > section[id] .container .container__display.container__display--type {
     margin-bottom: 2rem;
 }
 
 main > section[id] .container .container__display.container__display--type span,
-main > section[id] .container .container__display.container__display--color span{
+main > section[id] .container .container__display.container__display--color span {
     display: block;
     grid-column: 1/-1;;
     overflow: hidden;
@@ -260,67 +334,67 @@ main > section[id] .container .container__display.container__display--color span
 }
 
 main > section[id] .container .container__display.container__display--type span sub,
-main > section[id] .container .container__display.container__display--type span sup{
+main > section[id] .container .container__display.container__display--type span sup {
     font-size: 50%;
     opacity: 50%;
 }
 
-main > section[id] .container .container__display.container__display--type.container__display--type--platinum span{
+main > section[id] .container .container__display.container__display--type.container__display--type--platinum span {
     font-family: "Jubilee Platinum";
 }
 
-main > section[id] .container .container__display.container__display--type.container__display--type--silver span{
+main > section[id] .container .container__display.container__display--type.container__display--type--silver span {
     font-family: "Jubilee";
 }
 
-main > section[id] .container .container__display .container__display--type__item.container__display--type__item--upper{
+main > section[id] .container .container__display .container__display--type__item.container__display--type__item--upper {
     text-transform: uppercase;
 }
 
-main > section[id] .container .container__display.container__display--color .container__display--color__item{
+main > section[id] .container .container__display.container__display--color .container__display--color__item {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
 }
 
-main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--bg1{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--bg1 {
     background: var(--bg-color1);
     border: 1px solid var(--bg-color2);
 }
 
-main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--bg2{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--bg2 {
     background: var(--bg-color2);
 }
 
-main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--text{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--text {
     background: var(--text-primary);
     color: var(--bg-color1);
 }
 
-main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent1{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent1 {
     background: var(--accent1);
 }
 
-main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent2{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent2 {
     background: var(--accent2);
 }
 
-main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
+main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3 {
     background: var(--accent3);
 }
 
-main > section[id] .container .container__display .container__display--grid__wrapper{
+main > section[id] .container .container__display .container__display--grid__wrapper {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 
-main > section[id] .container .container__display .container__display--grid__wrapper--desktop{
+main > section[id] .container .container__display .container__display--grid__wrapper--desktop {
     grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
-main > section[id] .container .container__display .container__display--grid__item{
+main > section[id] .container .container__display .container__display--grid__item {
     min-height: 4rem;
     background: var(--bg-color2);
     display: flex;
@@ -328,46 +402,46 @@ main > section[id] .container .container__display .container__display--grid__ite
     align-items: center;
 }
 
-main > section[id] .container .container__display{
+main > section[id] .container .container__display {
     grid-column: 1/-1;
 }
 
-main > section[id] .container .container__display .container__display--spacing{
+main > section[id] .container .container__display .container__display--spacing {
     grid-column: 3/-1;
 }
 
-main > section[id] .container .container__display .container__display--spacing__item{
+main > section[id] .container .container__display .container__display--spacing__item {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample{
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample {
     background: var(--bg-color2);
 }
 
-main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--1{
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--1 {
     width: 0.5rem;
     height: 0.5rem;
 }
 
-main > section[id] .container .container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--2{
+main > section[id] .container .container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--2 {
     width: 1rem;
     height: 1rem;
 }
 
-main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--3{
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--3 {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--4{
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--4 {
     width: 2rem;
     height: 2rem;
 }
 
-main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--5{
+main > section[id] .container .container__display.container__display--spacing .container__display--spacing__item__sample.container__display--spacing__item__sample--5 {
     width: 3rem;
     height: 3rem;
 }
@@ -376,8 +450,8 @@ main > section[id] .container .container__display.container__display--spacing .c
 /*edits made by alex*/
 input[type="radio"] {
     -webkit-appearance: none;
-    appearance:none;
-    background-color:transparent;
+    appearance: none;
+    background-color: transparent;
     margin: 0;
     font: inherit;
     color: currentColor;
@@ -386,7 +460,7 @@ input[type="radio"] {
     border: 0.08em solid currentColor;
     border-radius: 100%;
     transform: translateY(0.200rem);
-    display:grid;
+    display: grid;
     place-content: center;
 }
 
@@ -400,7 +474,7 @@ input[type="radio"]::before {
     box-shadow: inset 1em 1em var(--text-primary);
 }
 
-input[type="radio"]:checked::before{
+input[type="radio"]:checked::before {
     transform: scale(0.25);
 }
 
@@ -410,26 +484,28 @@ input[type="radio"]:checked::before{
 
 /* input text field */
 
-.text__input{
+.text__input {
     outline: 0;
     border-width: 0 0 0.125rem;
     border-color: white;
-    background-color:transparent;
+    background-color: transparent;
     color: var(--text-primary);
 }
 
-.input__radio__overlay{
-    display:flex;
+.input__radio__overlay {
+    display: flex;
     gap: 0.5rem;
 }
+
 /*edits made by alex*/
 
 
-.container__product__page__details{
+.container__product__page__details {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
+
 
 
 a:hover{
@@ -452,11 +528,17 @@ a:hover{
     margin-top: 1rem;
     grid-column: 1/-1;
 }
+  
+a:hover {
+    text-decoration: underline;
+
+}
 
 .productInfo{
     margin-top: 1rem;
     grid-column: 1/-1;
 }
+
 
 .productPrice{
     margin-top: 0.5rem;
@@ -504,11 +586,17 @@ a:hover{
 
 
 /* mobile - tablet */
+
 @media screen and (min-width: 36rem) {
 
+    main > section.hero .hero__location {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
     /*edits made by alex*/
-    .container__grid--3{
-        display:grid;
+    .container__grid--3 {
+        display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-rows: 3fr;
         gap: 1rem;
@@ -516,27 +604,62 @@ a:hover{
 
     }
 
-    .container__grid--2{
-        display:grid;
+    .container__grid--2 {
+        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: 2fr;
         gap: 1rem;
         max-width: 55.0625rem;
         margin-top:5rem;
+
     }
+
+    .menu-items {
+        margin-top: 5rem;
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        grid-template-rows: auto;
+
+
+    }
+
+
+    .menu-items-price-1 {
+        grid-column: 3/-1;
+    }
+
+    .menu-listings {
+        padding-top: 10rem;
+        grid-column: 1/-1;
+    }
+
+    .menu-item-name{
+
+    }
+
+    .menu-item-descriptor{
+        grid-column: 1/-1;
+    }
+
+    .menu-item-price{
+        grid-column: 2/-1;
+
+    }
+
+    .menu-selection-item {
+        text-decoration: underline;
+    }
+
 
     /*edits made by alex*/
-    h1, .h1{
-        font-size: 4rem;
-        margin-bottom: 0.5rem;
-    }
-
-    h2, .h2{
+    h2, .h2 {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
     }
 
-    body.style main{
+    body.style main {
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 1fr;
@@ -544,28 +667,28 @@ a:hover{
         margin: 0 auto;
     }
 
-    body.style main{
+    body.style main {
         max-width: 75rem;
     }
 
-    body.style > main > section{
+    body.style > main > section {
         grid-column: 2/-1;
     }
 
 
-    body.style .nav{
+    body.style .nav {
         position: sticky;
         top: 2rem;
     }
-    
-    body.style .nav__overlay{
+
+    body.style .nav__overlay {
         position: absolute;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
 
-    body:not(.style) main > section{
+    body:not(.style) main > section {
         display: grid;
         grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-rows: 1fr;
@@ -595,47 +718,48 @@ a:hover{
         flex-direction: column;
     }
 
-    .nav .nav__overlay button.nav__overlay__menu{
+    .nav .nav__overlay button.nav__overlay__menu {
         display: none;
     }
-    
+
     main > section[id] .container .container__desc,
-    main > section[id] .container .container__display{
+    main > section[id] .container .container__display {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 1rem;
     }
-    main > section[id] .container .container__display--no_gap{
+
+    main > section[id] .container .container__display--no_gap {
         gap: 0;
     }
 
-    body.style main > section[id] .container .container__desc *:nth-child(2){
+    body.style main > section[id] .container .container__desc *:nth-child(2) {
         grid-column: 1/2;
     }
 
-    body.style main > section[id] .container .container__desc *:not(:nth-child(2)){
+    body.style main > section[id] .container .container__desc *:not(:nth-child(2)) {
         grid-column: 3/-1;
     }
 
-    body.style main > section[id] .container .container__desc .container__desc__divider{
+    body.style main > section[id] .container .container__desc .container__desc__divider {
         grid-column: 1/-1;
     }
 
-    body.style main > section[id] .container .container__display.container__display--color{
+    body.style main > section[id] .container .container__display.container__display--color {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min(40vw, 20rem) 1fr 1fr 1fr;
     }
 
-    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item.container__display--color__item--text{
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item.container__display--color__item--text {
         grid-row: 2/4
     }
 
-    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
-       grid-column: 1/-1;
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3 {
+        grid-column: 1/-1;
     }
 
-    body.style main > section[id] .container .container__display .container__display--spacing__item{
+    body.style main > section[id] .container .container__display .container__display--spacing__item {
         margin-bottom: 0;
         grid-column: 3/-1;
     }
@@ -643,39 +767,44 @@ a:hover{
 }
 
 
-/* Tablet */
 @media screen and (min-width: 48rem) {
+    h1, .h1 {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+    }
+
 }
 
 
 /* desktop */
 @media screen and (min-width: 62rem) {
-    body:not(.style) main > section.hero h1{
+    body:not(.style) main > section h1.h1--hero,
+    .h1.h1--hero {
         grid-column: 1/5;
     }
 
-    body.style main > section[id] .container .container__display.container__display--color{
+    body.style main > section[id] .container .container__display.container__display--color {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 
-    body.style main > section[id] .container .container__display .container__display--color__item{
+    body.style main > section[id] .container .container__display .container__display--color__item {
         grid-column: span 2;
     }
 
-    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3{
+    body.style main > section[id] .container .container__display.container__display--color .container__display--color__item.container__display--color__item--accent3 {
         grid-column: 1/-2;
-     }
+    }
 
     body.style main > section[id] .container .container__desc *:not(:nth-child(2)),
-    body.style  main > section[id] .container .container__display .container__display--spacing__item{
+    body.style main > section[id] .container .container__display .container__display--spacing__item {
         grid-column: 3/-2;
     }
 
-    body.style main > section[id] .container .container__desc .container__desc__divider{
+    body.style main > section[id] .container .container__desc .container__desc__divider {
         grid-column: 1/-2;
     }
 
-    body.style main > section[id] .container .container__display .container__display--grid__wrapper{
+    body.style main > section[id] .container .container__display .container__display--grid__wrapper {
         grid-column: 1/-2;
     }
 
@@ -747,13 +876,16 @@ a:hover{
 
 /* large desktops 2k*/
 @media screen and (min-width: 90rem) {
-    body:not(.style) main > section.hero h1{
+    body:not(.style) main > section h1.h1--hero,
+    .h1.h1--hero {
         grid-column: 1/4;
+
     }    
+
 }
 
 /* sab edits */
-.button{
+.button {
     border: 1px solid var(--bg-color2);
     background-color: transparent;
     text-align: center;
@@ -767,11 +899,12 @@ a:hover{
     display:block;
 }
 
-.button:hover, .button:focus, .button:active{
+.button:hover, .button:focus, .button:active {
     background-color: var(--bg-color2);
     color: var(--bg-color1);
     border: 1px solid var(--bg-color1);
 }
+
 
 a{
     /* color: var(--bg-color2); */
@@ -780,13 +913,13 @@ a{
 }
 
 /* divder line between the components */
-.sectionLine{
+.sectionLine {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 /* diveder line under the big headings */
-.topSectionLine{
+.topSectionLine {
     margin-bottom: 2rem;;
 }
 
@@ -794,31 +927,31 @@ a{
 /* sabs edits pt2 */
 
 /* for the longer input fields */
-.text__input_long{
+.text__input_long {
     outline: 0;
-    border:none;
+    border: none;
     border-bottom: 2px solid var(--text-primary);
     background-color: transparent;
     color: var(--text-primary);
 }
 
-.label__text__input{
-    display:block;
+.label__text__input {
+    display: block;
     width: 100%;
     margin-bottom: 1em;
 }
 
 /* drop down form */
-.text__input_drop{
+.text__input_drop {
     outline: 0;
     border-width: 0 0 0.125rem;
     border-color: var(--text-primary);
-    background-color:transparent;
+    background-color: transparent;
     color: var(--text-primary);
     padding-left: 0.5rem;
 }
 
-.text__input_drop:hover, .text__input_drop:focus, .text__input_drop:active{
+.text__input_drop:hover, .text__input_drop:focus, .text__input_drop:active {
     transition: all 0.3s ease-out;
     border-radius: 0.8125rem;
     background-color: var(--text-primary);
@@ -836,23 +969,23 @@ a{
 }
 
 /* contact items */
-.itemLeft{
+.itemLeft {
     /* background: rebeccapurple; */
     grid-column: 1;
 }
 
-.itemRight{
+.itemRight {
     /* background: var(--accent1); */
     grid-column: 2;
 }
 
-.itemLong{
+.itemLong {
     /* background:#6C4941; */
     grid-column: 1/ -1;
 }
 
-.h3-payment{
-margin-top:3rem;
+.h3-payment {
+    margin-top: 3rem;
 }
 
 /* Checkout grid*/
@@ -865,22 +998,22 @@ margin-top:3rem;
     /* background-color: #555555; */
 }
 
-.itemAmount{
+.itemAmount {
     /* background:#6C4941; */
     grid-column: 1;
 }
 
-.itemName{
+.itemName {
     /* background:#6C4941; */
     grid-column: 2;
 }
 
-.itemCost{
+.itemCost {
     /* background:#6C4941; */
     grid-column: 3;
 }
 
-.itemRemove{
+.itemRemove {
     /* background:#6C4941; */
     grid-column: 4;
 }
@@ -894,6 +1027,7 @@ margin-top:3rem;
     align-items: center;
     /* background-color: #555555; */
 }
+
 
 /* CONTACT PAGE CSS */
 /* adding padding so the header text doesn't get covered by the nav bar */
@@ -949,4 +1083,5 @@ svg{
 .headerSM{
     margin-top: 3rem;
 }
+
 
