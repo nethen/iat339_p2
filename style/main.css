@@ -1149,6 +1149,7 @@ a{
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     grid-template-rows: auto;
+    margin-right:2rem;
     /* background-color: #555555; */
 }
 
@@ -1181,6 +1182,7 @@ a{
     align-items: center;
     /* background-color: #555555; */
 }
+
 
 .itemAmount {
     /* background:#6C4941; */
@@ -1268,4 +1270,12 @@ svg{
     margin-top: 3rem;
 }
 
+#payment-page{
+    margin-left:1rem;
+}
+
+.payment-top{
+    padding-top:6rem;
+    grid-column:1/4;
+}
 
