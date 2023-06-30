@@ -21,30 +21,34 @@ const closeMenu = () => {
     body.style.overflow = menu.classList.contains("nav__overlay__wrapper--active") ? "hidden" : "auto";
 }
 
-// Intersection observer code courtesty of 
-// https://javascript.plainenglish.io/how-to-check-whether-an-element-is-in-the-viewport-or-not-eb5de51c0201
-// Handles scroll transition on hero
-const setupObserver = () => {
-    const hero = document.querySelector("section.hero");
-    const second = document.getElementsByTagName("section")[1];
+// // Intersection observer code courtesty of 
+// // https://javascript.plainenglish.io/how-to-check-whether-an-element-is-in-the-viewport-or-not-eb5de51c0201
+// // Handles scroll transition on hero
+// const setupObserver = () => {
+//     const hero = document.getElementsByClassName("shadow");
+//     const second = document.getElementsByTagName("section")[1];
 
-    const options = {
-        root: null,
-        threshold: 0.5
-    };
-    const callback = function(entries, observer) {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting){
-                hero.classList.add("hero--active");
-                console.log(entry.intersectionRatio);
-            } else{
-                hero.classList.remove("hero--active");
-            }
-        });
-    }
-    let observer = new IntersectionObserver(callback, options);
+//     const options = {
+//         root: null,
+//         threshold: 0.5
+//     };
+//     const callback = function(entries, observer) {
+//         entries.forEach((entry) => {
+//             if (entry.isIntersecting){
+//                 for (let i = 0; i < hero.length; i++){
+//                     hero[i].classList.add("shadow--active");
+//                 }
+//                 console.log(entry.intersectionRatio);
+//             } else{
+//                 for (let i = 0; i < hero.length; i++){
+//                     hero[i].classList.remove("shadow--active");
+//                 }
+//             }
+//         });
+//     }
+//     let observer = new IntersectionObserver(callback, options);
 
-    observer.observe(second);
-}
+//     observer.observe(second);
+// }
 
-setupObserver();
+// setupObserver();

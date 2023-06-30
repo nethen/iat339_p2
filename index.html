@@ -11,11 +11,29 @@
 <body>
     <main>
         <header class="nav">
+            <picture class="nav__background">
+                <source media="min-width: 36rem" srcset="./assets/img/background_mega.png 1x, ./assets/img/background.png 2x">
+                <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
+                <img 
+                    src="./assets/img/background_mini.png"
+                    srcset="./assets/img/background_midi.png 2x, ./assets/img/background_mega.png 3x, ./assets/img/background.png 4x"
+                    alt="exterior shot of cheong-su-dang cafe"
+                    >
+            </picture>
         <nav class="nav__overlay">
             <a class="nav__overlay__logo" href="/">
                 Cheong-su-dang
             </a>
             <div class="nav__overlay__wrapper">
+                <picture class="nav__overlay__wrapper__background">
+                    <source media="min-width: 36rem" srcset="./assets/img/background_mega.png 1x, ./assets/img/background.png 2x">
+                    <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
+                    <img 
+                        src="./assets/img/background_mini.png"
+                        srcset="./assets/img/background_midi.png 2x, ./assets/img/background_mega.png 3x, ./assets/img/background.png 4x"
+                        alt="exterior shot of cheong-su-dang cafe"
+                        >
+                </picture>
                 <div class="nav__overlay__wrapper__items">
                     <div class="nav__overlay__wrapper__items__group">
                         <ul>
@@ -47,12 +65,30 @@
             </button>
         </nav>
     </header>
-
+    <!-- <div class="background"></div> -->
+    <picture class="background">
+        <source media="min-width: 36rem" srcset="./assets/img/background_mega.png 1x, ./assets/img/background.png 2x">
+        <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
+        <img 
+            src="./assets/img/background_mini.png"
+            srcset="./assets/img/background_midi.png 2x, ./assets/img/background_mega.png 3x, ./assets/img/background.png 4x"
+            alt="exterior shot of cheong-su-dang cafe"
+            >
+    </picture>
     <section class="hero">
         <h1 class="h1--hero">A garden in the city in Ikseon-dong, South Korea.</h1>
         <div class="hero__location">
-            <h2 class="h3">Visit us</h2>
-            <a href="https://goo.gl/maps/eoKbazC9VGdP9YWe6">31-9 Donhwamun-ro 11na-gil, Jongno-gu, Seoul, South Korea</a>
+            <picture class="hero__location__background">
+                <source media="min-width: 36rem" srcset="./assets/img/background_mega.png 1x, ./assets/img/background.png 2x">
+                <source srcset="./assets/img/background_mini.png 1x, ./assets/img/background_midi.png 2x">
+                <img 
+                    src="./assets/img/background_mini.png"
+                    srcset="./assets/img/background_midi.png 2x, ./assets/img/background_mega.png 3x, ./assets/img/background.png 4x"
+                    alt="exterior shot of cheong-su-dang cafe"
+                    >
+            </picture>
+            <h2 class="h5">Visit us</h2>
+            <a href="https://goo.gl/maps/eoKbazC9VGdP9YWe6" target="_blank">31-9 Donhwamun-ro 11na-gil, Jongno-gu, Seoul, South Korea</a>
         </div>
     </section>
     <section>
@@ -65,21 +101,58 @@
         <div class="news__nav">
             <h2>Latest news</h2>
             <ul>
-                <l1>
-                    <a href="">
-                        
+                <li>
+                    <a href="#rewards">
+                        Test
                     </a>
-                </l1>
+                </li>
+                <li>
+                    <a href="#rewards">
+                        Test
+                    </a>
+                </li>
+                <li>
+                    <a href="#rewards">
+                        Test
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="news__item">
-
+        <div class="news__item" id="rewards">
+            <picture class="news__item__preview">
+                <img 
+                    src="./assets/img/cafe_interior.png"
+                    alt="pending update"
+                    >
+            </picture>
+            <div class="news__item__desc">
+                <h3 class="lower">Rewards</h3>
+                <p>Check out our new rewards system! Earn bonuses on your next visits through your sticker card.</p>
+            </div>
         </div>
-        <div class="news__item">
-
+        <div class="news__item" id="rewards">
+            <picture class="news__item__preview">
+                <img 
+                    src="./assets/img/cafe_interior.png"
+                    alt="pending update"
+                    >
+            </picture>
+            <div class="news__item__desc">
+                <h3 class="lower">Canada Day Sale</h3>
+                <p>15% off selected items</p>
+            </div>
         </div>
-        <div class="news__item">
-
+        <div class="news__item" id="rewards">
+            <picture class="news__item__preview">
+                <img 
+                    src="./assets/img/drinks_2.png"
+                    alt="pending update"
+                    >
+            </picture>
+            <div class="news__item__desc">
+                <h3 class="lower">July specials</h3>
+                <p>Check out our new fruit teas and lemonades for the month of July.</p>
+            </div>
         </div>
     </section>
     </main>
