@@ -156,7 +156,7 @@ section.menu-listings {
 
 .menu-items {
     margin-top: 5rem;
-    grid-column: 1;
+    grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
@@ -871,7 +871,7 @@ a:hover {
 
     .menu-items {
         margin-top: 5rem;
-        grid-column: 1;
+        grid-column: 1/-1;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
