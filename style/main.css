@@ -726,6 +726,7 @@ a:hover {
 .label__text__input1{
     display:block;
     font-size:2rem;
+    font-family: "Jubilee Platinum";
     /* width: 20%;
     margin-bottom: 1em;
     transform: scale(2); */
@@ -741,7 +742,6 @@ a:hover {
     color: var(--text-primary);
     padding-right: 3rem;
     font-size:xx-large;
- 
 }
 
 
@@ -812,9 +812,9 @@ a:hover {
         grid-column: 1/-1;
     }
 
-    .menu-item-name{
+    /* .menu-item-name{
 
-    }
+    } */
 
     .menu-item-descriptor{
         grid-column: 1/-1;
@@ -1279,3 +1279,16 @@ svg{
     grid-column:1/4;
 }
 
+
+/* sabs edits 3 */
+
+/* menu top */
+.menuDropHeader{
+    margin-top: 6rem;
+}
+
+.menuTextHeader{
+    margin-top: 6rem;
+    margin-left: 1.5rem;
+    grid-column: 2/-1;
+}
