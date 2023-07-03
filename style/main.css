@@ -192,6 +192,11 @@ img {
     height: auto;
 }
 
+.menu-image-mobile{
+    grid-column: 1/-1;
+    width: 75%;
+}
+
 body:not(.style) .nav{
     overflow-y: hidden;
 }
@@ -787,7 +792,10 @@ a:hover {
     }
 
 
+
     /*menu listing css (mobile) */
+
+
 
 
     .menu-items-price-1 {
@@ -880,8 +888,15 @@ a:hover {
 
     }
 
+
     .menu-item-price{
         grid-column: 2;
+
+    }
+
+    .menu-image-mobile{
+        grid-column: 1/-1;
+        width:75%;
     }
 
     .nav .nav__overlay .nav__overlay__logo {
@@ -965,6 +980,11 @@ a:hover {
         margin-bottom: 0.5rem;
     }
 
+    .menu-image-mobile{
+        display:none;
+    }
+
+
 }
 
 
@@ -1043,7 +1063,9 @@ a:hover {
     }
 
 
-
+    .menu-image-mobile{
+        display:none;
+    }
 
 
 
