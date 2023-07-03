@@ -156,15 +156,13 @@ section.menu-listings {
 
 .menu-items {
     margin-top: 5rem;
+    grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 1fr; /* Set the grid template columns for mobile view */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     grid-template-rows: auto;
-}
 
 
-.menu-items-price-1 {
-    grid-column: 1;
 }
 
 .menu-listings {
@@ -180,21 +178,23 @@ section.menu-listings {
     grid-column: 1;
 }
 
-.menu-item-price {
+.menu-item-price{
     grid-column: 2;
 }
+
 
 .menu-selection-item {
     text-decoration: underline;
 }
 
-.menu-container-flex{
-    display:flex;
-}
-
 img {
     width: 100%;
     height: auto;
+}
+
+.menu-image-mobile{
+    grid-column: 1/-1;
+    width: 75%;
 }
 
 body:not(.style) .nav{
@@ -457,7 +457,7 @@ main > section.news .news__item .news__item__desc{
     /* flex-direction: column; */
     /* justify-content: end; */
     text-transform: lowercase;
-    gap: 1rem; 
+    gap: 1rem;
 }
 
 .news .news__nav ul li{
@@ -698,7 +698,7 @@ a:hover{
     margin-top: 1rem;
     grid-column: 1/-1;
 }
-  
+
 a:hover {
     text-decoration: underline;
 
@@ -741,7 +741,7 @@ a:hover {
     color: var(--text-primary);
     padding-right: 3rem;
     font-size:xx-large;
- 
+
 }
 
 
@@ -764,7 +764,7 @@ a:hover {
         display: none;
     }
 
-    
+
 
     main > section.hero .hero__location {
         grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -791,25 +791,21 @@ a:hover {
 
     }
 
-    .menu-items {
-        margin-top: 5rem;
-        grid-column: span 2;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-        grid-template-rows: auto;
 
 
-    }
+    /*menu listing css (mobile) */
+
+
 
 
     .menu-items-price-1 {
-        grid-column: 3/-1;
+        grid-column: 1/-1;
     }
 
     .menu-listings {
         padding-top: 10rem;
-        grid-column: 1/-1;
+
+
     }
 
     .menu-item-name{
@@ -828,6 +824,16 @@ a:hover {
     .menu-selection-item {
         text-decoration: underline;
     }
+
+
+
+
+
+
+
+
+
+
 
 
     /*edits made by alex*/
@@ -871,6 +877,28 @@ a:hover {
         margin: 0 auto;
     }
 
+    .menu-items {
+        margin-top: 5rem;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        grid-template-rows: auto;
+
+
+    }
+
+
+    .menu-item-price{
+        grid-column: 2;
+
+    }
+
+    .menu-image-mobile{
+        grid-column: 1/-1;
+        width:75%;
+    }
+
     .nav .nav__overlay .nav__overlay__logo {
         font-size: min(2.5vw, 1.25rem);
     }
@@ -900,7 +928,7 @@ a:hover {
     main > section.news .news__nav{
         grid-column: 1/3;
     }
-    
+
     main > section[id] .container .container__desc,
     main > section[id] .container .container__display {
         display: grid;
@@ -952,6 +980,11 @@ a:hover {
         margin-bottom: 0.5rem;
     }
 
+    .menu-image-mobile{
+        display:none;
+    }
+
+
 }
 
 
@@ -990,7 +1023,52 @@ a:hover {
         grid-column: 1/-2;
     }
 
-   
+    /*menu listing css (desktop) */
+
+    .menu-items {
+        margin-top: 5rem;
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        grid-template-rows: auto;
+
+
+    }
+
+    .menu-items-price-1 {
+        grid-column: 3/-1;
+    }
+
+    .menu-listings {
+        padding-top: 10rem;
+        grid-column: 1/-1;
+    }
+
+    .menu-item-name{
+
+    }
+
+    .menu-item-descriptor{
+        grid-column: 1/-1;
+    }
+
+    .menu-item-price{
+        grid-column: 2/-1;
+
+    }
+
+    .menu-selection-item {
+        text-decoration: underline;
+    }
+
+
+    .menu-image-mobile{
+        display:none;
+    }
+
+
+
     /* PRODUCT PAGE CSS (DESKTOP)*/
     .productSectionAll{
         /* margin-top: 10rem; */
@@ -1002,7 +1080,7 @@ a:hover {
         margin-top: 8rem;
         grid-column: 2/4;
     }
-    
+
     .productInfo{
         margin-top: 14rem;
         margin-left: 1rem;
@@ -1012,19 +1090,19 @@ a:hover {
     .productPrice{
         margin-left: 0.5rem;
     }
-    
+
     .productDesc{
         margin-top: 3rem;
         margin-left: 0.5rem;
     }
-    
+
     /* for product dropdown */
     /* peter said its not clear enough that you can drop down so I added product(type) to help indicate, open to suggestions tho */
     .label__text__input1{
         display:block;
         font-size:2rem;
     }
-    
+
     /* drop down form */
     .text__input_drop1{
         outline: 0;
@@ -1034,7 +1112,7 @@ a:hover {
         color: var(--text-primary);
         padding-left: 0.5rem;
     }
-    
+
     .text__input_drop1:hover, .text__input_drop1:focus, .text__input_drop1:active{
         transition: all 0.3s ease-out;
         border-radius: 0.8125rem;
@@ -1063,7 +1141,7 @@ a:hover {
     main > section.news .news__item{
         grid-column: 1/4;
 
-    }    
+    }
 
 }
 
@@ -1251,7 +1329,7 @@ a{
 .forContact{
     grid-column: 1/-1;
     margin-top: 2rem;
-} 
+}
 
 svg{
     display: inline-block;
