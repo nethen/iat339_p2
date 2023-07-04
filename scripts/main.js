@@ -21,7 +21,7 @@ const closeMenu = () => {
     body.style.overflow = menu.classList.contains("nav__overlay__wrapper--active") ? "hidden" : "auto";
 }
 
-// // Intersection observer code courtesty of 
+// // Intersection observer code courtesty of
 // // https://javascript.plainenglish.io/how-to-check-whether-an-element-is-in-the-viewport-or-not-eb5de51c0201
 // // Handles scroll transition on hero
 // const setupObserver = () => {
@@ -52,3 +52,22 @@ const closeMenu = () => {
 // }
 
 // setupObserver();
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = document.querySelectorAll(".menu-item-name");
+
+    menuItems.forEach(function(item) {
+        const menuItemContainer = item.parentNode; // Get the parent container of the menu item
+        const popupImage = menuItemContainer.querySelector(".popup-image"); // Get the respective popup image for the menu item
+
+        menuItemContainer.addEventListener("mousemove", function(event) {
+            popupImage.style.display = "block";
+            popupImage.style.left = event.clientX + "px";
+            popupImage.style.top = event.clientY + "px";
+        });
+
+        menuItemContainer.addEventListener("mouseleave", function() {
+            popupImage.style.display = "none";
+        });
+    });
+});

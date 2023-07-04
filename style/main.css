@@ -192,6 +192,7 @@ img {
     height: auto;
 }
 
+
 .menu-image-mobile{
     grid-column: 1/-1;
     width: 75%;
@@ -899,6 +900,8 @@ a:hover {
         width:75%;
     }
 
+
+
     .nav .nav__overlay .nav__overlay__logo {
         font-size: min(2.5vw, 1.25rem);
     }
@@ -1067,6 +1070,15 @@ a:hover {
         display:none;
     }
 
+    .popup-image {
+        position: absolute;
+        display: none;
+        z-index: 999;
+        width: 200px;
+        height: 200px;
+    }
+
+
 
 
     /* PRODUCT PAGE CSS (DESKTOP)*/
@@ -1142,6 +1154,15 @@ a:hover {
         grid-column: 1/4;
 
     }
+    .popup-image {
+        position: absolute;
+        display: none;
+        z-index: 999;
+        width: 200px;
+        height: 200px;
+    }
+
+
 
 }
 
