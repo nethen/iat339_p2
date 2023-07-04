@@ -187,6 +187,18 @@ section.menu-listings {
     text-decoration: underline;
 }
 
+.menu-section {
+    display: none;
+}
+
+.menu-section.active {
+    display: block;
+}
+
+#menu-type-selection{
+    margin-top: 10rem;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -1073,9 +1085,9 @@ a:hover {
     .popup-image {
         position: absolute;
         display: none;
-        z-index: 999;
-        width: 200px;
-        height: 200px;
+        z-index: -1;
+        width: auto;
+        height: 300px;
     }
 
 
@@ -1157,9 +1169,9 @@ a:hover {
     .popup-image {
         position: absolute;
         display: none;
-        z-index: 999;
-        width: 200px;
-        height: 200px;
+        z-index: -1;
+        width: auto;
+        height: 300px;
     }
 
 

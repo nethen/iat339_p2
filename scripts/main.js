@@ -53,9 +53,15 @@ const closeMenu = () => {
 
 // setupObserver();
 
+
+
+//Image hoverstate over text in courtesty of
+//https://codepen.io/coreDeiv/pen/YzqzRKK
+//Handles where the images position is based on mouse position
+
 document.addEventListener("DOMContentLoaded", function() {
     const menuItems = document.querySelectorAll(".menu-item-name");
-
+    //checks for different image inputs for certain menu items
     menuItems.forEach(function(item) {
         const menuItemContainer = item.parentNode; // Get the parent container of the menu item
         const popupImage = menuItemContainer.querySelector(".popup-image"); // Get the respective popup image for the menu item
@@ -70,4 +76,26 @@ document.addEventListener("DOMContentLoaded", function() {
             popupImage.style.display = "none";
         });
     });
+});
+
+
+//Switch between sections to view food menu and drinks menu
+//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_state_switch1
+
+// Get references to the menu and sections
+const menu = document.getElementById('menu-type-selection');
+const sections = document.getElementsByClassName('menu-section');
+
+// Add an event listener to the menu
+menu.addEventListener('change', function() {
+    // Get the selected section value
+    const selectedSection = menu.value;
+
+    // Hide all sections
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+    }
+
+    // Show the selected section
+    document.getElementById(selectedSection).classList.add('active');
 });
