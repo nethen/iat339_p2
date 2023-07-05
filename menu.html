@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/main.css">
-    <script src="/scripts/main.js" defer></script>
     <title>menu | cheong-su-dang</title>
 </head>
 <body>
@@ -47,16 +46,27 @@
             </button>
         </nav>
     </header>
-    <section class="menu-listings">
-        <h1><span class="menu-selection-item">drinks</span> with us</h1>
+    <!--drinks menu-->
+    <section id="menu-listing-selection-padding">
+    <select id="menu" class="menu-select">
+        <option value="section1">drinks with us</option>
+        <option value="section2">dine with us</option>
+    </select>
+    </section>
+
+    <section class="menu-listings section-menu" id="section1">
+<!--        <h1><span class="menu-selection-item">drinks</span> with us</h1>-->
         <div class="menu-items">
             <!-- grouped together because its informational and helps seperate teh price and names -->
             <div class="menu-image-mobile">
-                <img src="assets/img/placeholder-image.png">
+                <a href=""><img src="assets/img/placeholder-image.png" class="popup-image"></a>
             </div>
             <div>
                 <div class="menu-item-name">
+                   <a href="productPageDrink.html"><img src="assets/img/pexels-karolina-grabowska-4195601.jpg" class="popup-image menu-image-desktop"></a>
                     <a href="productPageDrink.html"><h4>Espresso</h4></a>
+
+
                 </div>
                 <div class="menu-item-descriptor">
                     <p>iced/hot</p>
@@ -72,6 +82,7 @@
             </div>
             <div>
                 <div class="menu-item-name">
+                    <a href="productPageDrink.html"><img src="assets/img/pexels-andrew-peterson-350478.jpg" class="popup-image menu-image-desktop"></a>
                     <a href="productPageDrink.html"><h4>Mocha</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
@@ -89,6 +100,7 @@
             </div>
             <div>
                 <div class="menu-item-name">
+                    <a href="productPageDrink.html"><img src="assets/img/pexels-chevanon-photography-312418.jpg" class="popup-image menu-image-desktop"></a>
                     <a href="productPageDrink.html"><h4>Latte</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
@@ -106,6 +118,7 @@
             </div>
             <div>
                 <div class="menu-item-name">
+                    <a href="productPageDrink.html"><img src="assets/img/pexels-chevanon-photography-312418.jpg" class="popup-image menu-image-desktop"></a>
                     <a href="productPageDrink.html"><h4>Americano</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
@@ -123,6 +136,7 @@
             </div>
             <div>
                 <div class="menu-item-name">
+                    <a href="productPageDrink.html"><img src="assets/img/pexels-anna-tukhfatullina-food-photographerstylist-2638019.jpg" class="popup-image menu-image-desktop"></a>
                     <a href="productPageDrink.html"><h4>Cappuccino</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
@@ -176,6 +190,7 @@
             </div>
             <div>
                 <div class="menu-item-name">
+                    <a href="productPageDrink.html"><img src="assets/img/matchaSmall.png" class="popup-image menu-image-desktop"></a>
                     <a href="productPageDrink.html"><h4>Matcha tea</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
@@ -315,6 +330,34 @@
 
 
     </section>
+
+
+
+    <!--food menu-->
+    <section class="menu-listings section-menu" id="section2">
+        <div class="menu-items">
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/placeholder-image.png" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDrink.html"><img src="assets/img/pexels-karolina-grabowska-4195601.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Espresso</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>iced/hot</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>2.75</h4>
+            </div>
+        </div>
+    </section>
 </main>
+<script src="/scripts/main.js" defer></script>
 </body>
 </html>
