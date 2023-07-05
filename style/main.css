@@ -231,6 +231,22 @@ img {
 }
 
 
+.menu-select{
+    position: relative;
+    font-family: "Jubilee Platinum";
+    color:white;
+    font-size: 7.5vw;
+    width: 400%;
+    background-color: #283C2F;
+    border-color:transparent;
+}
+
+/*hides original select element*/
+
+.menu-select select {
+    display: none;
+}
+
 body:not(.style) .nav{
     overflow-y: hidden;
 }
@@ -879,7 +895,26 @@ a:hover {
         margin-top: 10rem;
     }
 
+    .menu-select{
+        position: relative;
+        font-family: "Jubilee Platinum";
+        color:white;
+        font-size: 4rem;
+        width: 400%;
+        background-color: #283C2F;
+        border-color:transparent;
+    }
 
+    /*hides original select element*/
+
+    .menu-select select {
+        display: none;
+    }
+
+    .menu-mobile-image-sizing{
+
+        height: 700px
+    }
 
 
     /*edits made by alex*/
@@ -1162,7 +1197,7 @@ a:hover {
         font-family: "Jubilee Platinum";
         color:white;
         font-size: 4rem;
-        width: 150%;
+        width: 300%;
         background-color: #283C2F;
         border-color:transparent;
     }
