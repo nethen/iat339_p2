@@ -83,19 +83,60 @@ document.addEventListener("DOMContentLoaded", function() {
 //https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_state_switch1
 
 // Get references to the menu and sections
-const menu = document.getElementById('menu-type-selection');
-const sections = document.getElementsByClassName('menu-section');
+const menu = document.getElementById('menu');
+const sections = document.getElementsByClassName('section-menu');
 
-// Add an event listener to the menu
 menu.addEventListener('change', function() {
-    // Get the selected section value
     const selectedSection = menu.value;
 
-    // Hide all sections
     for (let i = 0; i < sections.length; i++) {
         sections[i].classList.remove('active');
     }
 
-    // Show the selected section
-    document.getElementById(selectedSection).classList.add('active');
+    const sectionToShow = document.getElementById(selectedSection);
+    if (sectionToShow) {
+        sectionToShow.classList.add('active');
+    }
 });
+
+// Get the menu select element and section menu elements
+const menuSelect = document.getElementById('menu');
+const sectionMenus = document.querySelectorAll('.section-menu');
+
+// Retrieve the active section from localStorage
+const activeSection = localStorage.getItem('activeSection');
+
+// Set the initial active section
+if (activeSection) {
+    const activeOption = menuSelect.querySelector(`option[value="${activeSection}"]`);
+    if (activeOption) {
+        activeOption.selected = true;
+    }
+}
+
+
+//https://www.w3schools.com/js/js_api_web_storage.asp
+// Toggle the active section based on the selected option
+function toggleSection() {
+    const selectedOption = menuSelect.options[menuSelect.selectedIndex];
+    const selectedSectionId = selectedOption.value;
+
+    // Store the active section in localStorage
+    localStorage.setItem('activeSection', selectedSectionId);
+
+    // Toggle the active class on section menus
+    sectionMenus.forEach((section) => {
+        section.classList.remove('active');
+    });
+
+    const selectedSection = document.getElementById(selectedSectionId);
+    if (selectedSection) {
+        selectedSection.classList.add('active');
+    }
+}
+
+// Add event listener to the menu select element
+menuSelect.addEventListener('change', toggleSection);
+
+// Call the toggleSection function on page load
+toggleSection();

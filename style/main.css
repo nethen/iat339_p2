@@ -147,7 +147,7 @@ body:not(.style) main > section {
 }
 
 section.menu-listings {
-    padding-top: 10rem;
+    padding-top: 5rem;
     grid-column: 1 / -1; /* Extend the grid column to full width */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Adjust the grid template columns */
@@ -166,7 +166,7 @@ section.menu-listings {
 }
 
 .menu-listings {
-    padding-top: 10rem;
+    padding-top: 5rem;
     grid-column: 1;
 }
 
@@ -208,6 +208,10 @@ img {
 .menu-image-mobile{
     grid-column: 1/-1;
     width: 75%;
+}
+
+.menu-image-desktop{
+    display: none;
 }
 
 body:not(.style) .nav{
@@ -816,7 +820,7 @@ a:hover {
     }
 
     .menu-listings {
-        padding-top: 10rem;
+        padding-top: 5rem;
 
 
     }
@@ -838,9 +842,9 @@ a:hover {
         text-decoration: underline;
     }
 
-
-
-
+    .menu-image-desktop{
+        display: none;
+    }
 
 
 
@@ -995,8 +999,17 @@ a:hover {
         margin-bottom: 0.5rem;
     }
 
+    /*.menu-image-mobile{*/
+    /*    display:none;*/
+    /*}*/
+
     .menu-image-mobile{
-        display:none;
+        grid-column: 1/-1;
+        width: 60%;
+    }
+
+    .menu-image-desktop{
+        display: none;
     }
 
 
@@ -1038,6 +1051,19 @@ a:hover {
         grid-column: 1/-2;
     }
 
+    .section-menu {
+        display: none;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .section-menu.active {
+        display: grid;
+        visibility: visible;
+        position: static;
+    }
+
+
     /*menu listing css (desktop) */
 
     .menu-items {
@@ -1056,7 +1082,7 @@ a:hover {
     }
 
     .menu-listings {
-        padding-top: 10rem;
+        padding-top: 5rem;
         grid-column: 1/-1;
     }
 
@@ -1089,6 +1115,53 @@ a:hover {
         width: auto;
         height: 300px;
     }
+
+    #menu-listing-selection-padding{
+        margin-top: 10rem;
+    }
+
+
+    /*menu selection dropdown styling */
+    /*https://www.w3schools.com/howto/howto_custom_select.asp*/
+
+    .menu-select{
+        position: relative;
+        font-family: "Jubilee Platinum";
+        color:white;
+        font-size: 4rem;
+        width: 150%;
+        background-color: #283C2F;
+        border-color:transparent;
+    }
+
+    /*hides original select element*/
+
+    .menu-select select {
+        display: none;
+    }
+
+    .select-selected{
+        background-color: #283C2F;
+    }
+
+    .select-selected:after{
+        position: absolute;
+        content:"";
+        width:0;
+        height:0;
+        border-color:transparent;
+    }
+
+    .menu-select-items{
+        position:absolute;
+        background-color: #283C2F;
+
+    }
+
+    .select-hide{
+        display:none;
+    }
+
 
 
 
@@ -1173,6 +1246,18 @@ a:hover {
         width: auto;
         height: 300px;
     }
+
+    /*.section-menu {*/
+    /*    display: none;*/
+    /*    visibility: hidden;*/
+    /*    position: absolute;*/
+    /*}*/
+
+    /*.section-menu.active {*/
+    /*    display: grid;*/
+    /*    visibility: visible;*/
+    /*    position: static;*/
+    /*}*/
 
 
 
