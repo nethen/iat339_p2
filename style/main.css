@@ -214,6 +214,23 @@ img {
     display: none;
 }
 
+.section-menu {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+}
+
+.section-menu.active {
+    display: grid;
+    visibility: visible;
+    position: static;
+}
+
+#menu-listing-selection-padding{
+    margin-top: 10rem;
+}
+
+
 body:not(.style) .nav{
     overflow-y: hidden;
 }
@@ -808,7 +825,17 @@ a:hover {
 
     }
 
+    .section-menu {
+        display: none;
+        visibility: hidden;
+        position: absolute;
+    }
 
+    .section-menu.active {
+        display: grid;
+        visibility: visible;
+        position: static;
+    }
 
     /*menu listing css (mobile) */
 
@@ -848,7 +875,9 @@ a:hover {
 
 
 
-
+    #menu-listing-selection-padding{
+        margin-top: 10rem;
+    }
 
 
 
@@ -1010,6 +1039,10 @@ a:hover {
 
     .menu-image-desktop{
         display: none;
+    }
+
+    #menu-listing-selection-padding{
+        margin-top: 10rem;
     }
 
 
