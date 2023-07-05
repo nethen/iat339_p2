@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/normalize.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="/scripts/main.js" defer></script>
+    <title>cart | cheong-su-dang</title>
+</head>
+<body>
+    <main>
+        <header class="nav">
+        <nav class="nav__overlay">
+            <a class="nav__overlay__logo" href="/">
+                Cheong-su-dang
+            </a>
+            <div class="nav__overlay__wrapper">
+                <div class="nav__overlay__wrapper__items">
+                    <div class="nav__overlay__wrapper__items__group">
+                        <ul>
+                            <li>
+                                <a href="/menu.html" onclick="closeMenu()">Menu</a>
+                            </li>
+                            <li>
+                                <a href="/contact.html" onclick="closeMenu()">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/cart.html" onclick="closeMenu()">Cart (<span>0</span>)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SVG icons converted to inline using https://www.bayustudio.com/app/svg-encoder/ -->
+            <button class="nav__overlay__menu" onclick="toggleMenu()">
+                <svg class="nav__overlay__menu__img nav__overlay__menu__img--active" width="24" height="24"
+                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z"/>
+                </svg>
+
+                <svg class="nav__overlay__menu__img" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <section id="paymentMethod">
+        <div class="Cart-top">
+            <h2 class="Cart-top">Payment Details</h2>
+            <hr>
+        </div>
+        
+
+        <h5 class="cartSubheader">PAYMENT METHOD</h5>
+        <!-- radios visa mc debit -->
+
+        <div class="input__radio__overlay">
+            <div>
+                <input type="radio" id="visaexample" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="visaexample">Visa</label>
+            </div>
+            <div>
+                <input class="" type="radio" id="masterexample" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="masterexample">Mastercard</label>
+            </div>
+            <div>
+                <input type="radio" id="debitexample" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="debitexample">Debit</label>
+            </div>
+            <div>
+                <input class="" type="radio" id="paypalexample" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="paypalexample">Paypal</label>
+            </div> 
+        </div>
+
+        <div class="cardInfo">
+            <!-- card holder name -->
+            <label class="label__text__input cardInput" for="payment-form">Card Holder Name</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Jane Doe">
+            <!-- card number -->
+            <label class="label__text__input cardInput" for="payment-form">Card Number</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="123 456 7890">
+            <!-- cvc -->
+            <label class="label__text__input cardInput" for="payment-form">CVC</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="XXX">
+        </div>
+
+        <button class="paymentButton paymentLong" onclick="" type="submit" target="_blank">next step</button>
+        
+        <p class="paymentP">step 1 of 3 completed</p>
+
+    </section>
+
+    <section id="deliveryAddress">
+        <div class="Cart-top">
+            <h2>Billing Address</h2>
+            <hr>
+        </div>
+
+        <div class="cardInfo">
+            <!-- name -->
+            <label class="label__text__input cardInput" for="payment-form">Full Name</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Jane Doe">
+
+            <!-- Phone Number -->
+            <label class="label__text__input cardInput" for="payment-form">Phone Number</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="(604) 456 7890">
+            
+            <!-- Street -->
+            <label class="label__text__input cardInput" for="payment-form">Street Address</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="453-32 Yeonnam-ro Yeonnam-dong">
+
+            <!-- City -->
+            <label class="label__text__input cardInput" for="payment-form">City</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Seoul">
+
+            <!-- districts-->
+            <label class="label__text__input forContact" for="payment-form">District</label>  
+                                
+                <!-- source for drop down: https://www.w3schools.com/Css/css_dropdowns.asp  -->
+                <select class="label__text__input text__input_drop"  name="Topic" id="payment-form">
+                <option value="Select Topic">Select District</option>
+                <option value="Mapo-gu">Mapo-gu</option>
+                <option value="Songpa-gu">Songpa-gu</option>
+                <option value="Gangseo-gu">Gangseo-gu</option>
+                <option value="Jongno-gu">Jongno-gu</option>
+                <option value="Gangnam-gu">Gangnam-gu</option>
+                </select>
+
+            <!-- Postal Code-->
+            <label class="label__text__input cardInput" for="payment-form">Postal Code</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="103-531">
+
+            <input type="checkbox" name="items" value="deliveryAddress" notchecked placeholder="set address as delivery location?"> set address as delivery location?
+        </div>
+
+        <!-- return button -->
+        <button class="paymentButton returnBack" type="button" value="Return Back" onclick="history.go(-1)">return back</button>
+        
+        <!-- next part button -->
+        <button class="paymentButton nextStep" type="submit" target="_blank">next step</button>
+        <p class="paymentP">step 2 of 3 completed</p>
+    </section>
+
+    <section id="deliveryOrder">
+        <div class="Cart-top">
+            <h2>Delivery Order</h2>
+            <hr>
+        </div>
+
+        <h5 class="cartSubheader">Delivery Speed</h5>
+
+        <div class="input__radio__overlay">
+            <div>
+                <input type="radio" id="Express" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="Express">Express</label>
+            </div>
+
+            <div>
+                <input type="radio" id="Standard" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="Standard">Standard</label>
+            </div>
+
+            <div>
+                <input type="radio" id="Scheduled" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="Scheduled"> Scheduled</label>
+            </div>
+        </div>
+
+        <h5 class="cartSubheader">Pick-Up Method</h5>
+        
+        <div class="input__radio__overlay">
+            <div>
+                <input type="radio" id="Express" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="Express">InStore</label>
+            </div>
+
+            <div>
+                <input type="radio" id="Standard" name="radioexample">
+            </div>
+            <div>
+                <label class="radioPaymentType" for="Standard">Address</label>
+            </div>
+        </div> 
+
+        <!-- return button -->
+        <button class="paymentButton returnBack" type="button" value="Return Back" onclick="history.go(-1)">return back</button>
+        
+        <!-- next part button -->
+        <button class="paymentButton nextStep" onclick="alert('Success! see you soon!')" type="submit" target="_blank">Send Order</button>
+        <p class="paymentP">step 3 of 3 completed</p>
+
+    </section>
+
+
+    </main>
+</body>
+</html>
