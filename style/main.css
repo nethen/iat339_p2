@@ -214,6 +214,39 @@ img {
     display: none;
 }
 
+.section-menu {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+}
+
+.section-menu.active {
+    display: grid;
+    visibility: visible;
+    position: static;
+}
+
+#menu-listing-selection-padding{
+    margin-top: 10rem;
+}
+
+
+.menu-select{
+    position: relative;
+    font-family: "Jubilee Platinum";
+    color:white;
+    font-size: 7.5vw;
+    width: 400%;
+    background-color: #283C2F;
+    border-color:transparent;
+}
+
+/*hides original select element*/
+
+.menu-select select {
+    display: none;
+}
+
 body:not(.style) .nav{
     overflow-y: hidden;
 }
@@ -770,7 +803,37 @@ a:hover {
     border: 1px solid var(--bg-color1);
 }
 
+.counter {
+    width: 9.375rem;
+    padding: .5rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;  /* Added 'solid' as the border style */
+    border-radius: .5rem;
+    z-index: 100;
+}
 
+.counter input {
+    width: 3.125rem;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+}
+.counter span {
+    display: block;
+    font-size: 1.5625rem;
+    padding: 0 5px;
+    cursor: pointer;
+    color: white;
+    user-select: none;
+}
 
 
 /* mobile - tablet */
@@ -808,7 +871,17 @@ a:hover {
 
     }
 
+    .section-menu {
+        display: none;
+        visibility: hidden;
+        position: absolute;
+    }
 
+    .section-menu.active {
+        display: grid;
+        visibility: visible;
+        position: static;
+    }
 
     /*menu listing css (mobile) */
 
@@ -848,7 +921,63 @@ a:hover {
 
 
 
+    #menu-listing-selection-padding{
+        margin-top: 10rem;
+    }
 
+    .menu-select{
+        position: relative;
+        font-family: "Jubilee Platinum";
+        color:white;
+        font-size: 4rem;
+        width: 400%;
+        background-color: #283C2F;
+        border-color:transparent;
+    }
+
+    /*hides original select element*/
+
+    .menu-select select {
+        display: none;
+    }
+
+    .menu-mobile-image-sizing{
+
+        height: 700px
+    }
+
+
+    .counter {
+        width: 9.375rem;
+        padding: .5rem;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;  /* Added 'solid' as the border style */
+        border-radius: .5rem;
+        z-index: 100;
+    }
+
+    .counter input {
+        width: 3.125rem;
+        border: 0;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        background: transparent;
+        color: #fff;
+        appearance: none;
+        outline: 0;
+    }
+    .counter span {
+        display: block;
+        font-size: 1.5625rem;
+        padding: 0 5px;
+        cursor: pointer;
+        color: white;
+        user-select: none;
+    }
 
 
 
@@ -1012,6 +1141,10 @@ a:hover {
         display: none;
     }
 
+    #menu-listing-selection-padding{
+        margin-top: 10rem;
+    }
+
 
 }
 
@@ -1129,7 +1262,7 @@ a:hover {
         font-family: "Jubilee Platinum";
         color:white;
         font-size: 4rem;
-        width: 150%;
+        width: 300%;
         background-color: #283C2F;
         border-color:transparent;
     }
@@ -1229,6 +1362,40 @@ a:hover {
         z-index:-50;
         filter: brightness(75%);
     }
+
+    .counter {
+        width: 9.375rem;
+        padding: .5rem;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;  /* Added 'solid' as the border style */
+        border-radius: .5rem;
+        z-index: 100;
+    }
+
+    .counter input {
+        width: 3.125rem;
+        border: 0;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        background: transparent;
+        color: #fff;
+        appearance: none;
+        outline: 0;
+    }
+    .counter span {
+        display: block;
+        font-size: 1.5625rem;
+        padding: 0 5px;
+        cursor: pointer;
+        color: white;
+        user-select: none;
+    }
+
+
 }
 
 /* large desktops 2k*/

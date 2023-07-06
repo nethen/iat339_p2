@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/normalize.css">
-    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="/scripts/main.js" defer></script>
     <title>cart | cheong-su-dang</title>
 </head>
@@ -72,12 +74,21 @@
     
                 <div class="productDesc">
                     <p>A creamy blend of ceremonial-grade matcha and steamed milk, creating a harmonious and invigorating delight.</p>
+                    <!-- Quantity Counter https://dev.to/stackfindover/products-quantity-counter-using-html-css-javascript-663 -->
+                    <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
+remove
+</span></span>
+                        <input type="text" value="1">
+                        <span class="up" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
+add
+</span></span>
+                    </div>
+
                     <button class="button productButton" type="submit" onclick="alert('Success! added to cart')">Add to Cart</button>
+
                 </div>
-                
-                <!-- Quantity Counter https://dev.to/stackfindover/products-quantity-counter-using-html-css-javascript-663 -->
-                <div class="quantity">
-                </div>
+
             </form>
 
         </div>
