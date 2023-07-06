@@ -50,41 +50,63 @@
 
     <section id="checkoutItemPage">
         <div class="checkout-top">
-            <h2 class="Cart-top">Checkout Cart</h2>
+            <h2 class="Cart-top">Cart Items</h2>
+        </div>
+
+        <div class="breakLine">
             <hr>
         </div>
 
-            <div class="item-con">
-                <h5 class="itemName">Cinnemon roll (half-dozen)</h5>
-                <h5 class="itemQuantity">1x</h5>
-                <h5 class="itemPrice">$3.50</h5>
-                <h5 class="itemRemove">remove</h5>
-            </div>
-    
-            <div class="item-con">
-                <h5 class="itemName">Matcha (iced)</h5>
-                <h5 class="itemQuantity">2x</h5>
-                <h5 class="itemPrice">$9.00</h5>
-                <h5 class="itemRemove">remove</h5>
-            </div>
-    
-            <div class="item-con">
-                <h5 class="itemName">Matcha (hot)</h5>
-    
-                <h5 class="itemQuantity">1x</h5>
-                <h5 class="itemPrice">$4.50</h5>
-                <h5 class="itemRemove">remove</h5>
-            </div>
-
-       
-
-
-            
-        <!-- return button -->
-        <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='menu.html'">back to menu</button>
         
+        <div class="item-con">
+            <div class="checkoutCheck">
+                <input type="checkbox" name="items" value="menuItemCheck" checked>
+            </div>
+
+            <h5 class="itemName">Cinnemon roll (half-dozen)</h5>
+            <h5 class="itemQuantity">1x</h5>
+            <h5 class="itemPrice">$12.00</h5>
+            <!-- <h5 class="itemRemove">remove</h5> -->
+        </div>
+        
+        <div class="item-con">
+            <div class="checkoutCheck">
+                <input type="checkbox" name="items" value="menuItemCheck" checked>
+            </div>
+
+            <h5 class="itemName">Matcha (iced)</h5>
+            <h5 class="itemQuantity">2x</h5>
+            <h5 class="itemPrice">$9.00</h5>
+            <!-- <h5 class="itemRemove">remove</h5> -->
+        </div>
+    
+        <div class="item-con">
+            <div class="checkoutCheck">
+                <input type="checkbox" name="items" value="menuItemCheck" checked>
+            </div>
+
+            <h5 class="itemName">Matcha (hot)</h5>
+            <h5 class="itemQuantity">1x</h5>
+            <h5 class="itemPrice">$4.50</h5>
+            <!-- <h5 class="itemRemove">remove</h5> -->
+        </div>
+
+        <div class="breakLine">
+            <hr>
+        </div>
+
+        <div class="item-con">
+            <h5 class="totalItemName">TOTAL</h5>
+            <h5 class="totalItemPrice">$25.50</h5>
+        </div>
+        
+        <!-- return button -->
+        <button class="paymentButton backToMenu" type="button" value="returnBack" onclick="location.href='menu.html'">back to menu</button>
+                    
         <!-- next part button -->
         <button class="paymentButton nextStep" onclick="location.href='paymentDetails.html'" type="submit" target="_blank">checkout now </button> 
+
+        
         
         
     </section>
