@@ -97,7 +97,11 @@
             <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="XXX">
         </div>
 
-        <button class="paymentButton paymentLong" onclick="" type="submit" target="_blank">next step</button>
+
+        <!-- how to get button acting like a link https://www.w3schools.com/jsref/prop_loc_href.asp -->
+        <button class="paymentButton paymentLong" onclick="location.href='#deliveryAddress'" type="submit" target="_blank">next step</button>
+
+        <!-- <button class="paymentButton paymentLong" onclick="displayPaymentInfo()" type="submit" target="_blank">next step</button> -->
         
         <p class="paymentP">step 1 of 3 completed</p>
 
@@ -146,11 +150,15 @@
             <input type="checkbox" name="items" value="deliveryAddress" notchecked placeholder="set address as delivery location?"> set address as delivery location?
         </div>
 
+        <!-- how to get button acting like a link https://www.w3schools.com/jsref/prop_loc_href.asp -->
         <!-- return button -->
-        <button class="paymentButton returnBack" type="button" value="Return Back" onclick="history.go(-1)">return back</button>
+        <button class="paymentButton returnBack" type="button" value="Return Back" onclick="location.href='#paymentMethod'">return back</button>
         
         <!-- next part button -->
-        <button class="paymentButton nextStep" type="submit" target="_blank">next step</button>
+        <button class="paymentButton nextStep" type="submit" onclick="location.href='#deliveryOrder'" target="_blank">next step</button>
+        <!-- <button class="paymentButton nextStep" type="submit" onclick="displayPaymentInfo2()" target="_blank">next step</button> -->
+
+        
         <p class="paymentP">step 2 of 3 completed</p>
     </section>
 
@@ -204,13 +212,41 @@
         </div> 
 
         <!-- return button -->
-        <button class="paymentButton returnBack" type="button" value="Return Back" onclick="history.go(-1)">return back</button>
+        <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='#deliveryAddress'">return back</button>
         
         <!-- next part button -->
         <button class="paymentButton nextStep" onclick="alert('Success! see you soon!')" type="submit" target="_blank">Send Order</button>
         <p class="paymentP">step 3 of 3 completed</p>
-
     </section>
+
+    <script>
+
+        /** https://www.youtube.com/watch?v=DULFs16I_z8 & https://www.youtube.com/watch?v=ivilewmRX9A
+        if next step button is clicked, display the next section **/
+
+        // to deliveryAddress
+        function displayPaymentInfo(){
+            // const nextSection = getElementById("deliveryAddress");
+            var x = document.getElementById("deliveryAddress");
+            if(x.style.display ==="none"){
+                x.style.display = "block";
+            } else{
+                x.style.display = "none";
+            }
+        }
+        
+        // todeliveryOrder
+        function displayPaymentInfo2(){
+            // const nextSection = getElementById("deliveryAddress");
+            var x = document.getElementById("deliveryOrder");
+            if(x.style.display ==="none"){
+                x.style.display = "block";
+            } else{
+                x.style.display = "none";
+            }
+        }
+
+    </script>
 
 
     </main>
