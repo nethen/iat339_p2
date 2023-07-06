@@ -21,7 +21,7 @@ const closeMenu = () => {
     body.style.overflow = menu.classList.contains("nav__overlay__wrapper--active") ? "hidden" : "auto";
 }
 
-// // Intersection observer code courtesty of 
+// // Intersection observer code courtesty of
 // // https://javascript.plainenglish.io/how-to-check-whether-an-element-is-in-the-viewport-or-not-eb5de51c0201
 // // Handles scroll transition on hero
 // const setupObserver = () => {
@@ -52,3 +52,114 @@ const closeMenu = () => {
 // }
 
 // setupObserver();
+
+
+
+//Image hoverstate over text in courtesty of
+//https://codepen.io/coreDeiv/pen/YzqzRKK
+//Handles where the images position is based on mouse position
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuItems = document.querySelectorAll(".menu-item-name");
+    //checks for different image inputs for certain menu items
+    menuItems.forEach(function(item) {
+        const menuItemContainer = item.parentNode; // Get the parent container of the menu item
+        const popupImage = menuItemContainer.querySelector(".popup-image"); // Get the respective popup image for the menu item
+
+        menuItemContainer.addEventListener("mousemove", function(event) {
+            popupImage.style.display = "block";
+            popupImage.style.left = event.clientX + "px";
+            popupImage.style.top = event.clientY + "px";
+        });
+
+        menuItemContainer.addEventListener("mouseleave", function() {
+            popupImage.style.display = "none";
+        });
+    });
+});
+
+
+//Switch between sections to view food menu and drinks menu
+//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_state_switch1
+
+// Get references to the menu and sections
+const menu = document.getElementById('menu');
+const sections = document.getElementsByClassName('section-menu');
+
+menu.addEventListener('change', function() {
+    const selectedSection = menu.value;
+
+    for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+    }
+
+    const sectionToShow = document.getElementById(selectedSection);
+    if (sectionToShow) {
+        sectionToShow.classList.add('active');
+    }
+});
+
+
+//https://www.w3schools.com/jsref/prop_win_localstorage.asp
+// Get the menu select element and section menu elements
+const menuSelect = document.getElementById('menu');
+const sectionMenus = document.querySelectorAll('.section-menu');
+
+// Retrieve the active section from localStorage
+const activeSection = localStorage.getItem('activeSection');
+
+// Set the initial active section
+if (activeSection) {
+    const activeOption = menuSelect.querySelector(`option[value="${activeSection}"]`);
+    if (activeOption) {
+        activeOption.selected = true;
+    }
+}
+
+
+//https://www.w3schools.com/js/js_api_web_storage.asp
+// Toggle the active section based on the selected option
+function toggleSection() {
+    const selectedOption = menuSelect.options[menuSelect.selectedIndex];
+    const selectedSectionId = selectedOption.value;
+
+    // Store the active section in localStorage
+    localStorage.setItem('activeSection', selectedSectionId);
+
+    // Toggle the active class on section menus
+    sectionMenus.forEach((section) => {
+        section.classList.remove('active');
+    });
+
+    const selectedSection = document.getElementById(selectedSectionId);
+    if (selectedSection) {
+        selectedSection.classList.add('active');
+    }
+}
+
+// Add event listener to the menu select element
+menuSelect.addEventListener('change', toggleSection);
+
+// Call the toggleSection function on page load
+toggleSection();
+
+
+//https://dev.to/stackfindover/products-quantity-counter-using-html-css-javascript-663
+//item-counter
+function increaseCount(a, b) {
+    var input = b.previousElementSibling;
+    var value = parseInt(input.value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    input.value = value;
+}
+
+function decreaseCount(a, b) {
+    var input = b.nextElementSibling;
+    var value = parseInt(input.value, 10);
+    if (value > 1) {
+        value = isNaN(value) ? 0 : value;
+        value--;
+        input.value = value;
+    }
+}

@@ -147,7 +147,7 @@ body:not(.style) main > section {
 }
 
 section.menu-listings {
-    padding-top: 10rem;
+    padding-top: 5rem;
     grid-column: 1 / -1; /* Extend the grid column to full width */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Adjust the grid template columns */
@@ -156,19 +156,17 @@ section.menu-listings {
 
 .menu-items {
     margin-top: 5rem;
+    grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 1fr; /* Set the grid template columns for mobile view */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     grid-template-rows: auto;
-}
 
 
-.menu-items-price-1 {
-    grid-column: 1;
 }
 
 .menu-listings {
-    padding-top: 10rem;
+    padding-top: 5rem;
     grid-column: 1;
 }
 
@@ -180,21 +178,73 @@ section.menu-listings {
     grid-column: 1;
 }
 
-.menu-item-price {
+.menu-item-price{
     grid-column: 2;
 }
+
 
 .menu-selection-item {
     text-decoration: underline;
 }
 
-.menu-container-flex{
-    display:flex;
+.menu-section {
+    display: none;
+}
+
+.menu-section.active {
+    display: block;
+}
+
+#menu-type-selection{
+    margin-top: 10rem;
 }
 
 img {
     width: 100%;
     height: auto;
+}
+
+
+.menu-image-mobile{
+    grid-column: 1/-1;
+    width: 75%;
+}
+
+.menu-image-desktop{
+    display: none;
+}
+
+.section-menu {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+}
+
+.section-menu.active {
+    display: grid;
+    visibility: visible;
+    position: static;
+}
+
+#menu-listing-selection-padding{
+    margin-top: 10rem;
+}
+
+
+.menu-select{
+    position: relative;
+    font-family: "Jubilee Platinum";
+    color:white;
+    font-size: 7.5vw;
+    width: 400%;
+    background-color: #283C2F;
+    border-color:transparent;
+}
+
+/*hides original select element*/
+
+.menu-select select {
+    display: none;
 }
 
 body:not(.style) .nav{
@@ -457,7 +507,7 @@ main > section.news .news__item .news__item__desc{
     /* flex-direction: column; */
     /* justify-content: end; */
     text-transform: lowercase;
-    gap: 1rem; 
+    gap: 1rem;
 }
 
 .news .news__nav ul li{
@@ -698,7 +748,7 @@ a:hover{
     margin-top: 1rem;
     grid-column: 1/-1;
 }
-  
+
 a:hover {
     text-decoration: underline;
 
@@ -742,6 +792,7 @@ a:hover {
     color: var(--text-primary);
     padding-right: 3rem;
     font-size:xx-large;
+
 }
 
 
@@ -759,6 +810,38 @@ a:hover {
     padding-top:2rem;
     grid-column:1/-1;
     margin-right: 1rem;
+
+.counter {
+    width: 9.375rem;
+    padding: .5rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;  /* Added 'solid' as the border style */
+    border-radius: .5rem;
+    z-index: 100;
+}
+
+.counter input {
+    width: 3.125rem;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+}
+.counter span {
+    display: block;
+    font-size: 1.5625rem;
+    padding: 0 5px;
+    cursor: pointer;
+    color: white;
+    user-select: none;
+
 }
 
 
@@ -871,7 +954,7 @@ a:hover {
         display: none;
     }
 
-    
+
 
     main > section.hero .hero__location {
         grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -898,25 +981,31 @@ a:hover {
 
     }
 
-    .menu-items {
-        margin-top: 5rem;
-        grid-column: span 2;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-        grid-template-rows: auto;
-
-
+    .section-menu {
+        display: none;
+        visibility: hidden;
+        position: absolute;
     }
+
+    .section-menu.active {
+        display: grid;
+        visibility: visible;
+        position: static;
+    }
+
+    /*menu listing css (mobile) */
+
+
 
 
     .menu-items-price-1 {
-        grid-column: 3/-1;
+        grid-column: 1/-1;
     }
 
     .menu-listings {
-        padding-top: 10rem;
-        grid-column: 1/-1;
+        padding-top: 5rem;
+
+
     }
 
 
@@ -932,6 +1021,72 @@ a:hover {
     .menu-selection-item {
         text-decoration: underline;
     }
+
+    .menu-image-desktop{
+        display: none;
+    }
+
+
+
+    #menu-listing-selection-padding{
+        margin-top: 10rem;
+    }
+
+    .menu-select{
+        position: relative;
+        font-family: "Jubilee Platinum";
+        color:white;
+        font-size: 4rem;
+        width: 400%;
+        background-color: #283C2F;
+        border-color:transparent;
+    }
+
+    /*hides original select element*/
+
+    .menu-select select {
+        display: none;
+    }
+
+    .menu-mobile-image-sizing{
+
+        height: 700px
+    }
+
+
+    .counter {
+        width: 9.375rem;
+        padding: .5rem;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;  /* Added 'solid' as the border style */
+        border-radius: .5rem;
+        z-index: 100;
+    }
+
+    .counter input {
+        width: 3.125rem;
+        border: 0;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        background: transparent;
+        color: #fff;
+        appearance: none;
+        outline: 0;
+    }
+    .counter span {
+        display: block;
+        font-size: 1.5625rem;
+        padding: 0 5px;
+        cursor: pointer;
+        color: white;
+        user-select: none;
+    }
+
+
 
 
     /*edits made by alex*/
@@ -975,6 +1130,30 @@ a:hover {
         margin: 0 auto;
     }
 
+    .menu-items {
+        margin-top: 5rem;
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        grid-template-rows: auto;
+
+
+    }
+
+
+    .menu-item-price{
+        grid-column: 2;
+
+    }
+
+    .menu-image-mobile{
+        grid-column: 1/-1;
+        width:75%;
+    }
+
+
+
     .nav .nav__overlay .nav__overlay__logo {
         font-size: min(2.5vw, 1.25rem);
     }
@@ -1004,7 +1183,7 @@ a:hover {
     main > section.news .news__nav{
         grid-column: 1/3;
     }
-    
+
     main > section[id] .container .container__desc,
     main > section[id] .container .container__display {
         display: grid;
@@ -1056,6 +1235,24 @@ a:hover {
         margin-bottom: 0.5rem;
     }
 
+    /*.menu-image-mobile{*/
+    /*    display:none;*/
+    /*}*/
+
+    .menu-image-mobile{
+        grid-column: 1/-1;
+        width: 60%;
+    }
+
+    .menu-image-desktop{
+        display: none;
+    }
+
+    #menu-listing-selection-padding{
+        margin-top: 10rem;
+    }
+
+
 }
 
 
@@ -1094,7 +1291,121 @@ a:hover {
         grid-column: 1/-2;
     }
 
-   
+    .section-menu {
+        display: none;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .section-menu.active {
+        display: grid;
+        visibility: visible;
+        position: static;
+    }
+
+
+    /*menu listing css (desktop) */
+
+    .menu-items {
+        margin-top: 5rem;
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        grid-template-rows: auto;
+
+
+    }
+
+    .menu-items-price-1 {
+        grid-column: 3/-1;
+    }
+
+    .menu-listings {
+        padding-top: 5rem;
+        grid-column: 1/-1;
+    }
+
+    .menu-item-name{
+
+    }
+
+    .menu-item-descriptor{
+        grid-column: 1/-1;
+    }
+
+    .menu-item-price{
+        grid-column: 2/-1;
+
+    }
+
+    .menu-selection-item {
+        text-decoration: underline;
+    }
+
+
+    .menu-image-mobile{
+        display:none;
+    }
+
+    .popup-image {
+        position: absolute;
+        display: none;
+        z-index: -1;
+        width: auto;
+        height: 300px;
+    }
+
+    #menu-listing-selection-padding{
+        margin-top: 10rem;
+    }
+
+
+    /*menu selection dropdown styling */
+    /*https://www.w3schools.com/howto/howto_custom_select.asp*/
+
+    .menu-select{
+        position: relative;
+        font-family: "Jubilee Platinum";
+        color:white;
+        font-size: 4rem;
+        width: 300%;
+        background-color: #283C2F;
+        border-color:transparent;
+    }
+
+    /*hides original select element*/
+
+    .menu-select select {
+        display: none;
+    }
+
+    .select-selected{
+        background-color: #283C2F;
+    }
+
+    .select-selected:after{
+        position: absolute;
+        content:"";
+        width:0;
+        height:0;
+        border-color:transparent;
+    }
+
+    .menu-select-items{
+        position:absolute;
+        background-color: #283C2F;
+
+    }
+
+    .select-hide{
+        display:none;
+    }
+
+
+
+
+
     /* PRODUCT PAGE CSS (DESKTOP)*/
     .productSectionAll{
         /* margin-top: 10rem; */
@@ -1106,7 +1417,7 @@ a:hover {
         margin-top: 8rem;
         grid-column: 2/4;
     }
-    
+
     .productInfo{
         margin-top: 14rem;
         margin-left: 1rem;
@@ -1116,19 +1427,19 @@ a:hover {
     .productPrice{
         margin-left: 0.5rem;
     }
-    
+
     .productDesc{
         margin-top: 3rem;
         margin-left: 0.5rem;
     }
-    
+
     /* for product dropdown */
     /* peter said its not clear enough that you can drop down so I added product(type) to help indicate, open to suggestions tho */
     .label__text__input1{
         display:block;
         font-size:2rem;
     }
-    
+
     /* drop down form */
     .text__input_drop1{
         outline: 0;
@@ -1138,7 +1449,7 @@ a:hover {
         color: var(--text-primary);
         padding-left: 0.5rem;
     }
-    
+
     .text__input_drop1:hover, .text__input_drop1:focus, .text__input_drop1:active{
         transition: all 0.3s ease-out;
         border-radius: 0.8125rem;
@@ -1158,6 +1469,7 @@ a:hover {
         z-index:-50;
         filter: brightness(75%);
     }
+
 
 /* Checkout Cart Payment Details */
 .Cart-top{
@@ -1298,6 +1610,39 @@ a:hover {
 .proceedToCheckout{
     grid-column: 3/-1;
 }
+=======
+    .counter {
+        width: 9.375rem;
+        padding: .5rem;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;  /* Added 'solid' as the border style */
+        border-radius: .5rem;
+        z-index: 100;
+    }
+
+    .counter input {
+        width: 3.125rem;
+        border: 0;
+        line-height: 30px;
+        font-size: 20px;
+        text-align: center;
+        background: transparent;
+        color: #fff;
+        appearance: none;
+        outline: 0;
+    }
+    .counter span {
+        display: block;
+        font-size: 1.5625rem;
+        padding: 0 5px;
+        cursor: pointer;
+        color: white;
+        user-select: none;
+    }
+
 
 
 }
@@ -1309,7 +1654,28 @@ a:hover {
     main > section.news .news__item{
         grid-column: 1/4;
 
-    }    
+    }
+    .popup-image {
+        position: absolute;
+        display: none;
+        z-index: -1;
+        width: auto;
+        height: 300px;
+    }
+
+    /*.section-menu {*/
+    /*    display: none;*/
+    /*    visibility: hidden;*/
+    /*    position: absolute;*/
+    /*}*/
+
+    /*.section-menu.active {*/
+    /*    display: grid;*/
+    /*    visibility: visible;*/
+    /*    position: static;*/
+    /*}*/
+
+
 
 }
 
@@ -1496,7 +1862,7 @@ a{
 .forContact{
     grid-column: 1/-1;
     margin-top: 2rem;
-} 
+}
 
 svg{
     display: inline-block;

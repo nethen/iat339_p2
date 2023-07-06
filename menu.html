@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/normalize.css">
-    <link rel="stylesheet" href="/style/main.css">
-    <script src="/scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/main.css">
     <title>menu | cheong-su-dang</title>
 </head>
 <body>
@@ -48,56 +47,30 @@
         </nav>
     </header>
 
-    <section id="menuPage">
-        <div class="menuDropHeader">
-            <select class="label__text__input1 text__input_drop"  name="Flavour" id="menu-form">
-                <option value="Iced">Drinks</option>
-                <option value="Iced">Dine</option>
-            </select>
-        </div>
-
-        <div class="menuTextHeader">
-            <h2>with us</h2>
-        </div>
-        
-
-
+    <!--drinks menu-->
+    <section id="menu-listing-selection-padding">
+    <select id="menu" class="menu-select">
+        <option value="section1">drinks with us</option>
+        <option value="section2">dine with us</option>
+    </select>
     </section>
 
+    <!--drinks menu-->
 
-    <!-- <section class="menu-listings">
-        <h1><span class="menu-selection-item">drinks</span> with us</h1>
-
-        <div class="menu-items"> -->
+    <section class="menu-listings section-menu" id="section1">
+<!--        <h1><span class="menu-selection-item">drinks</span> with us</h1>-->
+        <div class="menu-items">
             <!-- grouped together because its informational and helps seperate teh price and names -->
-            <!-- <div>
-                <div class="menu-item-name">
-                   <a href="productPageDrink.html"> <h4>Espresso</h4> </a>
-                </div>
-                <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
-                </div>
-            </div>
-
-            <div class="menu-item-price">
-                <h4>2.75</h4>
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/pexels-karolina-grabowska-4195601.jpg" class="menu-mobile-image-sizing"></a>
             </div>
             <div>
-                <div class="menu-item-name">
-                    <a href="productPageDrink.html"> <h4>Mocha</h4> </a>
-                </div>
-                <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
-                </div>
-            </div>
 
-            <div class="menu-item-price">
-                <h4>2.75</h4>
-            </div>
-
-            <div>
                 <div class="menu-item-name">
-                    <a href="productPageDrink.html"> <h4>Latte</h4> </a>
+                   <a href="productPageDrink.html"><img src="assets/img/pexels-karolina-grabowska-4195601.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Espresso</h4></a>
+
+
                 </div>
                 <div class="menu-item-descriptor">
                     <p>iced/hot</p>
@@ -108,9 +81,13 @@
                 <h4>2.75</h4>
             </div>
 
+            <div class="menu-image-mobile">
+                <img src="assets/img/pexels-andrew-peterson-350478.jpg">
+            </div>
             <div>
                 <div class="menu-item-name">
-                    <a href="productPageDrink.html"> <h4>Americano</h4> </a>
+                    <a href="productPageDrink.html"><img src="assets/img/pexels-andrew-peterson-350478.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Mocha</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
                     <p>iced/hot</p>
@@ -121,9 +98,50 @@
                 <h4>2.75</h4>
             </div>
 
+
+            <div class="menu-image-mobile">
+                <img src="assets/img/pexels-chevanon-photography-312418.jpg">
+            </div>
             <div>
                 <div class="menu-item-name">
-                    <a href="productPageDrink.html"> <h4>Cappuccino</h4> </a>
+                    <a href="productPageDrink.html"><img src="assets/img/pexels-chevanon-photography-312418.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Latte</h4></a>
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>iced/hot</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>2.75</h4>
+            </div>
+
+
+            <div class="menu-image-mobile">
+                <img src="assets/img/americano.jpeg">
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDrink.html"><img src="assets/img/americano.jpeg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Americano</h4></a>
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>iced/hot</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>2.75</h4>
+            </div>
+
+
+            <div class="menu-image-mobile">
+                <img src="assets/img/pexels-anna-tukhfatullina-food-photographerstylist-2638019.jpg">
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDrink.html"><img src="assets/img/pexels-anna-tukhfatullina-food-photographerstylist-2638019.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Cappuccino</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
                     <p>iced/hot</p>
@@ -135,11 +153,17 @@
             </div>
 
         </div>
-        <div class="menu-items"> -->
+        <div class="menu-items"> 
             <!-- grouped together because its informational and helps seperate teh price and names -->
-            <!-- <div>
+
+            <div class="menu-image-mobile">
+                <img src="assets/img/blacktea.jpg">
+            </div>
+            <div>
+
                 <div class="menu-item-name">
-                    <h4>Black tea</h4>
+                    <a href="productPageDrink.html"><img src="assets/img/blacktea.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Black tea</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
                     <p>iced/hot</p>
@@ -150,9 +174,14 @@
                 <h4>$3</h4>
             </div>
 
+
+            <div class="menu-image-mobile">
+                <img src="assets/img/chaitea.jpg">
+            </div>
             <div>
                 <div class="menu-item-name">
-                    <h4>Chai tea</h4>
+                    <a href="productPageDrink.html"><img src="assets/img/chaitea.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Chai tea</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
                     <p>iced/hot</p>
@@ -163,34 +192,14 @@
                 <h4>2.75</h4>
             </div>
 
-            <div>
-                <div class="menu-item-name">
-                    <a href="productPageDrink.html"><h4>Matcha tea</h4> </a>
-                </div>
-                <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
-                </div>
-            </div>
 
-            <div class="menu-item-price">
-                <h4>$5</h4>
-            </div>
-
-            <div>
-                <div class="menu-item-name">
-                    <h4>Puer tea</h4>
-                </div>
-                <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
-                </div>
-            </div>
-
-            <div class="menu-item-price">
-                <h4>$5</h4>
+            <div class="menu-image-mobile">
+                <img src="assets/img/matchaSmall.png">
             </div>
             <div>
                 <div class="menu-item-name">
-                    <h4>Red tea</h4>
+                    <a href="productPageDrink.html"><img src="assets/img/matchaSmall.png" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Matcha tea</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
                     <p>iced/hot</p>
@@ -202,30 +211,55 @@
             </div>
 
 
+<!--            <div class="menu-image-mobile">-->
+<!--                <img src="assets/img/placeholder-image.png">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <div class="menu-item-name">-->
+<!--                    <h4>Puer tea</h4>-->
+<!--                </div>-->
+<!--                <div class="menu-item-descriptor">-->
+<!--                    <p>iced/hot</p>-->
+<!--                </div>-->
+<!--            </div>-->
 
+<!--            <div class="menu-item-price">-->
+<!--                <h4>$5</h4>-->
+<!--            </div>-->
+
+
+
+<!--            <div class="menu-image-mobile">-->
+<!--                <img src="assets/img/placeholder-image.png">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <div class="menu-item-name">-->
+<!--                    <h4>Red tea</h4>-->
+<!--                </div>-->
+<!--                <div class="menu-item-descriptor">-->
+<!--                    <p>iced/hot</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="menu-item-price">-->
+<!--                <h4>$5</h4>-->
+<!--            </div>-->
 
 
         </div>
-        <divd class="menu-items"> -->
+        <div class="menu-items">
             <!-- grouped together because its informational and helps seperate teh price and names -->
-            <!-- <div>
-                <div class="menu-item-name">
-                    <h4>Strawberry</h4>
-                </div>
-                <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
-                </div>
-            </div>
 
-            <div class="menu-item-price">
-                <h4>$6</h4>
+            <div class="menu-image-mobile">
+                <img src="assets/img/strawberrydrink.jpg">
             </div>
             <div>
                 <div class="menu-item-name">
-                    <h4>Mango</h4>
+                    <a href="productPageDrink.html"><img src="assets/img/strawberrydrink.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Strawberry</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
+                    <p>iced</p>
                 </div>
             </div>
 
@@ -233,12 +267,17 @@
                 <h4>$6</h4>
             </div>
 
+
+            <div class="menu-image-mobile">
+                <img src="assets/img/mango.jpg">
+            </div>
             <div>
                 <div class="menu-item-name">
-                    <h4>Lemon</h4>
+                    <a href="productPageDrink.html"><img src="assets/img/mango.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Mango</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
+                    <p>iced</p>
                 </div>
             </div>
 
@@ -246,12 +285,17 @@
                 <h4>$6</h4>
             </div>
 
+
+            <div class="menu-image-mobile">
+                <img src="assets/img/lemonade.jpg">
+            </div>
             <div>
                 <div class="menu-item-name">
-                    <h4>Passionfruit</h4>
+                    <a href="productPageDrink.html"><img src="assets/img/lemonade.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Lemon</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
+                    <p>iced</p>
                 </div>
             </div>
 
@@ -259,27 +303,240 @@
                 <h4>$6</h4>
             </div>
 
+
+            <div class="menu-image-mobile">
+                <img src="assets/img/passionfruit.jpg">
+            </div>
             <div>
                 <div class="menu-item-name">
-                    <h4>Pineapple</h4>
+                    <a href="productPageDrink.html"><img src="assets/img/passionfruit.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDrink.html"><h4>Passionfruit</h4></a>
                 </div>
                 <div class="menu-item-descriptor">
-                    <p>iced/hot</p>
+                    <p>iced</p>
                 </div>
             </div>
 
             <div class="menu-item-price">
                 <h4>$6</h4>
             </div>
+
+
+<!--            <div class="menu-image-mobile">-->
+<!--                <img src="assets/img/placeholder-image.png">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <div class="menu-item-name">-->
+<!--                    <h4>Pineapple</h4>-->
+<!--                </div>-->
+<!--                <div class="menu-item-descriptor">-->
+<!--                    <p>iced/hot</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="menu-item-price">-->
+<!--                <h4>$6</h4>-->
+<!--            </div>-->
 
         </div>
 
 
 
+    </section>
 
 
 
-    </section> -->
+    <!--food menu-->
+    <section class="menu-listings section-menu" id="section2">
+        <div class="menu-items">
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/original castella cake.jpg" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/original castella cake.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Original castella cake</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>2.75</h4>
+            </div>
+
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/matchacheesecake.jpg" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/matchacheesecake.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Matcha castella cake</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>5.5</h4>
+            </div>
+
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/strawberrycastella.jpg" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/strawberrycastella.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Strawberry castella cake</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>5.5</h4>
+            </div>
+
+        </div>
+        <div class="menu-items">
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/strawberrycheesecake.jpg" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/strawberrycheesecake.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Strawberry cheese cake</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>2.75</h4>
+            </div>
+
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/sesamecake.jpg" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/sesamecake.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Black sesame cheese cake</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>5.5</h4>
+            </div>
+
+
+        </div>
+        <div class="menu-items">
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/croissiant.jpg" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/croissiant.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Croissaint</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>2.75</h4>
+            </div>
+
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/scone.jpg" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/scone.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Scone</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>5.5</h4>
+            </div>
+
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/cinnamon roll.png" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/cinnamon roll.png" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Cinnamon roll</h4></a>
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+
+            <div class="menu-item-price">
+                <h4>5.5</h4>
+            </div>
+
+            <!-- grouped together because its informational and helps seperate teh price and names -->
+            <div class="menu-image-mobile">
+                <a href=""><img src="assets/img/danish.jpg" class="popup-image"></a>
+            </div>
+            <div>
+                <div class="menu-item-name">
+                    <a href="productPageDine.html"><img src="assets/img/danish.jpg" class="popup-image menu-image-desktop"></a>
+                    <a href="productPageDine.html"><h4>Danishes</h4></a>
+
+
+                </div>
+                <div class="menu-item-descriptor">
+                    <p>small/large</p>
+                </div>
+            </div>
+
+            <div class="menu-item-price">
+                <h4>5.5</h4>
+            </div>
+
+        </div>
+    </section>
 </main>
+<script src="/scripts/main.js" defer></script>
 </body>
 </html>
