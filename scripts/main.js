@@ -21,6 +21,8 @@ const closeMenu = () => {
     body.style.overflow = menu.classList.contains("nav__overlay__wrapper--active") ? "hidden" : "auto";
 }
 
+
+
 // // Intersection observer code courtesty of
 // // https://javascript.plainenglish.io/how-to-check-whether-an-element-is-in-the-viewport-or-not-eb5de51c0201
 // // Handles scroll transition on hero

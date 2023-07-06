@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/normalize.css">
-    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/main.css">
     <script src="/scripts/main.js" defer></script>
     <title>cart | cheong-su-dang</title>
 </head>
@@ -12,7 +12,7 @@
 <main>
     <header class="nav">
         <nav class="nav__overlay">
-            <a class="nav__overlay__logo" href="/">
+            <a class="nav__overlay__logo" href="index.html">
                 Cheong-su-dang
             </a>
             <div class="nav__overlay__wrapper">
@@ -20,13 +20,13 @@
                     <div class="nav__overlay__wrapper__items__group">
                         <ul>
                             <li>
-                                <a href="/menu.html" onclick="closeMenu()">Menu</a>
+                                <a href="menu.html" onclick="closeMenu()">Menu</a>
                             </li>
                             <li>
-                                <a href="/contact.html" onclick="closeMenu()">Contact</a>
+                                <a href="contact.html" onclick="closeMenu()">Contact</a>
                             </li>
                             <li>
-                                <a href="/cart.html" onclick="closeMenu()">Cart (<span>0</span>)</a>
+                                <a href="checkout.html" onclick="closeMenu()">Cart (<span>4</span>)</a>
                             </li>
                         </ul>
                     </div>
@@ -64,7 +64,16 @@
             </div>
 
             <h5 class="itemName">Cinnemon roll (half-dozen)</h5>
-            <h5 class="itemQuantity">1x</h5>
+            <!-- <h5 class="itemQuantity">1x</h5> -->
+            <div class="cartCount">
+                <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
+                    -
+                    </span></span>
+                <input type="text" value="1">
+                <span class="up" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
+                +
+                </span></span>
+            </div>
             <h5 class="itemPrice">$12.00</h5>
             <!-- <h5 class="itemRemove">remove</h5> -->
         </div>
@@ -75,7 +84,16 @@
             </div>
 
             <h5 class="itemName">Matcha (iced)</h5>
-            <h5 class="itemQuantity">2x</h5>
+            <!-- <h5 class="itemQuantity">2x</h5> -->
+            <div class="cartCount">
+                <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
+                    -
+                    </span></span>
+                <input type="text" value="2">
+                <span class="up" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
+                +
+                </span></span>
+            </div>
             <h5 class="itemPrice">$9.00</h5>
             <!-- <h5 class="itemRemove">remove</h5> -->
         </div>
@@ -86,7 +104,16 @@
             </div>
 
             <h5 class="itemName">Matcha (hot)</h5>
-            <h5 class="itemQuantity">1x</h5>
+            <!-- <h5 class="itemQuantity">1x</h5> -->
+            <div class="cartCount">
+                <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
+                    -
+                    </span></span>
+                <input type="text" value="1">
+                <span class="up" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
+                    +
+                </span></span>
+            </div>
             <h5 class="itemPrice">$4.50</h5>
             <!-- <h5 class="itemRemove">remove</h5> -->
         </div>

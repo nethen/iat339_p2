@@ -846,6 +846,41 @@ a:hover {
 }
 
 
+.cartCount{
+    padding: .5rem;
+    /* margin-top: 2rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;  /* Added 'solid' as the border style */
+    border-radius: .5rem;
+    z-index: 100;
+    transform: scale(0.5);
+    grid-column: 5/8;
+}
+
+.cartCount input {
+    width: 3.125rem;
+    border: 0;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    appearance: none;
+    outline: 0;
+}
+.cartCount span {
+    display: block;
+    font-size: 1.5625rem;
+    padding: 0 5px;
+    cursor: pointer;
+    color: white;
+    user-select: none;
+}
+
+
+
 .cartSubheader{
     margin-top: 1rem;
     grid-column:1/-1;
@@ -856,7 +891,8 @@ a:hover {
 }
 
 .cardInfo{
-    /* margin-top: 1rem; */
+    height: 0;
+    overflow-y: hidden;
     grid-column: 1/-1;
     margin-right: 1rem;
 }
@@ -956,7 +992,6 @@ a:hover {
     }
 
 
-
     main > section.hero .hero__location {
         grid-template-columns: repeat(6, minmax(0, 1fr));
         gap: 1rem;
@@ -995,20 +1030,13 @@ a:hover {
     }
 
     /*menu listing css (mobile) */
-
-
-
-
     .menu-items-price-1 {
         grid-column: 1/-1;
     }
 
     .menu-listings {
         padding-top: 5rem;
-
-
     }
-
 
     .menu-item-descriptor{
         grid-column: 1/-1;
@@ -1016,7 +1044,6 @@ a:hover {
 
     .menu-item-price{
         grid-column: 2/-1;
-
     }
 
     .menu-selection-item {
@@ -1026,8 +1053,6 @@ a:hover {
     .menu-image-desktop{
         display: none;
     }
-
-
 
     #menu-listing-selection-padding{
         margin-top: 10rem;
@@ -1050,7 +1075,6 @@ a:hover {
     }
 
     .menu-mobile-image-sizing{
-
         height: 700px
     }
 
@@ -1086,8 +1110,6 @@ a:hover {
         color: white;
         user-select: none;
     }
-
-
 
 
     /*edits made by alex*/
@@ -1138,8 +1160,6 @@ a:hover {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
         grid-template-rows: auto;
-
-
     }
 
 
@@ -1152,7 +1172,6 @@ a:hover {
         grid-column: 1/-1;
         width:75%;
     }
-
 
 
     .nav .nav__overlay .nav__overlay__logo {
@@ -1226,7 +1245,6 @@ a:hover {
         margin-bottom: 0;
         grid-column: 3/-1;
     }
-
 }
 
 
@@ -1314,8 +1332,6 @@ a:hover {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1rem;
         grid-template-rows: auto;
-
-
     }
 
     .menu-items-price-1 {
@@ -1327,9 +1343,8 @@ a:hover {
         grid-column: 1/-1;
     }
 
-    .menu-item-name{
-
-    }
+    /* .menu-item-name{
+    } */
 
     .menu-item-descriptor{
         grid-column: 1/-1;
@@ -1472,145 +1487,157 @@ a:hover {
     }
 
 
-/* Checkout Cart Payment Details */
-.Cart-top{
-    padding-top:5rem;
-    grid-column:1/3;
-}
+    /* Checkout Cart Payment Details */
+    .Cart-top{
+        padding-top:4rem;
+        grid-column:1/3;
+    }
 
-.cartSubheader{
-    margin-top: 1rem;
-    grid-column:1/-1;
-}
+    .cartSubheader{
+        margin-top: 1rem;
+        grid-column:1/-1;
+    }
 
-.radioPaymentType{
-    margin-right: 1rem;
-}
+    .radioPaymentType{
+        margin-right: 1rem;
+    }
 
-.cardInfo{
-    grid-column: 1/3;
-}
+    .cardInfo{
+        grid-column: 1/3;
+    }
 
-.cardInput {
-    margin-top: 2rem;
-}
+    .cardInput {
+        margin-top: 2rem;
+    }
 
-/* payment Buttons */
-.paymentButton{
-    border: 1px solid var(--bg-color2);
-    background-color: transparent;
-    text-align: center;
-    color:var(--bg-color2);
-    padding: 0.5rem 2rem;
-    border-radius: 0.8125rem;
-    font-family: "Jubilee Platinum";
-    font-size: medium;
-    transition: background 0.3s ease-out, color 0.3s ease-out, background 0.3s ease-out;
-    display:block;
-}
+    /* payment Buttons */
+    .paymentButton{
+        border: 1px solid var(--bg-color2);
+        background-color: transparent;
+        text-align: center;
+        color:var(--bg-color2);
+        padding: 0.5rem 2rem;
+        border-radius: 0.8125rem;
+        font-family: "Jubilee Platinum";
+        font-size: medium;
+        transition: background 0.3s ease-out, color 0.3s ease-out, background 0.3s ease-out;
+        display:block;
+    }
 
-.paymentButton:hover, .paymentButton:focus, .paymentButton:active {
-    background-color: var(--bg-color2);
-    color: var(--bg-color1);
-    border: 1px solid var(--bg-color1);
-}
+    .paymentButton:hover, .paymentButton:focus, .paymentButton:active {
+        background-color: var(--bg-color2);
+        color: var(--bg-color1);
+        border: 1px solid var(--bg-color1);
+    }
 
-.returnBack:hover, .returnBack:focus, .returnBack:active {
-    background-color: var(--bg-color2);
-    color: var(--bg-color1);
-    border: 1px solid var(--bg-color1);
-    text-decoration: underline;
-}
+    .returnBack:hover, .returnBack:focus, .returnBack:active {
+        background-color: var(--bg-color2);
+        color: var(--bg-color1);
+        border: 1px solid var(--bg-color1);
+        text-decoration: underline;
+    }
 
-/* button positions */
-.paymentLong{
-    grid-column: 1/3;
-}
+    /* button positions */
+    .paymentLong{
+        grid-column: 1/3;
+    }
 
-.returnBack{
-    grid-column: 1/2;
-    background-color: var(--bg-color2);
-    color:var(--bg-color1);
-}
+    .returnBack{
+        grid-column: 1/2;
+        background-color: var(--bg-color2);
+        color:var(--bg-color1);
+    }
 
-.nextStep{
-    grid-column: 2/3;
-}
+    .nextStep{
+        grid-column: 2/3;
+    }
 
-.paymentP{
-    margin: 0rem;
-    grid-column: 1/3;
-    color: var(--bg-color2);
-    text-align: center;
-    font-size: 12px;
-}
+    .paymentP{
+        margin: 0rem;
+        grid-column: 1/3;
+        color: var(--bg-color2);
+        text-align: center;
+        font-size: 12px;
+    }
 
-.pickUp-method{
-    grid-column: 1/-1;
-}
+    .pickUp-method{
+        grid-column: 1/-1;
+    }
 
-.pickUp{
-    margin-left: 1rem;
-}
+    .pickUp{
+        margin-left: 1rem;
+    }
 
 
-/* checkout */
-.checkout-top{
-    padding-top:2rem;
-    grid-column:1/-1;
-    /* margin-right: 0.5rem; */
-}
+    /* checkout */
+    .checkout-top{
+        padding-top:2rem;
+        grid-column:1/-1;
+        /* margin-right: 0.5rem; */
+    }
 
-.checkout-items{
-    grid-column:1/-1;
-}
+    .checkout-items{
+        grid-column:1/-1;
+    }
 
-.itemName{
-    grid-column: 2/3;
-    font-size: 2rem;
-}
+    .itemName{
+        grid-column: 2/3;
+        font-size: 2rem;
+    }
 
-.itemQuantity{
-    grid-column: 4;
-    font-size: 2rem;
-}
+    /* .itemQuantity{
+        grid-column: 4;
+        font-size: 2rem;
+    } */
 
-.itemPrice{
-    grid-column: 5;
-    font-size: 2rem;
-}
+    .cartCount{
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;  /* Added 'solid' as the border style */
+        border-radius: .5rem;
+        z-index: 100;
+        grid-column: 6/7;
+        transform: scale(1);
+    }
 
-.checkoutCheck{
-    grid-column: 1;
-    margin-top: 0.4rem;
-}
+    .itemPrice{
+        grid-column: 5;
+        font-size: 2rem;
+    }
 
-.breakLine{
-    grid-column:1/-1;
-    margin-right: 0.5rem;
-}
+    .checkoutCheck{
+        grid-column: 1;
+        margin-top: 0.4rem;
+    }
 
-.totalItemName{
-    grid-column: 1/2;
-    font-size: 2rem;
-    /* margin-top:-1rem; */
-}
+    .breakLine{
+        grid-column:1/-1;
+        margin-right: 0.5rem;
+    }
 
-.totalItemPrice{
-    grid-column: 8;
-    font-size: 2rem;
-    /* margin-top:-1rem; */
-}
+    .totalItemName{
+        grid-column: 1/2;
+        font-size: 2rem;
+        /* margin-top:-1rem; */
+    }
 
-.backToMenu{
-    grid-column: 1/3;
-    background-color: var(--bg-color2);
-    color:var(--bg-color1);
-}
+    .totalItemPrice{
+        grid-column: 8;
+        font-size: 2rem;
+        /* margin-top:-1rem; */
+    }
 
-.proceedToCheckout{
-    grid-column: 3/-1;
-}
+    .backToMenu{
+        grid-column: 1/3;
+        background-color: var(--bg-color2);
+        color:var(--bg-color1);
+    }
+
+    .proceedToCheckout{
+        grid-column: 3/-1;
+    }
 
     .counter {
         width: 9.375rem;
@@ -1675,9 +1702,6 @@ a:hover {
     /*    visibility: visible;*/
     /*    position: static;*/
     /*}*/
-
-
-
 }
 
 /* sab edits */
@@ -1700,7 +1724,6 @@ a:hover {
     color: var(--bg-color1);
     border: 1px solid var(--bg-color1);
 }
-
 
 a{
     /* color: var(--bg-color2); */
@@ -1792,27 +1815,21 @@ a{
     gap: 1rem;
     grid-template-rows: auto;
     align-items: center;
-    /* background-color: #555555; */
 }
 
-
 .itemAmount {
-    /* background:#6C4941; */
     grid-column: 1;
 }
 
 .itemName {
-    /* background:#6C4941; */
     grid-column: 2;
 }
 
 .itemCost {
-    /* background:#6C4941; */
     grid-column: 3;
 }
 
 .itemRemove {
-    /* background:#6C4941; */
     grid-column: 4;
 }
 
@@ -1843,7 +1860,7 @@ a{
 }
 
 .contactForm{
-    grid-column: 1/3;
+    grid-column: 1/4;
 }
 
 .contactTextarea{
@@ -1891,9 +1908,6 @@ svg{
     grid-column:1/4;
 }
 
-
-/* sabs edits 3 */
-
 /* menu top */
 .menuDropHeader{
     margin-top: 6rem;
@@ -1907,7 +1921,6 @@ svg{
 
 
 /* checkout Cart */
-
 .checkout-top{
     padding-top:2rem;
     grid-column:1/-1;
@@ -1919,14 +1932,16 @@ svg{
 }
 
 .itemName{
-    grid-column: 2/7;
+    grid-column: 2/4;
 }
-
+/* 
 .itemQuantity{
     grid-column: 7;
-    /* margin-left: 1rem; */
-    /* margin-top: -1rem; */
-}
+} */
+
+
+
+
 
 .itemPrice{
     grid-column: 8;
@@ -1934,7 +1949,6 @@ svg{
 
 .itemRemove{
     grid-column: 1;
-    /* margin-top: -1rem; */
 }
 
 .item-con{
@@ -1955,12 +1969,10 @@ svg{
 
 .totalItemName{
     grid-column: 1/2;
-    /* margin-top:-1rem; */
 }
 
 .totalItemPrice{
     grid-column: 8;
-    /* margin-top:-1rem; */
 }
 
 .breakLine{
@@ -1975,4 +1987,13 @@ svg{
 
 .proceedToCheckout{
     grid-column: 3/-1;
+}
+/* 
+.cardInfo{
+   height: 0;
+   overflow-y: hidden;
+} */
+
+.cardInfo.active{
+    height:100%;
 }
