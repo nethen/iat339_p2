@@ -806,10 +806,11 @@ a:hover {
 
 /* Checkout Cart Payment Details */
 
-.Cart-top{
-    padding-top:2rem;
-    grid-column:1/-1;
+.Cart-top {
+    padding-top: 2rem;
+    grid-column: 1/-1;
     margin-right: 1rem;
+}
 
 .counter {
     width: 9.375rem;
@@ -1610,7 +1611,7 @@ a:hover {
 .proceedToCheckout{
     grid-column: 3/-1;
 }
-=======
+
     .counter {
         width: 9.375rem;
         padding: .5rem;
