@@ -99,6 +99,8 @@ menu.addEventListener('change', function() {
     }
 });
 
+
+//https://www.w3schools.com/jsref/prop_win_localstorage.asp
 // Get the menu select element and section menu elements
 const menuSelect = document.getElementById('menu');
 const sectionMenus = document.querySelectorAll('.section-menu');
