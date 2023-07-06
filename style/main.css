@@ -776,6 +776,7 @@ a:hover {
 .label__text__input1{
     display:block;
     font-size:2rem;
+    font-family: "Jubilee Platinum";
     /* width: 20%;
     margin-bottom: 1em;
     transform: scale(2); */
@@ -802,6 +803,13 @@ a:hover {
     color: var(--bg-color1);
     border: 1px solid var(--bg-color1);
 }
+
+/* Checkout Cart Payment Details */
+
+.Cart-top{
+    padding-top:2rem;
+    grid-column:1/-1;
+    margin-right: 1rem;
 
 .counter {
     width: 9.375rem;
@@ -833,11 +841,113 @@ a:hover {
     cursor: pointer;
     color: white;
     user-select: none;
+
 }
 
 
-/* mobile - tablet */
+.cartSubheader{
+    margin-top: 1rem;
+    grid-column:1/-1;
+}
 
+.radioPaymentType{
+    margin-right: 1rem;
+}
+
+.cardInfo{
+    /* margin-top: 1rem; */
+    grid-column: 1/-1;
+    margin-right: 1rem;
+}
+
+.cardInput {
+    margin-top: 2rem;
+}
+
+/* payment Buttons */
+.paymentButton{
+    border: 1px solid var(--bg-color2);
+    background-color: transparent;
+    text-align: center;
+    margin: 1rem 0rem;
+    color:var(--bg-color2);
+    padding: 0.5rem 2rem;
+    border-radius: 0.8125rem;
+    font-family: "Jubilee Platinum";
+    font-size: medium;
+    transition: background 0.3s ease-out, color 0.3s ease-out, background 0.3s ease-out;
+    display:block;
+    /* margin-right: 1rem; */
+}
+
+.paymentButton:hover, .paymentButton:focus, .paymentButton:active {
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+}
+
+.returnBack:hover, .returnBack:focus, .returnBack:active {
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+    text-decoration: underline;
+}
+
+.nextStep:hover, .nextStep:focus, .nextStep:active {
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+}
+
+.backToMenu:hover, .backToMenu:focus, .backToMenu:active {
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+    text-decoration: underline;
+}
+
+/* button positions */
+.paymentLong{
+    grid-column: 1/-1;
+}
+
+.returnBack{
+    grid-column: 1/3;
+    background-color: var(--bg-color2);
+    color:var(--bg-color1);
+}
+
+.nextStep{
+    grid-column: 3/-1;
+}
+
+
+.paymentP{
+    margin: 0rem;
+    /* margin-top: -0.5rem; */
+    grid-column: 1/-1;
+    color: var(--bg-color2);
+    text-align: center;
+    font-size: 12px;
+}
+
+.pickUp-method{
+    grid-column: 1/-1;
+}
+
+.pickUp{
+    margin-left: 1rem;
+}
+
+/* .deliveryAddress{
+    display: none;
+}
+
+.deliveryOrder{
+    display: none;
+} */
+
+/* mobile - tablet */
 @media screen and (min-width: 36rem) {
     /* .nav .nav__background img, */
     .nav .nav__overlay__wrapper__background img{
@@ -898,9 +1008,6 @@ a:hover {
 
     }
 
-    .menu-item-name{
-
-    }
 
     .menu-item-descriptor{
         grid-column: 1/-1;
@@ -1363,6 +1470,147 @@ a:hover {
         filter: brightness(75%);
     }
 
+
+/* Checkout Cart Payment Details */
+.Cart-top{
+    padding-top:5rem;
+    grid-column:1/3;
+}
+
+.cartSubheader{
+    margin-top: 1rem;
+    grid-column:1/-1;
+}
+
+.radioPaymentType{
+    margin-right: 1rem;
+}
+
+.cardInfo{
+    grid-column: 1/3;
+}
+
+.cardInput {
+    margin-top: 2rem;
+}
+
+/* payment Buttons */
+.paymentButton{
+    border: 1px solid var(--bg-color2);
+    background-color: transparent;
+    text-align: center;
+    color:var(--bg-color2);
+    padding: 0.5rem 2rem;
+    border-radius: 0.8125rem;
+    font-family: "Jubilee Platinum";
+    font-size: medium;
+    transition: background 0.3s ease-out, color 0.3s ease-out, background 0.3s ease-out;
+    display:block;
+}
+
+.paymentButton:hover, .paymentButton:focus, .paymentButton:active {
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+}
+
+.returnBack:hover, .returnBack:focus, .returnBack:active {
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+    text-decoration: underline;
+}
+
+/* button positions */
+.paymentLong{
+    grid-column: 1/3;
+}
+
+.returnBack{
+    grid-column: 1/2;
+    background-color: var(--bg-color2);
+    color:var(--bg-color1);
+}
+
+.nextStep{
+    grid-column: 2/3;
+}
+
+.paymentP{
+    margin: 0rem;
+    grid-column: 1/3;
+    color: var(--bg-color2);
+    text-align: center;
+    font-size: 12px;
+}
+
+.pickUp-method{
+    grid-column: 1/-1;
+}
+
+.pickUp{
+    margin-left: 1rem;
+}
+
+
+/* checkout */
+.checkout-top{
+    padding-top:2rem;
+    grid-column:1/-1;
+    /* margin-right: 0.5rem; */
+}
+
+.checkout-items{
+    grid-column:1/-1;
+}
+
+.itemName{
+    grid-column: 2/3;
+    font-size: 2rem;
+}
+
+.itemQuantity{
+    grid-column: 4;
+    font-size: 2rem;
+}
+
+.itemPrice{
+    grid-column: 5;
+    font-size: 2rem;
+}
+
+.checkoutCheck{
+    grid-column: 1;
+    margin-top: 0.4rem;
+}
+
+.breakLine{
+    grid-column:1/-1;
+    margin-right: 0.5rem;
+}
+
+.totalItemName{
+    grid-column: 1/2;
+    font-size: 2rem;
+    /* margin-top:-1rem; */
+}
+
+.totalItemPrice{
+    grid-column: 8;
+    font-size: 2rem;
+    /* margin-top:-1rem; */
+}
+
+.backToMenu{
+    grid-column: 1/3;
+    background-color: var(--bg-color2);
+    color:var(--bg-color1);
+}
+
+.proceedToCheckout{
+    grid-column: 3/-1;
+}
+=======
     .counter {
         width: 9.375rem;
         padding: .5rem;
@@ -1394,6 +1642,7 @@ a:hover {
         color: white;
         user-select: none;
     }
+
 
 
 }
@@ -1443,7 +1692,6 @@ a:hover {
     font-size: medium;
     transition: background 0.3s ease-out, color 0.3s ease-out, background 0.3s ease-out;
     display:block;
-
 }
 
 .button:hover, .button:focus, .button:active {
@@ -1642,3 +1890,88 @@ svg{
     grid-column:1/4;
 }
 
+
+/* sabs edits 3 */
+
+/* menu top */
+.menuDropHeader{
+    margin-top: 6rem;
+}
+
+.menuTextHeader{
+    margin-top: 6rem;
+    margin-left: 1.5rem;
+    grid-column: 2/-1;
+}
+
+
+/* checkout Cart */
+
+.checkout-top{
+    padding-top:2rem;
+    grid-column:1/-1;
+    margin-right: 0.5rem;
+}
+
+.checkout-items{
+    grid-column:1/-1;
+}
+
+.itemName{
+    grid-column: 2/7;
+}
+
+.itemQuantity{
+    grid-column: 7;
+    /* margin-left: 1rem; */
+    /* margin-top: -1rem; */
+}
+
+.itemPrice{
+    grid-column: 8;
+}
+
+.itemRemove{
+    grid-column: 1;
+    /* margin-top: -1rem; */
+}
+
+.item-con{
+    display:grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-column: 1/-1;
+}
+
+.checkoutCheck{
+    grid-column: 1;
+    padding-left: 1rem;
+}
+
+.totalCost{
+    grid-column:1/-1;
+    margin-right: 0.5rem;
+}
+
+.totalItemName{
+    grid-column: 1/2;
+    /* margin-top:-1rem; */
+}
+
+.totalItemPrice{
+    grid-column: 8;
+    /* margin-top:-1rem; */
+}
+
+.breakLine{
+    grid-column: 1/-1;
+}
+
+.backToMenu{
+    grid-column: 1/3;
+    background-color: var(--bg-color2);
+    color:var(--bg-color1);
+}
+
+.proceedToCheckout{
+    grid-column: 3/-1;
+}
