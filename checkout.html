@@ -57,6 +57,7 @@
             <hr>
         </div>
 
+        <!-- items -->
         <div class="item-con">
             <div class="checkoutCheck">
                 <input type="checkbox" name="items" value="menuItemCheck" checked>
@@ -94,20 +95,18 @@
             <hr>
         </div>
 
+        <!-- total -->
         <div class="item-con">
             <h5 class="totalItemName">TOTAL</h5>
             <h5 class="totalItemPrice">$25.50</h5>
         </div>
         
-        <!-- return button -->
+         <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
+        <!-- return to menu button -->
         <button class="paymentButton backToMenu" type="button" value="returnBack" onclick="location.href='menu.html'">back to menu</button>
                     
-        <!-- next part button -->
-        <button class="paymentButton nextStep" onclick="location.href='paymentDetails.html'" type="submit" target="_blank">checkout now </button> 
-
-        
-        
-        
+        <!-- proceed to checkout button -->
+        <button class="paymentButton proceedToCheckout" onclick="location.href='paymentDetails.html'" type="submit" target="_blank">proceed to checkout </button> 
     </section>
 
 </main>

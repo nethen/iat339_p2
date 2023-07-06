@@ -810,6 +810,19 @@ a:hover {
     text-decoration: underline;
 }
 
+.nextStep:hover, .nextStep:focus, .nextStep:active {
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+}
+
+.backToMenu:hover, .backToMenu:focus, .backToMenu:active {
+    background-color: var(--bg-color2);
+    color: var(--bg-color1);
+    border: 1px solid var(--bg-color1);
+    text-decoration: underline;
+}
+
 /* button positions */
 .paymentLong{
     grid-column: 1/-1;
