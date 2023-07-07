@@ -116,14 +116,14 @@ p {
     text-transform: lowercase;
 }
 
-body:not(.style) main > header {
+body:not(.style, .home) main > header {
 
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     padding: 1rem;
-    /* background: var(--bg-color1); */
+    background: var(--bg-color1);
     z-index: 50;
 }
 
@@ -206,18 +206,6 @@ img {
 
 .menu-image-desktop{
     display: none;
-}
-
-.section-menu {
-    display: none;
-    visibility: hidden;
-    position: absolute;
-}
-
-.section-menu.active {
-    display: grid;
-    visibility: visible;
-    position: static;
 }
 
 #menu-listing-selection-padding{
@@ -350,6 +338,10 @@ body:not(.style) .nav{
 .nav .nav__overlay__wrapper.nav__overlay__wrapper--active {
     display: flex;
     overflow: auto;
+}
+
+body:not(.home) .nav .nav__overlay__wrapper.nav__overlay__wrapper--active {
+    background: var(--bg-color1);
 }
 
 .nav .nav__overlay__wrapper .nav__overlay__wrapper__items .nav__overlay__wrapper__items__group a {
@@ -942,18 +934,6 @@ a:hover {
 
     }
 
-    .section-menu {
-        display: none;
-        visibility: hidden;
-        position: absolute;
-    }
-
-    .section-menu.active {
-        display: grid;
-        visibility: visible;
-        position: static;
-    }
-
     /*menu listing css (mobile) */
     .menu-items-price-1 {
         grid-column: 1/-1;
@@ -1234,19 +1214,6 @@ a:hover {
     body.style main > section[id] .container .container__display .container__display--grid__wrapper {
         grid-column: 1/-2;
     }
-
-    .section-menu {
-        display: none;
-        visibility: hidden;
-        position: absolute;
-    }
-
-    .section-menu.active {
-        display: grid;
-        visibility: visible;
-        position: static;
-    }
-
 
     /*menu listing css (desktop) */
 
@@ -1542,18 +1509,6 @@ a:hover {
         width: auto;
         height: 300px;
     }
-
-    /*.section-menu {*/
-    /*    display: none;*/
-    /*    visibility: hidden;*/
-    /*    position: absolute;*/
-    /*}*/
-
-    /*.section-menu.active {*/
-    /*    display: grid;*/
-    /*    visibility: visible;*/
-    /*    position: static;*/
-    /*}*/
 }
 
 /* sab edits */
@@ -1863,3 +1818,6 @@ svg{
     height:100%;
 }
 
+.hidden{
+    display: none;
+}

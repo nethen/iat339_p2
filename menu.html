@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/main.css">
-    <script src="./scripts/main.js" defer></script>
     <title>menu | cheong-su-dang</title>
 </head>
 <body>
@@ -26,7 +25,10 @@
                                 <a href="contact.html" onclick="closeMenu()">Contact</a>
                             </li>
                             <li>
-                                <a href="checkout.html" onclick="closeMenu()">Cart (<span>4</span>)</a>
+                                <a href="style.html" onclick="closeMenu()">Style</a>
+                            </li>
+                            <li>
+                                <a href="payment.html" onclick="closeMenu()">Cart (<span>0</span>)</a>
                             </li>
                         </ul>
                     </div>
@@ -51,16 +53,16 @@
     <!--drinks menu-->
     <section id="menu-listing-selection-padding">
         <select id="menu" class="menu-select">
-            <option value="section1">drinks with us</option>
-            <option value="section2">dine with us</option>
+            <option value="menu-items-drinks">drinks with us</option>
+            <option value="menu-items-food">dine with us</option>
         </select>
     </section>
 
     <!--drinks menu-->
 
-    <section class="menu-listings section-menu" id="section1">
+    <section class="menu-listings section-menu">
 <!--        <h1><span class="menu-selection-item">drinks</span> with us</h1>-->
-        <div class="menu-items">
+        <div class="menu-items menu-items-drinks">
             <!-- grouped together because its informational and helps seperate teh price and names -->
             <div class="menu-image-mobile">
                 <a href=""><img src="assets/img/pexels-karolina-grabowska-4195601.jpg" class="menu-mobile-image-sizing" alt="expresso"></a>
@@ -154,7 +156,7 @@
             </div>
 
         </div>
-        <div class="menu-items"> 
+        <div class="menu-items menu-items-drinks"> 
             <!-- grouped together because its informational and helps seperate teh price and names -->
 
             <div class="menu-image-mobile">
@@ -211,44 +213,8 @@
                 <h4>$5</h4>
             </div>
 
-
-<!--            <div class="menu-image-mobile">-->
-<!--                <img src="assets/img/placeholder-image.png">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <div class="menu-item-name">-->
-<!--                    <h4>Puer tea</h4>-->
-<!--                </div>-->
-<!--                <div class="menu-item-descriptor">-->
-<!--                    <p>iced/hot</p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="menu-item-price">-->
-<!--                <h4>$5</h4>-->
-<!--            </div>-->
-
-
-
-<!--            <div class="menu-image-mobile">-->
-<!--                <img src="assets/img/placeholder-image.png">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <div class="menu-item-name">-->
-<!--                    <h4>Red tea</h4>-->
-<!--                </div>-->
-<!--                <div class="menu-item-descriptor">-->
-<!--                    <p>iced/hot</p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="menu-item-price">-->
-<!--                <h4>$5</h4>-->
-<!--            </div>-->
-
-
         </div>
-        <div class="menu-items">
+        <div class="menu-items menu-items-drinks">
             <!-- grouped together because its informational and helps seperate teh price and names -->
 
             <div class="menu-image-mobile">
@@ -322,34 +288,9 @@
                 <h4>$6</h4>
             </div>
 
-
-<!--            <div class="menu-image-mobile">-->
-<!--                <img src="assets/img/placeholder-image.png">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <div class="menu-item-name">-->
-<!--                    <h4>Pineapple</h4>-->
-<!--                </div>-->
-<!--                <div class="menu-item-descriptor">-->
-<!--                    <p>iced/hot</p>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="menu-item-price">-->
-<!--                <h4>$6</h4>-->
-<!--            </div>-->
-
         </div>
 
-
-
-    </section>
-
-
-
-    <!--food menu-->
-    <section class="menu-listings section-menu" id="section2">
-        <div class="menu-items">
+        <div class="menu-items menu-items-food">
             <!-- grouped together because its informational and helps seperate teh price and names -->
             <div class="menu-image-mobile">
                 <a href=""><img src="assets/img/original_castella_cake.jpg" class="popup-image" alt="castella cake"></a>
@@ -411,7 +352,7 @@
             </div>
 
         </div>
-        <div class="menu-items">
+        <div class="menu-items menu-items-food">
             <!-- grouped together because its informational and helps seperate teh price and names -->
             <div class="menu-image-mobile">
                 <a href=""><img src="assets/img/strawberrycheesecake.jpg" class="popup-image" alt="strawberry cheese cake"></a>
@@ -454,7 +395,7 @@
 
 
         </div>
-        <div class="menu-items">
+        <div class="menu-items menu-items-food">
             <!-- grouped together because its informational and helps seperate teh price and names -->
             <div class="menu-image-mobile">
                 <a href=""><img src="assets/img/croissiant.jpg" class="popup-image" alt="croissiant"></a>
@@ -536,7 +477,10 @@
             </div>
 
         </div>
+
+
     </section>
 </main>
+<script src="./scripts/main.js"></script>
 </body>
 </html>
