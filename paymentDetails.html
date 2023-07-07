@@ -87,23 +87,21 @@
 
         <div class="cardInfo active">
             <!-- card holder name -->
-            <label class="label__text__input cardInput" for="payment-form">Card Holder Name</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Jane Doe">
+            <label class="label__text__input cardInput" for="payment-cardHolderForm">Card Holder Name</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-cardHolderForm" name="payment-cardHolderForm" placeholder="Jane Doe">
             <!-- card number -->
-            <label class="label__text__input cardInput" for="payment-form">Card Number</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="123 456 7890">
+            <label class="label__text__input cardInput" for="payment-cardNumForm">Card Number</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-cardNumForm" name="payment-cardNumForm" placeholder="123 456 7890">
             <!-- cvc -->
-            <label class="label__text__input cardInput" for="payment-form">CVC</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="XXX">
+            <label class="label__text__input cardInput" for="payment-cvcForm">CVC</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-cvcForm" name="payment-cvcForm" placeholder="XXX">
         </div>
 
-
         <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
-        
         <!-- return button -->
         <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='checkout.html'">back to cart</button>
 
-        <button class="paymentButton nextStep" onclick="location.href='#deliveryAddress'" type="submit" target="_blank">next step</button>
+        <button class="paymentButton nextStep" onclick="location.href='#deliveryAddress'" type="submit">next step</button>
 
         <!-- <button class="paymentButton paymentLong" onclick="displayPaymentInfo()" type="submit" target="_blank">next step</button> -->
         
@@ -119,26 +117,26 @@
 
         <div class="cardInfo">
             <!-- name -->
-            <label class="label__text__input cardInput" for="payment-form">Full Name</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Jane Doe">
+            <label class="label__text__input cardInput" for="payment-fullNameForm">Full Name</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-fullNameForm" name="payment-fullNameForm" placeholder="Jane Doe">
 
             <!-- Phone Number -->
-            <label class="label__text__input cardInput" for="payment-form">Phone Number</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="(604) 456 7890">
+            <label class="label__text__input cardInput" for="payment-phoneNumForm">Phone Number</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-phoneNumForm" name="payment-phoneNumForm" placeholder="(604) 456 7890">
             
             <!-- Street -->
-            <label class="label__text__input cardInput" for="payment-form">Street Address</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="453-32 Yeonnam-ro Yeonnam-dong">
+            <label class="label__text__input cardInput" for="payment-streetAddForm">Street Address</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-streetAddForm" name="payment-streetAddForm" placeholder="453-32 Yeonnam-ro Yeonnam-dong">
 
             <!-- City -->
-            <label class="label__text__input cardInput" for="payment-form">City</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Seoul">
+            <label class="label__text__input cardInput" for="payment-cityForm">City</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-cityForm" name="payment-cityForm" placeholder="Seoul">
 
             <!-- districts-->
-            <label class="label__text__input forContact" for="payment-form">District</label>  
+            <label class="label__text__input forContact" for="payment-districtForm">District</label>  
                                 
                 <!-- source for drop down: https://www.w3schools.com/Css/css_dropdowns.asp  -->
-                <select class="label__text__input text__input_drop"  name="Topic" id="payment-form">
+                <select class="label__text__input text__input_drop"  name="Topic" id="payment-districtForm">
                 <option value="Select Topic">Select District</option>
                 <option value="Mapo-gu">Mapo-gu</option>
                 <option value="Songpa-gu">Songpa-gu</option>
@@ -148,10 +146,10 @@
                 </select>
 
             <!-- Postal Code-->
-            <label class="label__text__input cardInput" for="payment-form">Postal Code</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="103-531">
+            <label class="label__text__input cardInput" for="payment-postalForm">Postal Code</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-postalForm" name="payment-postalForm" placeholder="103-531">
 
-            <input type="checkbox" name="items" value="deliveryAddress" notchecked placeholder="set address as delivery location?"> set address as delivery location?
+            <input type="checkbox" name="items" value="deliveryAddress"> set address as delivery location?
         </div>
 
         <!-- how to get button acting like a link https://www.w3schools.com/jsref/prop_loc_href.asp -->
@@ -201,22 +199,22 @@
             
             <div class="input__radio__overlay">
                 <div>
-                    <input type="radio" id="Express" name="radioexample">
+                    <input type="radio" id="InStore" name="radioexample">
                 </div>
                 <div>
-                    <label class="radioPaymentType" for="Express">InStore</label>
+                    <label class="radioPaymentType" for="InStore">InStore</label>
                 </div>
     
                 <div>
-                    <input type="radio" id="Standard" name="radioexample">
+                    <input type="radio" id="Address" name="radioexample">
                 </div>
                 <div>
-                    <label class="radioPaymentType" for="Standard">Address</label>
+                    <label class="radioPaymentType" for="Address">Address</label>
                 </div>
             </div>     
         </div>
         
-         <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
+        <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
         <!-- return button -->
         <!-- <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='#deliveryAddress'">return back</button> -->
         
