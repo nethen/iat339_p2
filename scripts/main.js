@@ -86,27 +86,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Get references to the menu and sections
 const menu = document.getElementById('menu');
-const sections = document.getElementsByClassName('section-menu');
+if(menu)
+{
+    const sections = document.getElementsByClassName('section-menu');
 
-menu.addEventListener('change', function() {
-    const selectedSection = menu.value;
+    menu.addEventListener('change', function() {
+        const selectedSection = menu.value;
+    
+        for (let i = 0; i < sections.length; i++) {
+            sections[i].classList.remove('active');
+        }
+    
+        const sectionToShow = document.getElementById(selectedSection);
+        if (sectionToShow) {
+            sectionToShow.classList.add('active');
+        }
+    });
+}
 
-    for (let i = 0; i < sections.length; i++) {
-        sections[i].classList.remove('active');
-    }
-
-    const sectionToShow = document.getElementById(selectedSection);
-    if (sectionToShow) {
-        sectionToShow.classList.add('active');
-    }
-});
 
 
 //https://www.w3schools.com/jsref/prop_win_localstorage.asp
 // Get the menu select element and section menu elements
 const menuSelect = document.getElementById('menu');
-const sectionMenus = document.querySelectorAll('.section-menu');
 
+if (menuSelect){
 // Retrieve the active section from localStorage
 const activeSection = localStorage.getItem('activeSection');
 
@@ -117,6 +121,15 @@ if (activeSection) {
         activeOption.selected = true;
     }
 }
+// Add event listener to the menu select element
+menuSelect.addEventListener('change', toggleSection);
+
+// Call the toggleSection function on page load
+toggleSection();
+}
+
+
+
 
 
 //https://www.w3schools.com/js/js_api_web_storage.asp
@@ -127,6 +140,7 @@ function toggleSection() {
 
     // Store the active section in localStorage
     localStorage.setItem('activeSection', selectedSectionId);
+    const sectionMenus = document.querySelectorAll('.section-menu');
 
     // Toggle the active class on section menus
     sectionMenus.forEach((section) => {
@@ -139,11 +153,7 @@ function toggleSection() {
     }
 }
 
-// Add event listener to the menu select element
-menuSelect.addEventListener('change', toggleSection);
 
-// Call the toggleSection function on page load
-toggleSection();
 
 
 //https://dev.to/stackfindover/products-quantity-counter-using-html-css-javascript-663
@@ -154,6 +164,15 @@ function increaseCount(a, b) {
     value = isNaN(value) ? 0 : value;
     value++;
     input.value = value;
+    var inputs = document.getElementsByClassName("checkOutCartInputs")
+    var sum = 0;
+    for (var input of inputs){
+        console.log(input)
+         sum = sum + parseInt(input.value);
+        console.log(sum)
+        // return total;
+    }
+    document.getElementById("topCartCount").innerHTML = sum;
 }
 
 function decreaseCount(a, b) {
@@ -164,4 +183,13 @@ function decreaseCount(a, b) {
         value--;
         input.value = value;
     }
+    var inputs = document.getElementsByClassName("checkOutCartInputs")
+    var sum = 0;
+    for (var input of inputs){
+        console.log(input)
+         sum = sum + parseInt(input.value);
+        console.log(sum)
+        // return total;
+    }
+    document.getElementById("topCartCount").innerHTML = sum;
 }
