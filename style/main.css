@@ -48,7 +48,6 @@ main > .background{
     bottom: 0;
 }
 
-
 main > picture.background{
     position: fixed;
     top: 0;
@@ -65,12 +64,9 @@ main > picture.background img{
     filter: brightness(0.5);
 }
 
-
 .productBackground{
     display:none;
 }
-
-
 
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
@@ -116,7 +112,6 @@ p {
     margin-bottom: 1rem;
 }
 
-
 .lower{
     text-transform: lowercase;
 }
@@ -137,8 +132,6 @@ main > section {
     grid-column: 1/-1;
     padding: 1rem;
 }
-
-
 
 body:not(.style) main > section {
     display: grid;
@@ -161,8 +154,6 @@ section.menu-listings {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     grid-template-rows: auto;
-
-
 }
 
 .menu-listings {
@@ -181,7 +172,6 @@ section.menu-listings {
 .menu-item-price{
     grid-column: 2;
 }
-
 
 .menu-selection-item {
     text-decoration: underline;
@@ -1785,8 +1775,6 @@ svg{
 }
 
 .cartCount{
-    /* padding: .5rem; */
-    /* margin-top: -0.7rem; */
     display: flex;
     align-items: center;
     justify-content: center;
