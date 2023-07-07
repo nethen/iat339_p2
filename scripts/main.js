@@ -158,6 +158,7 @@ function toggleSection() {
 
 //https://dev.to/stackfindover/products-quantity-counter-using-html-css-javascript-663
 //item-counter
+//got help from Ahmed
 function increaseCount(a, b) {
     var input = b.previousElementSibling;
     var value = parseInt(input.value, 10);
@@ -193,3 +194,4 @@ function decreaseCount(a, b) {
     }
     document.getElementById("topCartCount").innerHTML = sum;
 }
+

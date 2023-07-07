@@ -58,33 +58,28 @@
         </div>
 
         <!-- items -->
-        <div class="item-con">
-            <div class="checkoutCheck">
-                <input type="checkbox" name="items" value="menuItemCheck" checked>
-            </div>
+        <div class="item-con conItem1">
 
             <h5 class="itemName">Cinnemon roll (half-dozen)</h5>
             <!-- <h5 class="itemQuantity">1x</h5> -->
             <div class="cartCount">
-                <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
+                <span class="down checkoutCountText" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
                     -
                     </span></span>
-                <input class="checkOutCartInputs" type="text" value="1">
-                <span class="up" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
+                <input class="checkOutCartInputs checkoutCountText" type="text" value="1">
+                <span class="up checkoutCountText" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
                 +
                 </span></span>
             </div>
             <h5 class="itemPrice">$12.00</h5>
-            <!-- <h5 class="itemRemove">remove</h5> -->
+            <div class="removeButton-con">
+                <button class="paymentButton itemRemove" onclick="alert('your order has been removed from cart')" type="submit" target="_blank">Remove</button>
+            </div>
         </div>
         
-        <div class="item-con">
-            <div class="checkoutCheck">
-                <input type="checkbox" name="items" value="menuItemCheck" checked>
-            </div>
+        <div class="item-con conItem2">
 
             <h5 class="itemName">Matcha (iced)</h5>
-            <!-- <h5 class="itemQuantity">2x</h5> -->
             <div class="cartCount">
                 <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
                     -
@@ -95,16 +90,14 @@
                 </span></span>
             </div>
             <h5 class="itemPrice">$9.00</h5>
-            <!-- <h5 class="itemRemove">remove</h5> -->
+            <div class="removeButton-con">
+                <button class="paymentButton itemRemove" onclick="alert('your order has been removed from cart')" type="submit" target="_blank">Remove</button>
+            </div>
         </div>
     
-        <div class="item-con">
-            <div class="checkoutCheck">
-                <input type="checkbox" name="items" value="menuItemCheck" checked>
-            </div>
+        <div class="item-con conItem3">
 
             <h5 class="itemName">Matcha (hot)</h5>
-            <!-- <h5 class="itemQuantity">1x</h5> -->
             <div class="cartCount">
                 <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
                     -
@@ -115,9 +108,11 @@
                 </span></span>
             </div>
             <h5 class="itemPrice">$4.50</h5>
-            <!-- <h5 class="itemRemove">remove</h5> -->
+            <div class="removeButton-con">
+                <button class="paymentButton itemRemove" onclick="alert('your order has been removed from cart')" type="submit" target="_blank">Remove</button>
+            </div>
         </div>
-
+        
         <div class="breakLine">
             <hr>
         </div>
