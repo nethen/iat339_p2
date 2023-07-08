@@ -1,3 +1,4 @@
+window.localStorage.setItem("hovers", true);
 // All scripting is made by Nathan Lew based on prior knowledge and experimentation
 // let second;
 const toggleMenu = () => {
@@ -61,19 +62,20 @@ const closeMenu = () => {
 //https://codepen.io/coreDeiv/pen/YzqzRKK
 //Handles where the images position is based on mouse position
 
-document.addEventListener("resize", function(){
-    let hoverable = (window.innerWidth >= 992);
-    if (hoverable) console.log("nice");
-});
+const checkDesktopMode = () => {
+    const width = window.innerWidth;
+    window.localStorage.setItem("hovers", (width >= 992));
+}
 
-document.addEventListener("DOMContentLoaded", function() {
+const activateHovers = () => {
     const menuItems = document.querySelectorAll(".menu-item-name");
     //checks for different image inputs for certain menu items
     menuItems.forEach(function(item) {
         const menuItemContainer = item.parentNode; // Get the parent container of the menu item
         const popupImage = menuItemContainer.querySelector(".popup-image"); // Get the respective popup image for the menu item
             menuItemContainer.addEventListener("mousemove", function(event) {
-                popupImage.style.display = "block";
+                if (window.localStorage.getItem("hovers") == "true") popupImage.style.display = "block";
+                else popupImage.style.display = "none";
                 popupImage.style.left = event.clientX + "px";
                 popupImage.style.top = event.clientY + "px";
             });
@@ -82,6 +84,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 popupImage.style.display = "none";
             });
     });
+}
+
+
+const activateHoversOnSize = () => {
+    checkDesktopMode();
+}
+
+window.onresize = checkDesktopMode;
+activateHovers();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    
 });
 
 
