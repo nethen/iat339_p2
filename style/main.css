@@ -126,6 +126,16 @@ body:not(.style, .home) main > header {
     background: var(--bg-color1);
     z-index: 50;
 }
+body.home main > header {
+
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    /* background: var(--bg-color1); */
+    z-index: 50;
+}
 
 body.style main > header,
 main > section {
@@ -1254,7 +1264,7 @@ a:hover {
     }
 
     .popup-image {
-        position: absolute;
+        position: fixed;
         display: none;
         z-index: -1;
         width: auto;

@@ -1,4 +1,3 @@
-window.localStorage.setItem("hovers", true);
 if (window.sessionStorage.getItem("drink") === null) window.sessionStorage.setItem("drink", 1);
 if (window.sessionStorage.getItem("dine") === null) window.sessionStorage.setItem("dine", 1);
 // All scripting is made by Nathan Lew based on prior knowledge and experimentation

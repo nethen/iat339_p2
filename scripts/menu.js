@@ -32,6 +32,7 @@ const activateHoversOnSize = () => {
     checkDesktopMode();
 }
 
+checkDesktopMode();
 window.onresize = checkDesktopMode;
 activateHovers();
 
