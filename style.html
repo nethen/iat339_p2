@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <script src="/scripts/main.js"></script>
     <title>Style Guide</title>
 </head>
@@ -514,21 +516,65 @@
 
 
 
-            <div class="container__grid--2">
-                <div>
-                    <img src="assets/img/large_totebag.png">
+<!--            <div class="container__grid&#45;&#45;2">-->
+<!--                <div>-->
+<!--                    <img src="assets/img/large_totebag.png">-->
+<!--                </div>-->
+<!--                <div class="container__product__page__details">-->
+<!--                    <h2>Canvas Tote Bag</h2>-->
+<!--                    <p>$20 CAD</p>-->
+<!--                    <br>-->
+<!--                    <p>This is a laptop utility totebag, suitable for any occasions. Durable, lightweight yet-->
+<!--                        practical.</p>-->
+<!--                    <br>-->
+<!--                    <a href="#"><p>view full detail description</p></a>-->
+<!--                    <button class="button R" onclick="alert('You have added a Tote Bag to Cart!')">Add to cart</button>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <section id="productPage">
+                <div class="productSectionAll">
+                    <div class="productImg">
+                        <img src="assets/img/cinnemonSmall.png" alt="Cheongsudang Cafe">
+                    </div>
+
+                    <form class="productInfo">
+                        <div class="productName">
+                            <!-- source for drop down: https://www.w3schools.com/Css/css_dropdowns.asp  -->
+                            <select class="label__text__input1 text__input_drop1" name="Flavour" id="product-form">
+                                <option value="Iced">Cinnamon roll (#)</option>
+                                <option value="Iced">Cinnamon (half-dozen)</option>
+                                <option value="hot">Cinnamon (dozen)</option>
+                            </select>
+                        </div>
+
+                        <div class="productPrice">
+                            <p>$12.00 CAD</p>
+                        </div>
+
+                        <div class="productDesc">
+                            <p>Indulge in our freshly baked Cinnamon Roll—a heavenly delight of fluffy dough infused with
+                                aromatic cinnamon and topped with a luscious cream cheese glaze.</p>
+                            <!-- Quantity Counter https://dev.to/stackfindover/products-quantity-counter-using-html-css-javascript-663 -->
+                            <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
+remove
+</span></span>
+                                <input type="text" value="1">
+                                <span class="up" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
+add
+</span></span>
+                            </div>
+                            <button class="button productButton" type="submit" onclick="alert('Success! added to cart')">Add to
+                                Cart
+                            </button>
+                        </div>
+
+
+                    </form>
+
                 </div>
-                <div class="container__product__page__details">
-                    <h2>Canvas Tote Bag</h2>
-                    <p>$20 CAD</p>
-                    <br>
-                    <p>This is a laptop utility totebag, suitable for any occasions. Durable, lightweight yet
-                        practical.</p>
-                    <br>
-                    <a href="#"><p>view full detail description</p></a>
-                    <button class="button R" onclick="alert('You have added a Tote Bag to Cart!')">Add to cart</button>
-                </div>
-            </div>
+            </section>
             <hr class="topSectionLine">
 
             <h3>Checkout cart</h3>
