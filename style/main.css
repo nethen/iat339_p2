@@ -326,6 +326,7 @@ body:not(.style) .nav{
     margin-inline: 0;
     padding-inline-start: 0;
     flex-direction: column;
+    overflow-y: hidden;
     /* justify-content: end; */
     text-transform: lowercase;
     gap: 1rem;

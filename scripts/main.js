@@ -41,7 +41,7 @@ function increaseCount(a, b) {
         console.log(sum)
         // return total;
     }
-    document.getElementById("topCartCount").innerHTML = sum;
+    if (document.getElementById("topCartCount")) document.getElementById("topCartCount").innerHTML = sum;
 }
 
 function decreaseCount(a, b) {
@@ -60,6 +60,6 @@ function decreaseCount(a, b) {
         console.log(sum)
         // return total;
     }
-    document.getElementById("topCartCount").innerHTML = sum;
+    if (document.getElementById("topCartCount")) document.getElementById("topCartCount").innerHTML = sum;
 }
 
