@@ -1832,3 +1832,9 @@ svg{
 .hidden{
     display: none;
 }
+
+section.cartValidators{
+    background: var(--bg-color1);
+    position: fixed;
+    bottom: 0;
+}

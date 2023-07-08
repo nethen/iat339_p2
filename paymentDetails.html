@@ -100,16 +100,6 @@
             <input class="label__text__input text__input_long" type="text" id="payment-cvcForm" name="payment-cvcForm" placeholder="XXX">
         </div>
 
-        <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
-        <!-- return button -->
-        <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='checkout.html'">back to cart</button>
-
-        <button class="paymentButton nextStep" onclick="location.href='#deliveryAddress'" type="submit">next step</button>
-
-        <!-- <button class="paymentButton paymentLong" onclick="displayPaymentInfo()" type="submit" target="_blank">next step</button> -->
-        
-        <p class="paymentP">step 1 of 3 completed</p>
-
     </section>
 
     <section id="deliveryAddress" class="form">
@@ -118,7 +108,7 @@
             <hr>
         </div>
 
-        <div class="cardInfo">
+        <div class="cardInfo active">
             <!-- name -->
             <label class="label__text__input cardInput" for="payment-fullNameForm">Full Name</label>
             <input class="label__text__input text__input_long" type="text" id="payment-fullNameForm" name="payment-fullNameForm" placeholder="Jane Doe">
@@ -172,7 +162,7 @@
             <hr>
         </div>
 
-        <div class="cardInfo">
+        <div class="cardInfo active">
             <h5 class="cartSubheader">Delivery Speed</h5>
 
             <div class="input__radio__overlay">
@@ -225,7 +215,20 @@
         <!-- <button class="paymentButton nextStep" onclick="alert('Success! see you soon!')" type="submit" target="_blank">Send Order</button>
         <p class="paymentP">step 3 of 3 completed</p> -->
     </section>
+    <section class="cartValidators">
+        <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
+        <!-- return button -->
+        <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='checkout.html'">back to cart</button>
+
+        <button class="paymentButton nextStep" onclick="location.href='#deliveryAddress'" type="submit">next step</button>
+
+        <!-- <button class="paymentButton paymentLong" onclick="displayPaymentInfo()" type="submit" target="_blank">next step</button> -->
+        
+        <p class="paymentP">step 1 of 3 completed</p>
+    </section>
 
     </main>
+    <script src="./scripts/main.js"></script>
+<script src="./scripts/validator.js"></script>
 </body>
 </html>
