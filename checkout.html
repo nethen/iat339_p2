@@ -62,20 +62,20 @@
         <!-- items -->
         <div class="item-con conItem1">
 
-            <h5 class="itemName">Cinnemon roll (half-dozen)</h5>
+            <h5 class="itemName">Cinnamon roll (single)</h5>
             <!-- <h5 class="itemQuantity">1x</h5> -->
             <div class="cartCount">
-                <span class="down checkoutCountText" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
+                <span class="down checkoutCountText" onClick='decreaseCountNeue(event, this,"dine")'><span class="material-symbols-outlined">
                     -
                     </span></span>
-                <input class="checkOutCartInputs checkoutCountText" type="text" value="2">
-                <span class="up checkoutCountText" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
+                <input class="checkOutCartInputs checkoutCountText" type="text" value="1">
+                <span class="up checkoutCountText" onClick='increaseCountNeue(event, this,"dine")'><span class="material-symbols-outlined">
                 +
                 </span></span>
             </div>
-            <h5 class="itemPrice">$11.00</h5>
+            <h5 class="itemPrice">$5.00</h5>
             <div class="removeButton-con">
-                <button class="paymentButton itemRemove" onclick="alert('your order has been removed from cart')" type="submit">Remove</button>
+                <button class="paymentButton itemRemove" onclick="removeItems('dine')" type="submit">Remove</button>
             </div>
         </div>
         
@@ -83,17 +83,17 @@
 
             <h5 class="itemName">Matcha (iced)</h5>
             <div class="cartCount">
-                <span class="down" onClick='decreaseCount(event, this)'><span class="material-symbols-outlined">
+                <span class="down" onClick='decreaseCountNeue(event, this,"drink")'><span class="material-symbols-outlined">
                     -
                     </span></span>
-                <input class="checkOutCartInputs" type="text" value="2">
-                <span class="up" onClick='increaseCount(event, this)'><span class="material-symbols-outlined">
+                <input class="checkOutCartInputs" type="text" value="1">
+                <span class="up" onClick='increaseCountNeue(event, this,"drink")'><span class="material-symbols-outlined">
                 +
                 </span></span>
             </div>
-            <h5 class="itemPrice">$9.00</h5>
+            <h5 class="itemPrice">$5.00</h5>
             <div class="removeButton-con">
-                <button class="paymentButton itemRemove" onclick="alert('your order has been removed from cart')" type="submit">Remove</button>
+                <button class="paymentButton itemRemove" onclick="removeItems('drink')" type="submit">Remove</button>
             </div>
         </div>
 
@@ -118,5 +118,6 @@
 
 </main>
 <script src="./scripts/main.js"></script>
+<script src="./scripts/checkout.js"></script>
 </body>
 </html>
