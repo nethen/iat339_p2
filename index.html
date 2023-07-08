@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/normalize.css">
-    <link rel="stylesheet" href="/style/main.css">
-    <script src="/scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="./scripts/main.js" defer></script>
     <title>cheong-su-dang</title>
 </head>
-<body>
+<body class="home">
     <main>
         <header class="nav">
             <picture class="nav__background">
@@ -21,7 +21,7 @@
                     >
             </picture>
         <nav class="nav__overlay">
-            <a class="nav__overlay__logo" href="/">
+            <a class="nav__overlay__logo" href="index.html">
                 Cheong-su-dang
             </a>
             <div class="nav__overlay__wrapper">
@@ -44,7 +44,10 @@
                                 <a href="contact.html" onclick="closeMenu()">Contact</a>
                             </li>
                             <li>
-                                <a href="payment.html" onclick="closeMenu()">Cart (<span>0</span>)</a>
+                                <a href="style.html" onclick="closeMenu()">Style</a>
+                            </li>
+                            <li>
+                                <a href="checkout.html" onclick="closeMenu()">Cart (<span>4</span>)</a>
                             </li>
                         </ul>
                     </div>
@@ -89,6 +92,10 @@
             </picture>
             <h2 class="h5">Visit us</h2>
             <a href="https://goo.gl/maps/eoKbazC9VGdP9YWe6" target="_blank">31-9 Donhwamun-ro 11na-gil, Jongno-gu, Seoul, South Korea</a>
+            <!-- add this to footer
+            <a href="style.html" target="_blank">Our StyleGuide</a> 
+            <a href="" target="_blank">Our Git Repository</a>-->
+            
         </div>
     </section>
     <section>
@@ -118,9 +125,9 @@
                 </li>
             </ul>
         </div>
-        <div class="news__item" id="rewards">
+        <!-- <div class="news__item" id="rewards">
             <picture class="news__item__preview">
-                <img 
+                <img
                     src="./assets/img/cafe_interior.png"
                     alt="pending update"
                     >
@@ -129,25 +136,30 @@
                 <h3 class="lower">Rewards</h3>
                 <p>Check out our new rewards system! Earn bonuses on your next visits through your sticker card.</p>
             </div>
-        </div>
+        </div> -->
         <div class="news__item" id="rewards">
             <picture class="news__item__preview">
-                <img 
+                <a target = "_self" href="menu.html">
+                    <img
                     src="./assets/img/cafe_interior.png"
                     alt="pending update"
                     >
+                </a>
             </picture>
             <div class="news__item__desc">
-                <h3 class="lower">Canada Day Sale</h3>
-                <p>15% off selected items</p>
+                <h3 class="lower">Summer Promo!</h3>
+                <p>10% off selected items</p>
             </div>
         </div>
         <div class="news__item" id="rewards">
             <picture class="news__item__preview">
-                <img 
+                <a target = "_self" href="https://www.instagram.com/cheongsudang_/">
+                    <img 
                     src="./assets/img/drinks_2.png"
                     alt="pending update"
                     >
+                </a>
+
             </picture>
             <div class="news__item__desc">
                 <h3 class="lower">July specials</h3>

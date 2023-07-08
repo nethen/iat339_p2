@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/normalize.css">
-    <link rel="stylesheet" href="/style/main.css">
-    <script src="/scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="./scripts/main.js" defer></script>
     <title>cart | cheong-su-dang</title>
 </head>
 <body>
     <main>
         <header class="nav">
         <nav class="nav__overlay">
-            <a class="nav__overlay__logo" href="/">
+            <a class="nav__overlay__logo" href="index.html">
                 Cheong-su-dang
             </a>
             <div class="nav__overlay__wrapper">
@@ -20,13 +20,13 @@
                     <div class="nav__overlay__wrapper__items__group">
                         <ul>
                             <li>
-                                <a href="/menu.html" onclick="closeMenu()">Menu</a>
+                                <a href="menu.html" onclick="closeMenu()">Menu</a>
                             </li>
                             <li>
-                                <a href="/contact.html" onclick="closeMenu()">Contact</a>
+                                <a href="contact.html" onclick="closeMenu()">Contact</a>
                             </li>
                             <li>
-                                <a href="/cart.html" onclick="closeMenu()">Cart (<span>0</span>)</a>
+                                <a href="checkout.html" onclick="closeMenu()">Cart (<span>4</span>)</a>
                             </li>
                         </ul>
                     </div>
@@ -85,25 +85,23 @@
             </div> 
         </div>
 
-        <div class="cardInfo">
+        <div class="cardInfo active">
             <!-- card holder name -->
-            <label class="label__text__input cardInput" for="payment-form">Card Holder Name</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Jane Doe">
+            <label class="label__text__input cardInput" for="payment-cardHolderForm">Card Holder Name</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-cardHolderForm" name="payment-cardHolderForm" placeholder="Jane Doe">
             <!-- card number -->
-            <label class="label__text__input cardInput" for="payment-form">Card Number</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="123 456 7890">
+            <label class="label__text__input cardInput" for="payment-cardNumForm">Card Number</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-cardNumForm" name="payment-cardNumForm" placeholder="123 456 7890">
             <!-- cvc -->
-            <label class="label__text__input cardInput" for="payment-form">CVC</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="XXX">
+            <label class="label__text__input cardInput" for="payment-cvcForm">CVC</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-cvcForm" name="payment-cvcForm" placeholder="XXX">
         </div>
 
-
         <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
-        
         <!-- return button -->
         <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='checkout.html'">back to cart</button>
 
-        <button class="paymentButton nextStep" onclick="location.href='#deliveryAddress'" type="submit" target="_blank">next step</button>
+        <button class="paymentButton nextStep" onclick="location.href='#deliveryAddress'" type="submit">next step</button>
 
         <!-- <button class="paymentButton paymentLong" onclick="displayPaymentInfo()" type="submit" target="_blank">next step</button> -->
         
@@ -111,7 +109,7 @@
 
     </section>
 
-    <section id="deliveryAddress">
+    <section id="deliveryAddress" class="form">
         <div class="Cart-top">
             <h2>Billing Address</h2>
             <hr>
@@ -119,26 +117,26 @@
 
         <div class="cardInfo">
             <!-- name -->
-            <label class="label__text__input cardInput" for="payment-form">Full Name</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Jane Doe">
+            <label class="label__text__input cardInput" for="payment-fullNameForm">Full Name</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-fullNameForm" name="payment-fullNameForm" placeholder="Jane Doe">
 
             <!-- Phone Number -->
-            <label class="label__text__input cardInput" for="payment-form">Phone Number</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="(604) 456 7890">
+            <label class="label__text__input cardInput" for="payment-phoneNumForm">Phone Number</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-phoneNumForm" name="payment-phoneNumForm" placeholder="(604) 456 7890">
             
             <!-- Street -->
-            <label class="label__text__input cardInput" for="payment-form">Street Address</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="453-32 Yeonnam-ro Yeonnam-dong">
+            <label class="label__text__input cardInput" for="payment-streetAddForm">Street Address</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-streetAddForm" name="payment-streetAddForm" placeholder="453-32 Yeonnam-ro Yeonnam-dong">
 
             <!-- City -->
-            <label class="label__text__input cardInput" for="payment-form">City</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="Seoul">
+            <label class="label__text__input cardInput" for="payment-cityForm">City</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-cityForm" name="payment-cityForm" placeholder="Seoul">
 
             <!-- districts-->
-            <label class="label__text__input forContact" for="payment-form">District</label>  
+            <label class="label__text__input forContact" for="payment-districtForm">District</label>  
                                 
                 <!-- source for drop down: https://www.w3schools.com/Css/css_dropdowns.asp  -->
-                <select class="label__text__input text__input_drop"  name="Topic" id="payment-form">
+                <select class="label__text__input text__input_drop"  name="Topic" id="payment-districtForm">
                 <option value="Select Topic">Select District</option>
                 <option value="Mapo-gu">Mapo-gu</option>
                 <option value="Songpa-gu">Songpa-gu</option>
@@ -148,22 +146,21 @@
                 </select>
 
             <!-- Postal Code-->
-            <label class="label__text__input cardInput" for="payment-form">Postal Code</label>
-            <input class="label__text__input text__input_long" type="text" id="payment-form" name="payment-form" placeholder="103-531">
+            <label class="label__text__input cardInput" for="payment-postalForm">Postal Code</label>
+            <input class="label__text__input text__input_long" type="text" id="payment-postalForm" name="payment-postalForm" placeholder="103-531">
 
-            <input type="checkbox" name="items" value="deliveryAddress" notchecked placeholder="set address as delivery location?"> set address as delivery location?
+            <input type="checkbox" name="items" value="deliveryAddress"> set address as delivery location?
         </div>
 
         <!-- how to get button acting like a link https://www.w3schools.com/jsref/prop_loc_href.asp -->
         <!-- return button -->
-        <button class="paymentButton returnBack" type="button" value="Return Back" onclick="location.href='#paymentMethod'">return back</button>
+        <!-- <button class="paymentButton returnBack" type="button" value="Return Back" onclick="location.href='#paymentMethod'">return back</button> -->
         
         <!-- next part button -->
-        <button class="paymentButton nextStep" type="submit" onclick="location.href='#deliveryOrder'" target="_blank">next step</button>
+        <!-- <button class="paymentButton nextStep" type="submit" onclick="location.href='#deliveryOrder'" target="_blank">next step</button> -->
         <!-- <button class="paymentButton nextStep" type="submit" onclick="displayPaymentInfo2()" target="_blank">next step</button> -->
 
-        
-        <p class="paymentP">step 2 of 3 completed</p>
+        <!-- <p class="paymentP">step 2 of 3 completed</p> -->
     </section>
 
     <section id="deliveryOrder">
@@ -172,87 +169,59 @@
             <hr>
         </div>
 
-        <h5 class="cartSubheader">Delivery Speed</h5>
+        <div class="cardInfo">
+            <h5 class="cartSubheader">Delivery Speed</h5>
 
-        <div class="input__radio__overlay">
-            <div>
-                <input type="radio" id="Express" name="radioexample">
+            <div class="input__radio__overlay">
+                <div>
+                    <input type="radio" id="Express" name="radioexample">
+                </div>
+                <div>
+                    <label class="radioPaymentType" for="Express">Express</label>
+                </div>
+    
+                <div>
+                    <input type="radio" id="Standard" name="radioexample">
+                </div>
+                <div>
+                    <label class="radioPaymentType" for="Standard">Standard</label>
+                </div>
+    
+                <div>
+                    <input type="radio" id="Scheduled" name="radioexample">
+                </div>
+                <div>
+                    <label class="radioPaymentType" for="Scheduled"> Scheduled</label>
+                </div>
             </div>
-            <div>
-                <label class="radioPaymentType" for="Express">Express</label>
-            </div>
-
-            <div>
-                <input type="radio" id="Standard" name="radioexample">
-            </div>
-            <div>
-                <label class="radioPaymentType" for="Standard">Standard</label>
-            </div>
-
-            <div>
-                <input type="radio" id="Scheduled" name="radioexample">
-            </div>
-            <div>
-                <label class="radioPaymentType" for="Scheduled"> Scheduled</label>
-            </div>
+    
+            <h5 class="cartSubheader">Pick-Up Method</h5>
+            
+            <div class="input__radio__overlay">
+                <div>
+                    <input type="radio" id="InStore" name="radioexample">
+                </div>
+                <div>
+                    <label class="radioPaymentType" for="InStore">InStore</label>
+                </div>
+    
+                <div>
+                    <input type="radio" id="Address" name="radioexample">
+                </div>
+                <div>
+                    <label class="radioPaymentType" for="Address">Address</label>
+                </div>
+            </div>     
         </div>
-
-        <h5 class="cartSubheader">Pick-Up Method</h5>
         
-        <div class="input__radio__overlay">
-            <div>
-                <input type="radio" id="Express" name="radioexample">
-            </div>
-            <div>
-                <label class="radioPaymentType" for="Express">InStore</label>
-            </div>
-
-            <div>
-                <input type="radio" id="Standard" name="radioexample">
-            </div>
-            <div>
-                <label class="radioPaymentType" for="Standard">Address</label>
-            </div>
-        </div> 
-
-         <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
+        <!-- how to get button acting like a link onclick https://www.w3schools.com/jsref/prop_loc_href.asp -->
         <!-- return button -->
-        <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='#deliveryAddress'">return back</button>
+        <!-- <button class="paymentButton returnBack" type="button" value="returnBack" onclick="location.href='#deliveryAddress'">return back</button> -->
         
         <!-- next part button -->
-        <button class="paymentButton nextStep" onclick="alert('Success! see you soon!')" type="submit" target="_blank">Send Order</button>
-        <p class="paymentP">step 3 of 3 completed</p>
+        <!-- <button class="paymentButton nextStep" onclick="alert('Success! see you soon!')" type="submit" target="_blank">Send Order</button>
+        <p class="paymentP">step 3 of 3 completed</p> -->
     </section>
-
-    <script>
-
-        /** https://www.youtube.com/watch?v=DULFs16I_z8 & https://www.youtube.com/watch?v=ivilewmRX9A
-        if next step button is clicked, display the next section **/
-
-        // to deliveryAddress
-        function displayPaymentInfo(){
-            // const nextSection = getElementById("deliveryAddress");
-            var x = document.getElementById("deliveryAddress");
-            if(x.style.display ==="none"){
-                x.style.display = "block";
-            } else{
-                x.style.display = "none";
-            }
-        }
-        
-        // todeliveryOrder
-        function displayPaymentInfo2(){
-            // const nextSection = getElementById("deliveryAddress");
-            var x = document.getElementById("deliveryOrder");
-            if(x.style.display ==="none"){
-                x.style.display = "block";
-            } else{
-                x.style.display = "none";
-            }
-        }
-
-    </script>
-
 
     </main>
 </body>
